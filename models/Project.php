@@ -15,6 +15,7 @@ use Yii;
  * @property double $latitude
  * @property integer $created_at
  * @property integer $updated_at
+ * @property string $mainImage
  */
 class Project extends \yii\db\ActiveRecord
 {
@@ -36,7 +37,8 @@ class Project extends \yii\db\ActiveRecord
             [['shortDescription'], 'string'],
             [['longitude', 'latitude'], 'number'],
             [['created_at', 'updated_at'], 'integer'],
-            [['title', 'location'], 'string', 'max' => 255]
+            [['title', 'location'], 'string', 'max' => 255],
+            [['mainImage'], 'file', 'extensions' => 'png, jpg'],
         ];
     }
 
@@ -54,6 +56,7 @@ class Project extends \yii\db\ActiveRecord
             'latitude' => 'Latitude',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'mainImage' => 'Main Image',
         ];
     }
 }

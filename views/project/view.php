@@ -34,6 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'location',
             'longitude',
             'latitude',
+            'mainImage',
             'created_at',
             'updated_at',
         ],

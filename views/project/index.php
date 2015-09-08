@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'title',
             'shortDescription:ntext',
             'location',
-            'longitude',
+            // 'longitude',
             // 'latitude',
             // 'created_at',
             // 'updated_at',

@@ -27,7 +27,5 @@ class m150907_132758_create_project_table extends Migration
     public function down()
     {
         $this->dropTable('{{%project}}');
-
-        return false;
     }
 }
