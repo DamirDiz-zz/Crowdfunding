@@ -6,6 +6,11 @@ $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
+    <?php 
+    foreach($projects as $project) {
+        echo $project->title;
+    }
+    ?>
     <div class="jumbotron">
         <h1>Congratulations!</h1>
 
