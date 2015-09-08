@@ -59,4 +59,9 @@ class Project extends \yii\db\ActiveRecord
             'mainImage' => 'Main Image',
         ];
     }
+    
+    public function getImagePath() 
+    {
+        return 'uploads/' . $this->mainImage;
+    }
 }
