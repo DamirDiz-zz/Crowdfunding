@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;;;;;AAUA,sBAAuB;EACnB,OAAO,EAAC,IAAI;EACZ,OAAO,EAAC,IAAI;EACZ,cAAc,EAAE,GAAG;EACnB,SAAS,EAAE,MAAM;EACjB,eAAe,EAAE,MAAM;EACvB,aAAa,EAAE,UAAU;EACzB,WAAW,EAAE,UAAU;;AAG3B,YAAa;EACT,SAAS,EAAC,KAAK;EACf,SAAS,EAAC,KAAK;EACf,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,OAAO",
+"sources": ["../scss/projectbox.scss"],
+"names": [],
+"file": "projectbox.css"
+}
