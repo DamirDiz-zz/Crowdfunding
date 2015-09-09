@@ -4,6 +4,9 @@ web/uploads
 # Packages
 web/node_modules
 
+# Fonts
+web/fonts
+
 # phpstorm project files
 .idea
 

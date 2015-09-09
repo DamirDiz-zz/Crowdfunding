@@ -8,7 +8,19 @@ and open the template in the editor.
     Author     : DamirDiz
 */
 
+
+@font-face {
+    font-family: Serendity;
+    src: url(../fonts/Serendity.woff);
+}
+
+@font-face {
+    font-family: Sunday;
+    src: url(../fonts/Sunday.otf);
+}
+
 .project-box-container {
+    font-family: 'Martel Sans', sans-serif;
     idsplay:flex;
     display:flex;
     flex-direction: row;
@@ -22,5 +34,83 @@ and open the template in the editor.
     max-width:300px;
     min-width:200px;
     margin: 20px;
-    background: #e5e5e5;
+    background: #F7F7F7;
+    height: 420px;
+    font-size: 12px;
+    
+    h1, h2 {
+        font-size: 26px;
+        text-shadow: -1px 1px rgba(0, 0, 0, 0.2);
+        line-height: 140%;        
+    }
+    
+    h1 {
+        font-family: Sunday;
+        margin:0;
+    }
+    
+    h2 {
+        font-family: Serendity;
+        margin: 7px 0 0 0;
+    }
+}
+
+.project-box-header {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    color: white;
+}
+
+.project-box-header-imageholder 
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    transform: scale(1.1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    filter: blur(5px);
+    z-index: 1;    
+}
+.project-box-header-content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    z-index: 3;    
+}
+
+    .project-box-header-content-holder {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+.project-box-header-category {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width:100%;
+    height: 2em;
+    line-height: 2em;
+    background: rgba(0,0,0, 0.3);
+    padding: 0 13px;
+    text-align: right;
+    z-index: 2;
+    
+}
+
+.project-box-body {
+    color: #303030;
+}
+
+.project-box-body-description {
+    padding: 15px 13px;
+    line-height: 170%;
 }

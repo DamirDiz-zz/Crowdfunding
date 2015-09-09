@@ -25,6 +25,7 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
+    /**
     NavBar::begin([
         'brandLabel' => 'Crowdfunding',
         'brandUrl' => Yii::$app->homeUrl,
@@ -46,6 +47,8 @@ AppAsset::register($this);
         ],
     ]);
     NavBar::end();
+     * **/
+
     ?>
 
     <div class="container-fluid">
