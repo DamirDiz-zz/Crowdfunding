@@ -1,6 +1,9 @@
 # Image folder
 web/uploads
 
+# Packages
+web/node_modules
+
 # phpstorm project files
 .idea
 
