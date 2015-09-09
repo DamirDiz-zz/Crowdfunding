@@ -71,7 +71,9 @@ class ProjectController extends Controller
             $model->mainImage= UploadedFile::getInstance($model,'mainImage');
             
             if($model->save()) {
-                $model->mainImage->saveAs('uploads/' . $model->mainImage->baseName . '.' . $model->mainImage->extension);
+                if($model->mainImage != null) {
+                    $model->mainImage->saveAs('uploads/' . $model->mainImage->baseName . '.' . $model->mainImage->extension);                    
+                }
                 return $this->redirect(['view', 'id' => $model->id]);                
             }
         } else {

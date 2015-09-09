@@ -13,7 +13,7 @@ $this->title = 'Crowdfunding';
                         <h2 class="text-center text-capitalize"><?php echo $project->location; ?></h2>
                     </div>
                 </div>
-                <div class="project-box-header-category"><p>Kategorie</p></div>
+                <div class="project-box-header-category"><p><?php echo $project->category->title; ?></p></div>
                 <div class="project-box-header-imageholder" style="background-image: url(<?php echo $project->getImagePath() ?>);"></div>
             </div>
             <div class="project-box-body">

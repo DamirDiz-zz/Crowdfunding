@@ -46,7 +46,8 @@ and open the template in the editor.
   margin: 20px;
   background: #F7F7F7;
   height: 420px;
-  font-size: 12px; }
+  font-size: 12px;
+  cursor: pointer; }
   .project-box h1, .project-box h2 {
     font-size: 26px;
     text-shadow: -1px 1px rgba(0, 0, 0, 0.2);
@@ -102,11 +103,12 @@ and open the template in the editor.
   left: 0px;
   width: 100%;
   height: 2em;
-  line-height: 2em;
+  line-height: 2.2em;
   background: rgba(0, 0, 0, 0.3);
   padding: 0 13px;
   text-align: right;
-  z-index: 2; }
+  z-index: 2;
+  font-weight: 400; }
 
 .project-box-body {
   color: #303030; }

@@ -16,6 +16,9 @@ use Yii;
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $mainImage
+ * @property integer $category_id
+ *
+ * @property Category $category
  */
 class Project extends \yii\db\ActiveRecord
 {
@@ -36,9 +39,8 @@ class Project extends \yii\db\ActiveRecord
             [['title', 'shortDescription', 'location', 'created_at', 'updated_at'], 'required'],
             [['shortDescription'], 'string'],
             [['longitude', 'latitude'], 'number'],
-            [['created_at', 'updated_at'], 'integer'],
-            [['title', 'location'], 'string', 'max' => 255],
-            [['mainImage'], 'file', 'extensions' => 'png, jpg'],
+            [['created_at', 'updated_at', 'category_id'], 'integer'],
+            [['title', 'location', 'mainImage'], 'string', 'max' => 255]
         ];
     }
 
@@ -57,11 +59,21 @@ class Project extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'mainImage' => 'Main Image',
+            'category_id' => 'Category',
         ];
     }
-    
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCategory()
+    {
+        return $this->hasOne(Category::className(), ['id' => 'category_id']);
+    }
+
     public function getImagePath() 
     {
         return 'uploads/' . $this->mainImage;
     }
+
 }

@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use app\models\Category;
+use yii\helpers\ArrayHelper
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Project */
@@ -19,6 +21,13 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'location')->textInput(['maxlength' => true]) ?>
     
     <?= $form->field($model, 'mainImage')->fileInput()  ?>
+    
+    <?php
+    $models = Category::find()->asArray()->all();
+    $map = ArrayHelper::map($models, 'id', 'title'); // (where 'id' becomes the value and 'name' the name of the value which will be displayed)
+    ?>
+    <?= $form->field($model, 'category_id')->dropDownList($map) ?>
+
     
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
