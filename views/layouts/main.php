@@ -25,12 +25,12 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-    /**
+
     NavBar::begin([
-        'brandLabel' => 'Crowdfunding',
+        'brandLabel' => '',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar navbar-fixed-top',
         ],
     ]);
     echo Nav::widget([
@@ -39,15 +39,15 @@ AppAsset::register($this);
             ['label' => 'About', 'url' => ['/site/about']],
             Yii::$app->user->isGuest ?
                 ['label' => 'Login', 'url' => ['/site/login']] :
-                [
-                    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                [ 
+                   'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ],
+            ['label' => 'Start your Project', 'url' => ['/project/create'], 'linkOptions'=> array('class' => 'btn btn-success')],
         ],
     ]);
     NavBar::end();
-     * **/
 
     ?>
 

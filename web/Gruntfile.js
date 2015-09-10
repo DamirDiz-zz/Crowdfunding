@@ -4,21 +4,24 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 files: {
-                    'styles/css/projectbox.css': 'styles/scss/projectbox.scss'
+                    'styles/css/projectbox.css': 'styles/scss/projectbox.scss',
+                    'styles/css/customize.css': 'styles/scss/customize.scss'
                 }
             }
         },
         autoprefixer: {
             compile: {
                 files: {
-                    'styles/css/projectbox.css': 'styles/css/projectbox.css'
+                    'styles/css/projectbox.css': 'styles/css/projectbox.css',
+                    'styles/css/customize.css': 'styles/css/customize.css'
+
                 }
             }
         },
         cssmin: {
             target: {
                 files: {
-                    'build/main.min.css': ['styles/css/site.css', 'styles/css/projectbox.css']
+                    'build/main.min.css': ['styles/css/site.css', 'styles/css/projectbox.css',  'styles/css/customize.css']
                 }
             }
         },

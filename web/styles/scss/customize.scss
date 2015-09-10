@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10.09.2015, 19:27:32
+    Author     : DamirDiz
+*/
+
+* {
+    font-family: 'Martel Sans', sans-serif;
+}
+
+.navbar {
+    background: rgba(0,0,0,0.3)
+}
+
+
+.navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
+    color: rgba(230, 230, 230, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+.navbar-nav>.active>a,
+.navbar-nav>.active>a:hover,
+.navbar-nav>.active>a:focus {
+    color: rgba(230, 230, 230, 1);
+    background-color: rgba(231, 231, 231, 0);
+}
+.navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    background-color: #ddd;
+}
