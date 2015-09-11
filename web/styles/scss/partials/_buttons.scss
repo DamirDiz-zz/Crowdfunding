@@ -10,9 +10,9 @@
     color: $accent-color !important; 
     border-color: $accent-color;
 }
-.btn:hover, .btn:focus {
-    color: $accent-color-hover !important;
-    border-color: $accent-color-hover;
+.btn:hover {
+    color: $white-color !important;
+    background-color: $accent-color;
 }
 
 .btn-fill {

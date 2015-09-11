@@ -51,7 +51,7 @@ AppAsset::register($this);
             ?>
 
 
-            <section class="navigation fixed">
+            <section class="navigation">
                 <header>
                     <div class="header-content">
                         <div class="header-nav">
@@ -67,20 +67,10 @@ AppAsset::register($this);
                 </header>
             </section>
 
-
-
             <div class="container-fluid">
                 <?= $content ?>
             </div>
         </div>
-
-        <footer class="footer">
-            <div class="container">
-                <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-                <p class="pull-right"><?= Yii::powered() ?></p>
-            </div>
-        </footer>
 
         <?php $this->endBody() ?>
     </body>

@@ -16,6 +16,9 @@ and open the template in the editor.
     Created on : 11.09.2015, 13:22:01
     Author     : DamirDiz
 */
+/* ==========================================================================
+Mixins
+========================================================================== */
 .project-box-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -51,7 +54,6 @@ and open the template in the editor.
   cursor: pointer; }
   .project-box h1, .project-box h2 {
     font-size: 26px;
-    text-shadow: -1px 1px rgba(0, 0, 0, 0.2);
     line-height: 140%; }
   .project-box h1 {
     font-family: Sunday;
@@ -73,14 +75,14 @@ and open the template in the editor.
   top: 0px;
   width: 100%;
   height: 100%;
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: blur(5px) brightness(90%);
+          filter: blur(5px) brightness(90%);
   z-index: 1; }
 
 .project-box-header-content {

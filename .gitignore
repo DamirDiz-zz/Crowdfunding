@@ -7,6 +7,9 @@ web/node_modules
 # Fonts
 web/fonts
 
+# Images
+web/img
+
 # phpstorm project files
 .idea
 

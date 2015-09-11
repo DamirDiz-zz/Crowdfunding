@@ -4,6 +4,17 @@
 $this->title = 'Crowdfunding';
 ?>
 
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-content-holder text-center">
+             <h1>Mach deine Stadt grüner!</h1>
+            <p class="intro">Crowdfunding für ökologische, nachhaltige und grüne Projekte</p>
+            <a href="#" class="btn btn-accent btn-large">Erfahre mehr</a>
+        </div>
+    </div>
+    <div class="hero-image"></div>
+</section>
+
 <div class="project-box-container">
     <?php foreach ($projects as $project) { ?>
         <div class="project-box">

@@ -16,6 +16,7 @@
 @import "partials/typography";
 @import "partials/colors";
 @import "partials/buttons";
+@import "partials/mixins";
 
 /* ==========================================================================
 Global Styles
@@ -48,6 +49,19 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
+.container-fluid {
+    padding: 0px;
+}
+
+/* ==========================================================================
+Typography
+========================================================================== */
+
+h1 {
+    font-family: $title-font;
+    font-size: $font-size-h1;
+    text-shadow: -1px 1px rgba(0, 0, 0, 0.2);
+} 
 
 /* ==========================================================================
 Navigation
@@ -84,7 +98,7 @@ header {
     .logo {
         display: inline-block;
     }
-    
+
     ul.primary-nav {
         li {
             display: inline;
@@ -98,8 +112,8 @@ header {
                 }
             }
             .btn {
-                    margin-left:10px;
-                }
+                margin-left:10px;
+            }
         }
     }
     .header-nav {
@@ -110,5 +124,52 @@ header {
         right: 0;
         top: 20px;
         transition: all 300ms ease-in-out;
+    }
+}
+
+/* ==========================================================================
+Hero
+========================================================================== */
+
+.hero {
+    min-height: 750px;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+        color: $white-color;
+        margin-bottom: 40px;
+    }
+    p.intro {
+        color: $white-color;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 80px;
+    }
+
+    .hero-image {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width:100%;
+        height:100%;
+        background: url('../img/header.jpg');
+        @include blur(8px);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width:100%;
+        height:100%;
+        z-index: 3;    
+    }
+
+    .hero-content-holder {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
