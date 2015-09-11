@@ -17,6 +17,7 @@ $this->title = 'Crowdfunding';
 
 <div class="project-box-container">
     <?php foreach ($projects as $project) { ?>
+    <a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/detail', 'id' => (int) $project->id]); ?>">"
         <div class="project-box">
             <div class="project-box-header">
                 <div class="project-box-header-content">
@@ -32,5 +33,6 @@ $this->title = 'Crowdfunding';
                 <div class="project-box-body-description"><?php echo $project->shortDescription; ?></div>
             </div>
         </div>
+    </a>
     <?php } ?>
 </div>

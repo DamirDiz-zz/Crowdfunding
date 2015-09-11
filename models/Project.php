@@ -3,7 +3,7 @@
 namespace app\models;
 
 use Yii;
-
+use app\assets\AppAsset;
 /**
  * This is the model class for table "project".
  *
@@ -73,7 +73,7 @@ class Project extends \yii\db\ActiveRecord
 
     public function getImagePath() 
     {
-        return 'uploads/' . $this->mainImage;
+        return  'uploads/' . $this->mainImage;
     }
 
 }

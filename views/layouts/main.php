@@ -57,6 +57,7 @@ AppAsset::register($this);
                         <div class="header-nav">
                             <nav>
                                 <ul class="primary-nav">
+                                    <li><?= Html::a('Home', ['/']) ?></li>
                                     <li><a href="#blog">Entdecken</a></li>
                                     <li><a href="#download">Über uns</a></li>
                                     <li><a href="#download" class="login">Login</a></li>

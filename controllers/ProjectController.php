@@ -55,6 +55,14 @@ class ProjectController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+    
+        public function actionDetail($id)
+    {
+        return $this->render('detail', [
+            'project' => $this->findModel($id),
+        ]);
+    }
+
 
     /**
      * Creates a new Project model.
