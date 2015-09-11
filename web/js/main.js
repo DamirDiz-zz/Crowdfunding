@@ -1,7 +1,22 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+$(document).ready(function () {
 
+    /***************** Header BG Scroll ******************/
+    $(function () {
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
 
+            if (scroll >= 20) {
+                console.log("yo")
+                $('section.navigation').addClass('fixed');
+                $('header').css({
+                    "border-bottom": "none",
+                    "padding": "35px 0"
+                });
+
+            } else {
+                $('section.navigation').removeClass('fixed');
+            }
+        });
+    });
+
+});
