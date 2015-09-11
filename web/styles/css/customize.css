@@ -7,30 +7,84 @@ and open the template in the editor.
     Created on : 10.09.2015, 19:27:32
     Author     : DamirDiz
 */
-* {
-  font-family: 'Martel Sans', sans-serif; }
+@import url(http://fonts.googleapis.com/css?family=Martel+Sans:200,300,400,600,700);
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11.09.2015, 13:22:01
+    Author     : DamirDiz
+*/
+/* ==========================================================================
+Global Styles
+========================================================================== */
+body {
+  font-family: "Open Sans", sans-serif; }
 
-.navbar {
-  background: rgba(0, 0, 0, 0.3); }
+/* ==========================================================================
+Navigation
+========================================================================== */
+.header-nav.open {
+  visibility: visible;
+  opacity: 0.9;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
 
-.navbar-nav > li > a {
-  color: white;
-  background-color: rgba(248, 248, 248, 0); }
+.nav-toggle {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  z-index: 999999;
+  padding: 10px 35px 16px 0;
+  cursor: pointer; }
 
-.navbar-nav > li > a:hover,
-.navbar-nav > li > a:focus {
-  color: #e6e6e6;
-  background-color: rgba(248, 248, 248, 0); }
+.nav-toggle:focus {
+  outline: none; }
 
-.navbar-nav > .active > a,
-.navbar-nav > .active > a:hover,
-.navbar-nav > .active > a:focus {
-  color: #e6e6e6;
-  background-color: rgba(231, 231, 231, 0); }
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 3px;
+  border-radius: 1px;
+  background: #fff;
+  cursor: pointer; }
 
-.navbar-toggle {
-  border-color: #ddd; }
+.nav-toggle span:before {
+  top: -10px; }
 
-.navbar-toggle:hover,
-.navbar-toggle:focus {
-  background-color: #ddd; }
+.nav-toggle span:after {
+  bottom: -10px; }
+
+.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+
+.nav-toggle.active span {
+  background-color: transparent; }
+
+.nav-toggle.active span:before, .nav-toggle.active span:after {
+  top: 0; }
+
+.nav-toggle.active span:before {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.nav-toggle.active span:after {
+  top: 10px;
+  -ms-transform: translatey(-10px) rotate(-45deg);
+  -webkit-transform: translatey(-10px) rotate(-45deg);
+  transform: translatey(-10px) rotate(-45deg); }
+
+.navicon {
+  position: absolute;
+  height: 26px;
+  right: 10px;
+  top: 48px;
+  visibility: hidden;
+  -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out; }

@@ -5,7 +5,7 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'styles/css/projectbox.css': 'styles/scss/projectbox.scss',
-                    'styles/css/customize.css': 'styles/scss/customize.scss'
+                    'styles/css/styles.css': 'styles/scss/styles.scss'
                 }
             }
         },
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
             compile: {
                 files: {
                     'styles/css/projectbox.css': 'styles/css/projectbox.css',
-                    'styles/css/customize.css': 'styles/css/customize.css'
+                    'styles/css/styles.css': 'styles/css/styles.css'
 
                 }
             }
@@ -21,13 +21,13 @@ module.exports = function (grunt) {
         cssmin: {
             target: {
                 files: {
-                    'build/main.min.css': ['styles/css/site.css', 'styles/css/projectbox.css',  'styles/css/customize.css']
+                    'build/main.min.css': ['styles/css/site.css',  'styles/css/styles.css', 'styles/css/projectbox.css']
                 }
             }
         },
         watch: {
             stylus: {
-                files: ['styles/scss/*.scss'],
+                files: ['styles/scss/*.scss', 'styles/scss/partials/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'cssmin']
             }
         }

@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Martel+Sans:400,200,300,600,700,800,900);
+@font-face {
+  font-family: Serendity;
+  src: url(../../fonts/Serendity.woff); }
+@font-face {
+  font-family: Sunday;
+  src: url(../../fonts/Sunday.otf); }
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11.09.2015, 13:22:01
+    Author     : DamirDiz
+*/
+.btn {
+  font-size: 13px;
+  border: solid 2px;
+  border-radius: 40px;
+  display: inline-block;
+  color: #49D964 !important;
+  border-color: #49D964; }
+
+.btn:hover, .btn:focus {
+  color: #ABFFBA !important;
+  border-color: #ABFFBA; }
+
+.btn-fill {
+  color: #FFFFFF;
+  border: solid 2px #49D964;
+  border-radius: 40px;
+  display: inline-block;
+  background-color: #49D964; }
+
+.btn-fill:hover, .btn-fill:focus {
+  color: #FFFFFF;
+  background-color: #ABFFBA;
+  border-color: #ABFFBA; }
+
+.btn-small {
+  padding: 8px 40px; }
+
+.btn-large {
+  padding: 15px 40px; }
+
+.btn-margin-right {
+  margin-right: 20px; }
+
+/* ==========================================================================
+Global Styles
+========================================================================== */
+body {
+  font-family: "Martel Sans", sans-serif; }
+
+ul, ol {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+a {
+  color: #FFFFFF;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-property: color, border-color, background-color;
+  transition-property: color, border-color, background-color; }
+
+a:hover, a:focus {
+  color: #DDDDDD;
+  text-decoration: none; }
+
+/* ==========================================================================
+Navigation
+========================================================================== */
+.navigation {
+  -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
+  position: fixed;
+  width: 100%;
+  z-index: 999; }
+
+.fixed {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  width: 100%; }
+
+header {
+  padding: 30px 0px;
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  -webkit-transition: padding 300ms ease-in-out;
+          transition: padding 300ms ease-in-out; }
+  header a {
+    color: #FFFFFF;
+    font-size: 13px; }
+    header a.login {
+      margin-right: 20px; }
+  header .logo {
+    display: inline-block; }
+  header ul.primary-nav li {
+    display: inline; }
+    header ul.primary-nav li a {
+      color: #FFFFFF;
+      margin-left: 25px; }
+      header ul.primary-nav li a:hover {
+        color: #DDDDDD; }
+    header ul.primary-nav li .btn {
+      margin-left: 10px; }
+  header .header-nav {
+    display: inline-block; }
+  header .primary-nav {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    -webkit-transition: all 300ms ease-in-out;
+            transition: all 300ms ease-in-out; }

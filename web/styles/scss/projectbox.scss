@@ -8,16 +8,7 @@ and open the template in the editor.
     Author     : DamirDiz
 */
 
-
-@font-face {
-    font-family: Serendity;
-    src: url(../fonts/Serendity.woff);
-}
-
-@font-face {
-    font-family: Sunday;
-    src: url(../fonts/Sunday.otf);
-}
+@import "partials/typography";
 
 .project-box-container {
     display:flex;
@@ -44,12 +35,12 @@ and open the template in the editor.
     }
     
     h1 {
-        font-family: Sunday;
+        font-family: $title-font;
         margin:0;
     }
     
     h2 {
-        font-family: Serendity;
+        font-family: $subtitle-font;
         margin: 7px 0 0 0;
     }
 }

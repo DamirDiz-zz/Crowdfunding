@@ -7,12 +7,15 @@ and open the template in the editor.
     Created on : 09.09.2015, 13:15:57
     Author     : DamirDiz
 */
-@font-face {
-  font-family: Serendity;
-  src: url(../fonts/Serendity.woff); }
-@font-face {
-  font-family: Sunday;
-  src: url(../fonts/Sunday.otf); }
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11.09.2015, 13:22:01
+    Author     : DamirDiz
+*/
 .project-box-container {
   display: -webkit-box;
   display: -webkit-flex;
