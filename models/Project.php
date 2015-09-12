@@ -73,7 +73,24 @@ class Project extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Category::className(), ['id' => 'category_id']);
     }
+    
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser2projects()
+    {
+        return $this->hasMany(User2project::className(), ['project_id' => 'id']);
+    }
 
+    public function getInitiator() {
+        $user2project = User2project::findOne(['project_id' => $this->id, 'role_id' => 1]);
+        if($user2project) {
+            return User::findOne($user2project->user_id);
+        }
+        
+        return null;
+    }
+    
     public function getImagePath() 
     {
         return  'uploads/' . $this->mainImage;

@@ -55,10 +55,14 @@ class ProjectController extends Controller
         ]);
     }
     
-        public function actionDetail($id)
+    public function actionDetail($id)
     {
+        $project = $this->findModel($id);
+        $initiator = $project->getInitiator();
+                        
         return $this->render('detail', [
-            'project' => $this->findModel($id),
+            'project' => $project,
+            'initiator' => $initiator
         ]);
     }
 
