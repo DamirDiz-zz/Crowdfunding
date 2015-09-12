@@ -22,6 +22,9 @@ use app\assets\AppAsset;
  */
 class Project extends \yii\db\ActiveRecord
 {
+    
+    public $mainImageFile;
+    
     /**
      * @inheritdoc
      */

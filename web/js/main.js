@@ -6,7 +6,6 @@ $(document).ready(function () {
             var scroll = $(window).scrollTop();
 
             if (scroll >= 20) {
-                console.log("yo")
                 $('section.navigation').addClass('fixed');
                 $('header').css({
                     "border-bottom": "none",

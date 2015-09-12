@@ -19,6 +19,8 @@ use Yii;
  */
 class User extends \yii\db\ActiveRecord
 {
+    public $avatarImageFile;
+
     /**
      * @inheritdoc
      */

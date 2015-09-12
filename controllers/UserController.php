@@ -63,14 +63,18 @@ class UserController extends Controller {
         if ($model->load(Yii::$app->request->post())) {
             $model->created_at = time();
             $model->updated_at = time();
-            $model->avatarImage = UploadedFile::getInstance($model, 'avatarImage');
 
+            $model->avatarImageFile = UploadedFile::getInstance($model,'avatarImage');
+            if($model->avatarImageFile) {
+                $name = $model->avatarImageFile->baseName . '.' . $model->avatarImageFile->extension;
+                $model->avatarImageFile->saveAs('uploads/' . $name);  
+                $model->avatarImage = $name;
+            }
+            
             if ($model->save()) {
-                if ($model->avatarImage != null) {
-                    $model->avatarImage->saveAs('uploads/' . $model->avatarImage->baseName . '.' . $model->avatarImage->extension);
-                }
                 return $this->redirect(['view', 'id' => $model->id]);
             }
+            
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -88,14 +92,21 @@ class UserController extends Controller {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
+            $model->updated_at = time();
+
+            $model->avatarImageFile = UploadedFile::getInstance($model,'avatarImage');
+            if($model->avatarImageFile) {
+                $name = $model->avatarImageFile->baseName . '.' . $model->avatarImageFile->extension;
+                $model->avatarImageFile->saveAs('uploads/' . $name);  
+                $model->avatarImage = $name;
+            }
 
             if ($model->save()) {
-                $model->avatarImage = UploadedFile::getInstance($model, 'avatarImage');
                 return $this->redirect(['view', 'id' => $model->id]);
             }
         } else {
             return $this->render('update', [
-                        'model' => $model,
+                'model' => $model,
             ]);
         }
     }

@@ -75,12 +75,15 @@ class ProjectController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $model->created_at = time();
             $model->updated_at = time();
-            $model->mainImage= UploadedFile::getInstance($model,'mainImage');
+            
+            $model->mainImageFile = UploadedFile::getInstance($model,'mainImage');
+            if($model->mainImageFile) {
+                $name = $model->mainImageFile->baseName . '.' . $model->mainImageFile->extension;
+                $model->mainImageFile->saveAs('uploads/' . $name);  
+                $model->mainImage = $name;
+            }
             
             if($model->save()) {
-                if($model->mainImage != null) {
-                    $model->mainImage->saveAs('uploads/' . $model->mainImage->baseName . '.' . $model->mainImage->extension);                    
-                }
                 return $this->redirect(['view', 'id' => $model->id]);                
             }
         } else {
@@ -101,10 +104,16 @@ class ProjectController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post())) {
-            $model->mainImage= UploadedFile::getInstance($model,'mainImage');
+            $model->updated_at = time();
 
+            $model->mainImageFile = UploadedFile::getInstance($model,'mainImage');
+            if($model->mainImageFile) {
+                $name = $model->mainImageFile->baseName . '.' . $model->mainImageFile->extension;
+                $model->mainImageFile->saveAs('uploads/' . $name);  
+                $model->mainImage = $name;
+            }
+            
             if($model->save()) {
-                $model->mainImage->saveAs('uploads/' . $model->mainImage->baseName . '.' . $model->mainImage->extension);
                 return $this->redirect(['view', 'id' => $model->id]);                
             }
         } else {
