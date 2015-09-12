@@ -42,7 +42,12 @@ and open the template in the editor.
 .btn-small {
   padding: 8px 40px; }
 
+.btn-medium {
+  font-size: 110%;
+  padding: 10px 40px; }
+
 .btn-large {
+  font-size: 130%;
   padding: 15px 40px; }
 
 .btn-margin-right {
@@ -81,6 +86,13 @@ a:hover, a:focus {
   padding: 0px; }
 
 /* ==========================================================================
+Layout
+========================================================================== */
+.container-elements {
+  max-width: 980px;
+  margin: 40px auto; }
+
+/* ==========================================================================
 Typography
 ========================================================================== */
 h1 {
@@ -105,12 +117,12 @@ Navigation
 
 .fixed {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 999;
   width: 100%; }
 
 header {
-  padding: 10px 0px;
+  padding: 0px;
   position: relative;
   max-width: 980px;
   margin: 0 auto;

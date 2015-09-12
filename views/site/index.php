@@ -15,14 +15,18 @@ $this->title = 'Crowdfunding';
     <div class="hero-image"></div>
 </section>
 
+<div class="container-elements clearfix">
+    <div class="pull-left"><h3>Beliebte Projekte</h3></div>
+    <div class="pull-right"><a href="#" class="btn btn-accent btn-medium">Alle Projekte</a></div>
+</div>
+
 <div class="project-box-container">
     <?php foreach ($projects as $project) { ?>
-    <a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/detail', 'id' => (int) $project->id]); ?>">"
         <div class="project-box">
             <div class="project-box-header">
                 <div class="project-box-header-content">
                     <div class="project-box-header-content-holder">
-                        <h1 class="text-center text-uppercase"><?php echo $project->title; ?></h1>
+                        <a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/detail', 'id' => (int) $project->id]); ?>"><h1 class="text-center text-uppercase"><?php echo $project->title; ?></h1></a>
                         <h2 class="text-center text-capitalize"><?php echo $project->location; ?></h2>
                     </div>
                 </div>
@@ -33,6 +37,5 @@ $this->title = 'Crowdfunding';
                 <div class="project-box-body-description"><?php echo $project->shortDescription; ?></div>
             </div>
         </div>
-    </a>
     <?php } ?>
 </div>

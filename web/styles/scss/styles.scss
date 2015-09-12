@@ -18,6 +18,8 @@
 @import "partials/buttons";
 @import "partials/mixins";
 
+$globalmaxwidth: 980px;
+
 /* ==========================================================================
 Global Styles
 ========================================================================== */
@@ -54,6 +56,15 @@ a:hover, a:focus {
 }
 
 /* ==========================================================================
+Layout
+========================================================================== */
+
+.container-elements {
+    max-width: $globalmaxwidth;
+    margin: 40px auto;
+}
+
+/* ==========================================================================
 Typography
 ========================================================================== */
 
@@ -82,14 +93,14 @@ Navigation
 
 .fixed {
     position: fixed;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     z-index: 999;
     width: 100%;
 }
 header {
-    padding: 10px 0px;
+    padding: 0px;
     position: relative;
-    max-width: 980px;
+    max-width: $globalmaxwidth;
     margin: 0 auto;
     transition: padding 300ms ease-in-out;
 

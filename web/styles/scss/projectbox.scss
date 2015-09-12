@@ -21,24 +21,24 @@ and open the template in the editor.
 }
 
 .project-box {
+    box-sizing: border-box;
     max-width:300px;
     min-width:200px;
-    margin: 20px;
+    margin: 0px 20px;
     background: #F7F7F7;
     height: 420px;
     font-size: 12px;
-    cursor: pointer;
-    
+
     h1, h2 {
         font-size: 26px;
         line-height: 140%;
     }
-    
+
     h1 {
         font-family: $title-font;
         margin:0;
     }
-    
+
     h2 {
         font-family: $subtitle-font;
         margin: 7px 0 0 0;
@@ -72,11 +72,11 @@ and open the template in the editor.
     z-index: 3;    
 }
 
-    .project-box-header-content-holder {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+.project-box-header-content-holder {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .project-box-header-category {
     position: absolute;
@@ -90,7 +90,6 @@ and open the template in the editor.
     text-align: right;
     z-index: 2;
     font-weight: 400;
-    
 }
 
 .project-box-body {

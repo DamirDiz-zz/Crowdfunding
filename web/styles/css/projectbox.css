@@ -45,13 +45,13 @@ Mixins
           align-items: flex-start; }
 
 .project-box {
+  box-sizing: border-box;
   max-width: 300px;
   min-width: 200px;
-  margin: 20px;
+  margin: 0px 20px;
   background: #F7F7F7;
   height: 420px;
-  font-size: 12px;
-  cursor: pointer; }
+  font-size: 12px; }
   .project-box h1, .project-box h2 {
     font-size: 26px;
     line-height: 140%; }
