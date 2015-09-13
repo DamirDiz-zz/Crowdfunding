@@ -81,7 +81,7 @@ Vertical Nav
     #vertical-nav a:hover .vn-label {
       opacity: 1; }
     #vertical-nav a.is-selected .vn-dot {
-      background-color: #fff; }
+      background-color: #ffffff; }
   #vertical-nav .vn-dot {
     position: relative;
     /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/

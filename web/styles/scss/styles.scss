@@ -281,3 +281,33 @@ Detail Hero
     height: 60px;
     width: 60px;
 }
+
+/* ==========================================================================
+Detail Hero
+========================================================================== */
+
+input, textarea, select, label {
+    font-weight: $normal;
+    font-family: $sans-serif;
+    font-size: 1.6rem;
+    color: #2b3e51;
+}
+
+input,
+input[type="text"], 
+input[type="email"], 
+select {
+    padding: 24px 16px !important;
+    //appearance: none;
+    &:focus {
+    }
+}
+
+textarea {
+    padding: 16px !important;
+} 
+
+.create-form {
+    width: 600px;
+    margin: 0px auto;
+}
