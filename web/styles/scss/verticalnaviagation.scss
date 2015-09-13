@@ -54,7 +54,7 @@ Vertical Nav
         height: 12px;
         width: 12px;
         border-radius: 50%;
-        background-color: $accent-color;
+        background-color: #BBB;
         transition: transform 0.2s, background-color 0.5s;
         transform-origin: 50% 50%;
     }
@@ -62,8 +62,11 @@ Vertical Nav
     .vn-label {
         position: relative;
         margin-right: 10px;
-        padding: .4em .5em;
-        color: $accent-color;
+        padding: 0.5em 0.5em 0.3em 0.5em;
+        line-height:14px;
+        background: rgba(0,0,0,0.8);
+        border-radius: 5px;
+        color: $white-color;
         font-size: 14px;
         transition: transform 0.2s, opacity 0.2s;
         opacity: 0;

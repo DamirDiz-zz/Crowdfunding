@@ -89,7 +89,7 @@ Vertical Nav
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    background-color: #49D964;
+    background-color: #BBB;
     -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
             transition: transform 0.2s, background-color 0.5s;
     -webkit-transform-origin: 50% 50%;
@@ -98,8 +98,11 @@ Vertical Nav
   #vertical-nav .vn-label {
     position: relative;
     margin-right: 10px;
-    padding: .4em .5em;
-    color: #49D964;
+    padding: 0.5em 0.5em 0.3em 0.5em;
+    line-height: 14px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    color: #FFFFFF;
     font-size: 14px;
     -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
             transition: transform 0.2s, opacity 0.2s;
