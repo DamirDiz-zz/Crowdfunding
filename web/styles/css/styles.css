@@ -59,8 +59,15 @@ Mixins
 /* ==========================================================================
 Global Styles
 ========================================================================== */
+*, *:after, *:before {
+  box-sizing: border-box; }
+
 body {
+  font-size: 100%;
   font-family: "Martel Sans", sans-serif; }
+
+body, html {
+  height: 100%; }
 
 ul, ol {
   margin: 0;
@@ -82,15 +89,22 @@ a:hover, a:focus {
   color: #DDDDDD;
   text-decoration: none; }
 
-.container-fluid {
-  padding: 0px; }
-
 /* ==========================================================================
 Layout
 ========================================================================== */
+.content {
+  padding: 0px;
+  margin: 0px;
+  height: 100%; }
+
 .container-elements {
-  max-width: 980px;
-  margin: 40px auto; }
+  box-sizing: border-box;
+  max-width: 1160px;
+  padding: 40px 0px;
+  margin: 0px auto; }
+
+.full-page-section {
+  height: 100%; }
 
 /* ==========================================================================
 Typography
@@ -124,7 +138,7 @@ Navigation
 header {
   padding: 0px;
   position: relative;
-  max-width: 980px;
+  max-width: 1160px;
   margin: 0 auto;
   -webkit-transition: padding 300ms ease-in-out;
           transition: padding 300ms ease-in-out; }
@@ -157,9 +171,10 @@ header {
 Hero
 ========================================================================== */
 .hero {
-  min-height: 750px;
+  min-height: 500px;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%; }
   .hero h1 {
     color: #FFFFFF;
     margin-bottom: 40px; }

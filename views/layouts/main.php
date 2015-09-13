@@ -22,7 +22,7 @@ AppAsset::register($this);
     <body>
         <?php $this->beginBody() ?>
 
-        <div class="wrap">
+        <div class="content">
             <?php
             /**
               NavBar::begin([
@@ -68,9 +68,7 @@ AppAsset::register($this);
                 </header>
             </section>
 
-            <div class="container-fluid">
                 <?= $content ?>
-            </div>
         </div>
 
         <?php $this->endBody() ?>

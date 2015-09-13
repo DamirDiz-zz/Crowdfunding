@@ -17,15 +17,26 @@
 @import "partials/colors";
 @import "partials/buttons";
 @import "partials/mixins";
-
-$globalmaxwidth: 980px;
+@import "partials/variables";
 
 /* ==========================================================================
 Global Styles
 ========================================================================== */
 
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: $sans-serif;
+    font: {
+        size: 100%;
+        family: $sans-serif;
+    }
+}
+
+body, html {
+    //damit 100% auf den divs funktioniert
+    height: 100%;
 }
 
 ul, ol {
@@ -51,17 +62,25 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
-.container-fluid {
-    padding: 0px;
-}
-
 /* ==========================================================================
 Layout
 ========================================================================== */
 
+.content {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
 .container-elements {
+    box-sizing: border-box;
     max-width: $globalmaxwidth;
-    margin: 40px auto;
+    padding: 40px 0px;
+    margin: 0px auto;
+}
+
+.full-page-section {
+    height: 100%;
 }
 
 /* ==========================================================================
@@ -149,9 +168,10 @@ Hero
 ========================================================================== */
 
 .hero {
-    min-height: 750px;
+    min-height: $full-page-section-min-height;
     position: relative;
     overflow: hidden;
+    height: 100%;
 
     h1 {
         color: $white-color;
@@ -195,10 +215,8 @@ Hero
 Detail Hero
 ========================================================================== */
 
-$herodetailheight: 500px;
-
 .herodetail {
-    min-height: $herodetailheight;
+    min-height: $herodetail-height;
     position: relative;
     overflow: hidden;
 
@@ -231,7 +249,7 @@ $herodetailheight: 500px;
         left: 0px;
         top: 0px;
         width:100%;
-        height:$herodetailheight;
+        height:$herodetail-height;
         @include blur(8px);
         z-index: 1;
     }
@@ -241,7 +259,7 @@ $herodetailheight: 500px;
         top: 0px;
         left: 0px;
         width:100%;
-        height:$herodetailheight;
+        height:$herodetail-height;
         z-index: 3;    
     }
 

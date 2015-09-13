@@ -20,6 +20,8 @@ and open the template in the editor.
 Mixins
 ========================================================================== */
 .project-box-container {
+  margin: 0 auto;
+  max-width: 1160px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,10 +34,9 @@ Mixins
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-align-content: flex-start;
       -ms-flex-line-pack: start;
           align-content: flex-start;
@@ -46,9 +47,8 @@ Mixins
 
 .project-box {
   box-sizing: border-box;
-  max-width: 300px;
+  max-width: 376.66667px;
   min-width: 200px;
-  margin: 0px 20px;
   background: #F7F7F7;
   height: 420px;
   font-size: 12px; }

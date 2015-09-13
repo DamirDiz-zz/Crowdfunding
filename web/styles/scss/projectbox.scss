@@ -10,21 +10,23 @@ and open the template in the editor.
 
 @import "partials/typography";
 @import "partials/mixins";
+@import "partials/variables";
 
 .project-box-container {
+    margin: 0 auto;
+    max-width: $globalmaxwidth;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-around;
     align-content: flex-start;
     align-items: flex-start;
 }
 
 .project-box {
     box-sizing: border-box;
-    max-width:300px;
+    max-width:($globalmaxwidth/3) - 10;
     min-width:200px;
-    margin: 0px 20px;
     background: #F7F7F7;
     height: 420px;
     font-size: 12px;
