@@ -21,7 +21,7 @@ Mixins
 ========================================================================== */
 .project-box-container {
   margin: 0 auto;
-  max-width: 1160px;
+  max-width: 1180px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -43,15 +43,17 @@ Mixins
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  padding: 10px; }
 
 .project-box {
   box-sizing: border-box;
-  max-width: 376.66667px;
+  max-width: 386.66667px;
   min-width: 200px;
   background: #F7F7F7;
-  height: 420px;
-  font-size: 12px; }
+  height: 500px;
+  font-size: 12px;
+  margin: 10px; }
   .project-box h1, .project-box h2 {
     font-size: 26px;
     line-height: 140%; }
@@ -63,7 +65,7 @@ Mixins
     margin: 7px 0 0 0; }
 
 .project-box-header {
-  height: 200px;
+  height: 250px;
   overflow: hidden;
   position: relative;
   vertical-align: middle;
@@ -98,7 +100,8 @@ Mixins
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
+          transform: translateY(-50%);
+  padding: 0px 20px; }
 
 .project-box-header-category {
   position: absolute;

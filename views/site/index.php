@@ -4,7 +4,23 @@
 $this->title = 'Crowdfunding';
 ?>
 
-<section class="hero">
+<nav id="vertical-nav">
+    <ul>
+        <li>
+            <a href="#section1" data-number="1">
+                <span class="vn-dot"></span>
+                <span class="vn-label">Intro</span>
+            </a>
+        </li>
+        <li>
+            <a href="#section2" data-number="2">
+                <span class="vn-dot"></span>
+                <span class="vn-label">Beliebte Projekte</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+<section id="section1" class="hero">
     <div class="hero-content">
         <div class="hero-content-holder text-center">
             <h1>Mach deine Stadt grüner!</h1>
@@ -15,7 +31,7 @@ $this->title = 'Crowdfunding';
     <div class="hero-image"></div>
 </section>
 
-<section class="full-page-section">
+<section id="section2" class="full-page-section">
     <div class="container-elements clearfix">
         <div class="pull-left"><h3>Beliebte Projekte</h3></div>
         <div class="pull-right"><a href="#" class="btn btn-accent btn-medium">Alle Projekte</a></div>

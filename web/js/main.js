@@ -9,7 +9,7 @@ $(document).ready(function () {
                 $('section.navigation').addClass('fixed');
                 $('header').css({
                     "border-bottom": "none",
-                    "padding": "30px 0"
+                    "padding": "25px 0"
                 });
 
             } else {

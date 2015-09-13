@@ -14,22 +14,24 @@ and open the template in the editor.
 
 .project-box-container {
     margin: 0 auto;
-    max-width: $globalmaxwidth;
+    max-width: $globalmaxwidth + $resize-padding * 2;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: flex-start;
     align-items: flex-start;
+    padding: $resize-padding;
 }
 
 .project-box {
     box-sizing: border-box;
-    max-width:($globalmaxwidth/3) - 10;
+    max-width:($globalmaxwidth/3);
     min-width:200px;
     background: #F7F7F7;
-    height: 420px;
+    height: $projectbox-height;
     font-size: 12px;
+    margin: $resize-padding;
 
     h1, h2 {
         font-size: 26px;
@@ -48,7 +50,7 @@ and open the template in the editor.
 }
 
 .project-box-header {
-    height: 200px;
+    height: $projectbox-image-height;
     overflow: hidden;
     position: relative;
     vertical-align: middle;
@@ -78,6 +80,7 @@ and open the template in the editor.
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    padding: 0px 20px;
 }
 
 .project-box-header-category {

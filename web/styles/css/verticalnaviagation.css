@@ -1,0 +1,109 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11.09.2015, 13:22:01
+    Author     : DamirDiz
+*/
+.btn, btn-success {
+  font-size: 13px;
+  border: solid 2px;
+  border-radius: 40px;
+  display: inline-block;
+  color: #49D964 !important;
+  border-color: #49D964;
+  background: transparent; }
+  .btn:hover, btn-success:hover {
+    color: #FFFFFF !important;
+    background-color: #49D964;
+    border-color: #49D964; }
+
+.btn-fill {
+  color: #FFFFFF;
+  border: solid 2px #49D964;
+  border-radius: 40px;
+  display: inline-block;
+  background-color: #49D964; }
+
+.btn-fill:hover, .btn-fill:focus {
+  color: #FFFFFF;
+  background-color: #ABFFBA;
+  border-color: #ABFFBA; }
+
+.btn-small {
+  padding: 8px 40px; }
+
+.btn-medium {
+  font-size: 140%;
+  padding: 10px 40px; }
+
+.btn-large {
+  font-size: 170%;
+  padding: 15px 40px; }
+
+.btn-margin-right {
+  margin-right: 20px; }
+
+/* ==========================================================================
+Mixins
+========================================================================== */
+/* ==========================================================================
+Vertical Nav
+========================================================================== */
+#vertical-nav {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 4; }
+  #vertical-nav li {
+    text-align: right; }
+  #vertical-nav a {
+    display: inline-block;
+    /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+    #vertical-nav a span {
+      float: right;
+      display: inline-block;
+      -webkit-transform: scale(0.6);
+          -ms-transform: scale(0.6);
+              transform: scale(0.6); }
+    #vertical-nav a:hover span {
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1); }
+    #vertical-nav a:hover .vn-label {
+      opacity: 1; }
+    #vertical-nav a.is-selected .vn-dot {
+      background-color: #fff; }
+  #vertical-nav .vn-dot {
+    position: relative;
+    /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+    top: 8px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #49D964;
+    -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+            transition: transform 0.2s, background-color 0.5s;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%; }
+  #vertical-nav .vn-label {
+    position: relative;
+    margin-right: 10px;
+    padding: .4em .5em;
+    color: #49D964;
+    font-size: 14px;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+            transition: transform 0.2s, opacity 0.2s;
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%; }
