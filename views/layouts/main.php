@@ -91,11 +91,11 @@ $newproject = new Project();
 
                             <?php $form = ActiveForm::begin(['action' => 'project/create', 'enableClientValidation' => false, 'options' => ['enctype' => 'multipart/form-data']]); ?>
 
-                            <?= $form->field($newproject, 'title')->textInput(['maxlength' => true]) ?>
+                            <?= $form->field($newproject, 'title')->textInput(['maxlength' => true])->label("Gib deinem Projekt einen Namen") ?>
 
                             <?= $form->field($newproject, 'shortDescription')->textarea(['rows' => 4])->label("Worum geht's?") ?>
 
-                            <?= $form->field($newproject, 'location')->textInput(['maxlength' => true]) ?>
+                            <?= $form->field($newproject, 'location')->textInput(['maxlength' => true])->label("Wo?") ?>
 
                             <?= $form->field($newproject, 'mainImage')->fileInput() ?>
 
@@ -103,10 +103,10 @@ $newproject = new Project();
                             $models = Category::find()->asArray()->all();
                             $map = ArrayHelper::map($models, 'id', 'title'); // (where 'id' becomes the value and 'name' the name of the value which will be displayed)
                             ?>
-                            <?= $form->field($newproject, 'category_id')->dropDownList($map) ?>
+                            <?= $form->field($newproject, 'category_id')->dropDownList($map)->label("In welche Kategorie passt dein Projekt?") ?>
 
-                            <div class="form-group">
-                                    <?= Html::submitButton('Leg los', ['class' => 'btn-fill btn-medium' ]) ?>
+                            <div class="form-group center-block">
+                                    <?= Html::submitButton('Leg los', ['class' => 'btn-fill btn-large center-block' ]) ?>
                             </div>
                             <?php ActiveForm::end(); ?>
                         </div>

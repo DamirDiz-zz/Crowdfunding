@@ -319,11 +319,20 @@ Detail Hero
 /* ==========================================================================
 Modals
 ========================================================================== */
+.modal p {
+  margin: 0px !important; }
+.modal .center-block {
+  text-align: center; }
+
 .modal-content {
   padding: 10px; }
 
 .modal-header {
+  padding: 0px 15px;
   border: none; }
+
+.modal-body {
+  padding: 15px 15px 0px 15px; }
 
 .modal-title {
   text-align: center;
@@ -336,8 +345,14 @@ Modals
   font-size: 14px;
   color: #929292; }
 
-input, textarea, select, label {
+label {
   font-weight: 300;
+  font-family: "Martel Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #2b3e51; }
+
+input, textarea, select {
+  font-weight: 600;
   font-family: "Martel Sans", sans-serif;
   font-size: 1.6rem;
   color: #2b3e51; }
