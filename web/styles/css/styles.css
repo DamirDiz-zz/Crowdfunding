@@ -92,8 +92,11 @@ Layout
 .container-elements {
   box-sizing: border-box;
   max-width: 1160px;
-  padding: 20px 10px 20px 10px;
+  padding: 0px 10px 20px 10px;
   margin: 0px auto; }
+
+.main-section {
+  padding: 30px 0px; }
 
 /* ==========================================================================
 Typography
@@ -164,7 +167,7 @@ Hero
   min-height: 500px;
   position: relative;
   overflow: hidden;
-  height: 500px; }
+  height: 650px; }
   .hero h1 {
     color: #FFFFFF;
     margin-bottom: 40px; }
@@ -172,7 +175,7 @@ Hero
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 300;
-    margin-bottom: 80px; }
+    margin-bottom: 50px; }
   .hero .hero-image {
     position: absolute;
     left: 0px;
@@ -220,12 +223,12 @@ Detail Hero
   .herodetail .herodetail-people {
     margin-top: 40px;
     color: #FFFFFF;
-    font-weight: 500; }
+    font-weight: 400; }
     .herodetail .herodetail-people p {
       margin: 0px; }
     .herodetail .herodetail-people .role {
       font-size: 90%;
-      font-weight: 300; }
+      font-weight: 200; }
   .herodetail .herodetail-image {
     position: absolute;
     left: 0px;
@@ -263,11 +266,58 @@ Detail Hero
   height: 60px;
   width: 60px; }
 
+.hero-content-how-it-works {
+  margin: 0px auto;
+  max-width: 1160px; }
+  .hero-content-how-it-works .col-md-4 {
+    padding-left: 22.5px;
+    padding-right: 22.5px; }
+  .hero-content-how-it-works .intro-feature h5 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 24px;
+    color: #FFFFFF; }
+  .hero-content-how-it-works .intro-feature p {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF; }
+  .hero-content-how-it-works .intro-feature .intro_step {
+    height: 150px !important;
+    vertical-align: center; }
+  .hero-content-how-it-works .intro-feature .step-one {
+    background-image: url(../img/step1@2x.png);
+    background-size: 120px 131px;
+    background-repeat: no-repeat;
+    display: block;
+    width: 120px;
+    height: 131px; }
+  .hero-content-how-it-works .intro-feature .step-two {
+    background-image: url(../img/step2@2x.png);
+    background-size: 124px 123px;
+    background-repeat: no-repeat;
+    display: block;
+    width: 124px;
+    height: 124px; }
+  .hero-content-how-it-works .intro-feature .step-three {
+    background-image: url(../img/step3@2x.png);
+    background-size: 155px 112px;
+    background-repeat: no-repeat;
+    display: block;
+    width: 155px;
+    height: 112px; }
+  .hero-content-how-it-works h1 {
+    font-family: "Martel Sans", sans-serif;
+    text-align: center;
+    text-shadow: none;
+    font-weight: 600;
+    font-size: 40px; }
+
 /* ==========================================================================
 Detail Hero
 ========================================================================== */
 input, textarea, select, label {
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Martel Sans", sans-serif;
   font-size: 1.6rem;
   color: #2b3e51; }

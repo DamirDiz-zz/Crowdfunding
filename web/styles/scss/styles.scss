@@ -69,8 +69,13 @@ Layout
 .container-elements {
     box-sizing: border-box;
     max-width: $globalmaxwidth;
-    padding: 20px $resize-padding 20px $resize-padding;
+    padding: 0px $resize-padding 20px $resize-padding;
     margin: 0px auto;
+}
+
+.main-section {
+    padding: 30px 0px;
+    
 }
 
 /* ==========================================================================
@@ -163,7 +168,7 @@ Hero
     min-height: $full-page-section-min-height;
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: 650px;
 
     h1 {
         color: $white-color;
@@ -173,7 +178,7 @@ Hero
         color: $white-color;
         font-size: 20px;
         font-weight: 300;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
     }
 
     .hero-image {
@@ -269,6 +274,74 @@ Detail Hero
     margin: 10px;
     height: 60px;
     width: 60px;
+}
+
+.hero-content-how-it-works {
+
+    margin: 0px auto;
+    max-width: $globalmaxwidth;
+    
+    .col-md-4 {
+        padding-left: 22.5px;
+        padding-right: 22.5px;
+    }
+    
+    .intro-feature {
+        
+        h5 {
+            text-align: center;
+            font-weight: $light;
+            font-size: 24px;    
+            color: $white-color;
+        }
+
+        p { 
+            font-size: 14px;
+            line-height: 26px;
+            text-align: center;
+            color: $white-color;
+        }
+
+        .intro_step {
+            height:150px !important;
+            vertical-align: center;
+        }
+
+        .step-one {
+            background-image: url(../img/step1@2x.png);
+            background-size: 120px 131px;
+            background-repeat: no-repeat;
+            display: block;
+            width: 120px;
+            height: 131px;
+        } 
+
+        .step-two {
+            background-image: url(../img/step2@2x.png);
+            background-size: 124px 123px;
+            background-repeat: no-repeat;
+            display: block;
+            width: 124px;
+            height: 124px;
+        }        
+
+        .step-three {
+            background-image: url(../img/step3@2x.png);
+            background-size: 155px 112px;
+            background-repeat: no-repeat;
+            display: block;
+            width: 155px;
+            height: 112px;
+        }    
+    }
+
+    h1 {
+        font-family: $sans-serif;
+        text-align: center;
+        text-shadow: none;
+        font-weight: $bold;
+        font-size: 40px;
+    }
 }
 
 /* ==========================================================================
