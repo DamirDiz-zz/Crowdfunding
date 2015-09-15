@@ -83,8 +83,8 @@ Mixins
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
-  -webkit-filter: blur(5px) brightness(90%);
-          filter: blur(5px) brightness(90%);
+  -webkit-filter: blur(5px) brightness(80%);
+          filter: blur(5px) brightness(80%);
   z-index: 1; }
 
 .project-box-header-content {

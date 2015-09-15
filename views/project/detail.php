@@ -21,6 +21,7 @@ if ($initiator) {
                  <p class="username"><?php echo $username; ?></p>
                  <p class="role">Initiator</p>
              </div>
+             <div class="center-block"><a href="#" class="btn-fill btn-medium">Ich will mitmachen!</a></div>
              <?php } ?>
         </div>
     </div>

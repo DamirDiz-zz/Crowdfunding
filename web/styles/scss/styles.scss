@@ -188,7 +188,7 @@ Hero
         width:100%;
         height:100%;
         background: url('../img/header.jpg');
-        @include blur(8px);
+        @include blur(10px);
         z-index: 1;
     }
 
@@ -228,15 +228,15 @@ Detail Hero
     }
 
     .herodetail-people {
-        margin-top: 40px;
+        margin: 10px 0px 20px 0px;
         color: $white-color;
         font-weight: $semibold;
+        font-size: 120%;
 
         p {
             margin:0px;
         }
         .role {
-            font-size:90%;
             font-weight:$light;
         }
     }
@@ -291,7 +291,7 @@ Detail Hero
         h5 {
             text-align: center;
             font-weight: $light;
-            font-size: 24px;    
+            font-size: 20px;    
             color: $white-color;
         }
 
@@ -311,6 +311,7 @@ Detail Hero
             background-image: url(../img/step1@2x.png);
             background-size: 120px 131px;
             background-repeat: no-repeat;
+            background-position: center;
             display: block;
             width: 120px;
             height: 131px;
@@ -320,6 +321,7 @@ Detail Hero
             background-image: url(../img/step2@2x.png);
             background-size: 124px 123px;
             background-repeat: no-repeat;
+            background-position: center;
             display: block;
             width: 124px;
             height: 124px;
@@ -329,6 +331,7 @@ Detail Hero
             background-image: url(../img/step3@2x.png);
             background-size: 155px 112px;
             background-repeat: no-repeat;
+            background-position: center;
             display: block;
             width: 155px;
             height: 112px;
@@ -344,9 +347,32 @@ Detail Hero
     }
 }
 
+
 /* ==========================================================================
-Detail Hero
+Modals
 ========================================================================== */
+
+.modal-content {
+    padding: 10px;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: $light;
+    margin-top:20px;
+}
+
+.modal-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: $grey-color;
+
+}
 
 input, textarea, select, label {
     font-weight: $normal;
@@ -355,6 +381,22 @@ input, textarea, select, label {
     color: #2b3e51;
 }
 
+input,
+input[type="text"], 
+input[type="email"], 
+select,
+textarea {
+    border:none !important;
+    border-radius: 0px  !important;
+    background-color: $lightgrey-color  !important;
+    appearance: none;
+    box-shadow: none;
+    
+    &:focus {
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
 input,
 input[type="text"], 
 input[type="email"], 
@@ -368,8 +410,3 @@ select {
 textarea {
     padding: 16px !important;
 } 
-
-.create-form {
-    width: 600px;
-    margin: 0px auto;
-}
