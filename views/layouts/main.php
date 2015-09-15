@@ -61,7 +61,7 @@ AppAsset::register($this);
                                     <li><a href="#blog">Entdecken</a></li>
                                     <li><a href="#download">Über uns</a></li>
                                     <li><a href="#download" class="login">Login</a></li>
-                                    <li><?= Html::a('Starte dein Projekt', ['/project/create'], ['class' => 'btn btn-small']) ?></li>
+                                    <li><?= Html::a('Starte dein Projekt', ['/project/create'], ['class' => 'btn btn-fill btn-small']) ?></li>
                             </nav>
                         </div>
                     </div>

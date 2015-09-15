@@ -5,8 +5,7 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'styles/css/projectbox.css': 'styles/scss/projectbox.scss',
-                    'styles/css/styles.css': 'styles/scss/styles.scss',
-                    'styles/css/verticalnaviagation.css': 'styles/scss/verticalnaviagation.scss'
+                    'styles/css/styles.css': 'styles/scss/styles.scss'
                 }
             }
         },
@@ -14,8 +13,7 @@ module.exports = function (grunt) {
             compile: {
                 files: {
                     'styles/css/projectbox.css': 'styles/css/projectbox.css',
-                    'styles/css/styles.css': 'styles/css/styles.css',
-                    'styles/css/verticalnaviagation.css': 'styles/css/verticalnaviagation.css'
+                    'styles/css/styles.css': 'styles/css/styles.css'
                 }
             }
         },

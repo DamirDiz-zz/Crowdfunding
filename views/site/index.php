@@ -4,37 +4,25 @@
 $this->title = 'Crowdfunding';
 ?>
 
-<nav id="vertical-nav">
-    <ul>
-        <li>
-            <a href="#section1" data-number="1">
-                <span class="vn-dot"></span>
-                <span class="vn-label">Intro</span>
-            </a>
-        </li>
-        <li>
-            <a href="#section2" data-number="2">
-                <span class="vn-dot"></span>
-                <span class="vn-label">Beliebte Projekte</span>
-            </a>
-        </li>
-    </ul>
-</nav>
-<section id="section1" class="hero">
+<section class="hero">
     <div class="hero-content">
         <div class="hero-content-holder text-center">
             <h1>Mach deine Stadt grüner!</h1>
-            <p class="intro">Crowdfunding für ökologische, nachhaltige und grüne Projekte</p>
-            <a href="#" class="btn btn-accent btn-large">Erfahre mehr</a>
+            <p class="intro">Wir helfen dir ökologische, nachhaltige und grüne Projekte in deiner Nachbarschaft umzusetzen</p>
+            <a href="#" class="btn btn-fill btn-large">Starte dein Projekt</a>
         </div>
     </div>
     <div class="hero-image"></div>
 </section>
 
-<section id="section2" class="full-page-section">
+<section>
+    
+</section>
+
+<section>
     <div class="container-elements clearfix">
         <div class="pull-left"><h3>Beliebte Projekte</h3></div>
-        <div class="pull-right"><a href="#" class="btn btn-accent btn-medium">Alle Projekte</a></div>
+        <div class="pull-right"><a href="#" class="btn btn-medium">Alle Projekte</a></div>
     </div>
 
     <div class="project-box-container">

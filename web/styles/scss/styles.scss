@@ -10,7 +10,7 @@
 }
 
 // Google Fonts
-@import url(https://fonts.googleapis.com/css?family=Martel+Sans:400,200,300,600,700,800,900);
+@import url(https://fonts.googleapis.com/css?family=Martel+Sans:400,300,200,600,700);
 
 // Imports
 @import "partials/typography";
@@ -32,11 +32,6 @@ body {
         size: 100%;
         family: $sans-serif;
     }
-}
-
-body, html {
-    //damit 100% auf den divs funktioniert
-    height: 100%;
 }
 
 ul, ol {
@@ -69,19 +64,13 @@ Layout
 .content {
     padding: 0px;
     margin: 0px;
-    height: 100%;
 }
 
 .container-elements {
     box-sizing: border-box;
     max-width: $globalmaxwidth;
-    padding: 0px $resize-padding 20px $resize-padding;
+    padding: 20px $resize-padding 20px $resize-padding;
     margin: 0px auto;
-}
-
-.full-page-section {
-    height: 100%;
-    padding-top: 80px;
 }
 
 /* ==========================================================================
@@ -174,7 +163,7 @@ Hero
     min-height: $full-page-section-min-height;
     position: relative;
     overflow: hidden;
-    height: 100%;
+    height: 500px;
 
     h1 {
         color: $white-color;
