@@ -324,8 +324,13 @@ Modals
 .modal .center-block {
   text-align: center; }
 
+.modal-dialog {
+  width: 800px !important; }
+
 .modal-content {
-  padding: 10px; }
+  padding: 10px;
+  box-shadow: none !important;
+  border-radius: 10px; }
 
 .modal-header {
   padding: 0px 15px;
@@ -349,7 +354,13 @@ label {
   font-weight: 300;
   font-family: "Martel Sans", sans-serif;
   font-size: 1.6rem;
-  color: #2b3e51; }
+  color: #2b3e51;
+  margin: 0px; }
+
+.hint-block {
+  margin-top: 8px !important;
+  font-size: 12px;
+  color: #929292; }
 
 input, textarea, select {
   font-weight: 600;

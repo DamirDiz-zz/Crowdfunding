@@ -89,15 +89,34 @@ $newproject = new Project();
                     <div class="modal-body">
                         <div class="project-form">
 
-                            <?php $form = ActiveForm::begin(['action' => 'project/create', 'enableClientValidation' => false, 'options' => ['enctype' => 'multipart/form-data']]); ?>
+                            <?php $form = ActiveForm::begin([
+                                'action' => 'project/create', 
+                                'enableClientValidation' => false,
+                                'options' => ['enctype' => 'multipart/form-data'],
+                                'fieldConfig' => [
+                                    'template' => "{label}\n{input}\n{hint}\n{error}",
+                                    //'horizontalCssClasses' => [
+                                    //    'label' => 'col-sm-4',
+                                    //    'offset' => 'col-sm-offset-4',
+                                    //    'wrapper' => 'col-sm-8',
+                                    //    'error' => '',
+                                    //    'hint' => '',
+                                    //],
+                                ],
+                            ]); ?>
 
                             <?= $form->field($newproject, 'title')->textInput(['maxlength' => true])->label("Gib deinem Projekt einen Namen") ?>
 
-                            <?= $form->field($newproject, 'shortDescription')->textarea(['rows' => 4])->label("Worum geht's?") ?>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <?= $form->field($newproject, 'shortDescription')->textarea(['rows' => 5])->hint("Beschreibe in 3-4 Sätzen worum es bei deiner Idee geht und was deine Nachbarschaft davon hat.")->label("Worum geht's?") ?>
+                                </div>
+                                <div class="col-md-4">
+                                    <?= $form->field($newproject, 'location')->textInput(['maxlength' => true])->label("Wo?") ?>
+                                </div>
+                            </div>
 
-                            <?= $form->field($newproject, 'location')->textInput(['maxlength' => true])->label("Wo?") ?>
-
-                            <?= $form->field($newproject, 'mainImage')->fileInput() ?>
+                            <?= $form->field($newproject, 'mainImage')->fileInput()->hint("Ein Bild sagt mehr als tausend Worte. Zeig uns den Ort den du verändern möchtest.")->label("Lade ein Bild hoch") ?>
 
                             <?php
                             $models = Category::find()->asArray()->all();
