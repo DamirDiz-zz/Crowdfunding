@@ -39,9 +39,11 @@ class Project extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'shortDescription', 'location', 'created_at', 'updated_at'], 'required'],
-            [['shortDescription'], 'string'],
+            [['shortDescription', 'created_at', 'updated_at'], 'required'],
+            [['title'], 'required', 'message' => 'Bitte gib deinem Projekt einen Namen.'],
+            [['shortDescription'], 'string', 'min' => 150, 'message' => 'Erzähle uns bitte ein bisschen mehr über deine Idee.'],
             [['longitude', 'latitude'], 'number'],
+            [['location'], 'required', 'message' => 'Wir brauchen einen Ort um den Leuten zeigen zu können wo sich dein Projekt befindet.'],
             [['created_at', 'updated_at', 'category_id'], 'integer'],
             [['title', 'location', 'mainImage'], 'string', 'max' => 255]
         ];

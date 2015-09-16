@@ -4,10 +4,7 @@
 
 use yii\helpers\Html;
 use app\assets\AppAsset;
-use yii\widgets\ActiveForm;
 use app\models\Project;
-use app\models\Category;
-use yii\helpers\ArrayHelper;
 
 AppAsset::register($this);
 

@@ -422,7 +422,6 @@ input, textarea, select {
     color: #2b3e51;
 }
 
-input,
 input[type="text"], 
 input[type="email"], 
 select,
@@ -438,7 +437,7 @@ textarea {
         box-shadow: none !important;
     }
 }
-input,
+
 input[type="text"], 
 input[type="email"], 
 select {
@@ -450,3 +449,28 @@ select {
 textarea {
     padding: 16px !important;
 } 
+
+/* ==========================================================================
+Category Select
+========================================================================== */
+.category-select input[type="radio"] {
+    display:none; 
+}
+
+.category-select label {
+    vertical-align: center;
+    text-align: center;
+    width:32%;
+    display:inline-block;
+    background: $lightgrey-color;
+    padding:20px;
+    margin:3px;
+    font-size:16px;
+    cursor: pointer;
+    border: solid 1px $white-color;
+}
+
+.category-is-selected {
+        background-color: #DBF7E0 !important;
+        border: solid 1px #49D964 !important;
+}
