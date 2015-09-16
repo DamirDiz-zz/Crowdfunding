@@ -379,18 +379,25 @@ Modals
     padding: 15px 15px 0px 15px;
 }
 
-.modal-title {
+.form-title {
     text-align: center;
     font-size: 30px;
     font-weight: $light;
     margin-top:20px;
+    font-family: $sans-serif;
+    text-shadow: none;
 }
 
-.modal-subtitle {
+.form-subtitle {
     text-align: center;
     font-size: 14px;
     color: $grey-color;
 
+}
+
+.project-form {
+    width: 700px;
+    margin: 0 auto;
 }
 
 label {
@@ -440,7 +447,6 @@ select {
     &:focus {
     }
 }
-
 textarea {
     padding: 16px !important;
 } 

@@ -2,15 +2,19 @@
 
 use yii\helpers\Html;
 
+$this->registerJsFile('@web/js/CreateProject.js', ['position' => \yii\web\View::POS_END, 'depends' => [\yii\web\JqueryAsset::className()]]);
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Project */
 
-$this->title = 'Create Project';
+$this->title = 'Starte dein Projekt';
 ?>
+
 <div class="create-form">
 
-    <h1 class="text-center"><?= Html::encode($this->title) ?></h1>
+    <h1 class="form-title">Starte dein Projekt</h4>
+    <p class="form-subtitle">Erzähle uns ein bisschen über deine Idee</p>
 
     <?= $this->render('_form', [
         'model' => $model,

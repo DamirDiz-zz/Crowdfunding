@@ -339,16 +339,22 @@ Modals
 .modal-body {
   padding: 15px 15px 0px 15px; }
 
-.modal-title {
+.form-title {
   text-align: center;
   font-size: 30px;
   font-weight: 200;
-  margin-top: 20px; }
+  margin-top: 20px;
+  font-family: "Martel Sans", sans-serif;
+  text-shadow: none; }
 
-.modal-subtitle {
+.form-subtitle {
   text-align: center;
   font-size: 14px;
   color: #929292; }
+
+.project-form {
+  width: 700px;
+  margin: 0 auto; }
 
 label {
   font-weight: 300;
