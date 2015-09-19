@@ -21,9 +21,7 @@ class AppAsset extends AssetBundle
         'build/main.min.css'];
     public $js = [
         'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js',
-        //'https://maps.googleapis.com/maps/api/js?key=AIzaSyBs3fhRSzXqbC68gPAJBqrz-Rs_AXEfaMA&callback=initMap',
         'https://maps.googleapis.com/maps/api/js?key=AIzaSyBs3fhRSzXqbC68gPAJBqrz-Rs_AXEfaMA&sensor=false&libraries=places',
-        //'http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places',
         'js/main.js'
     ];
     public $depends = [

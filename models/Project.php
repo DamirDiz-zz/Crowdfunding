@@ -11,8 +11,10 @@ use app\assets\AppAsset;
  * @property string $title
  * @property string $shortDescription
  * @property string $location
+ * @property string $formattedAddress
  * @property double $longitude
  * @property double $latitude
+ * 
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $mainImage
@@ -39,13 +41,13 @@ class Project extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['shortDescription', 'created_at', 'updated_at'], 'required'],
+            [['shortDescription', 'created_at', 'updated_at', 'category_id', 'placeId'], 'required'],
             [['title'], 'required', 'message' => 'Bitte gib deinem Projekt einen Namen.'],
             [['shortDescription'], 'string', 'min' => 150, 'message' => 'Erzähle uns bitte ein bisschen mehr über deine Idee.'],
             [['longitude', 'latitude'], 'number'],
             [['location'], 'required', 'message' => 'Wir brauchen einen Ort um den Leuten zeigen zu können wo sich dein Projekt befindet.'],
             [['created_at', 'updated_at', 'category_id'], 'integer'],
-            [['title', 'location', 'mainImage'], 'string', 'max' => 255]
+            [['title', 'location', 'formattedAddress', 'mainImage'], 'string', 'max' => 255]
         ];
     }
 
@@ -61,6 +63,7 @@ class Project extends \yii\db\ActiveRecord
             'location' => 'Location',
             'longitude' => 'Longitude',
             'latitude' => 'Latitude',
+            'formattedAddress' => 'Volle Addresse',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'mainImage' => 'Main Image',
