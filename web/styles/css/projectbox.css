@@ -51,8 +51,8 @@ Mixins
   max-width: 386.66667px;
   min-width: 200px;
   background: #F7F7F7;
-  height: 500px;
-  font-size: 12px;
+  height: 450px;
+  font-size: 13px;
   margin: 10px; }
   .project-box h1, .project-box h2 {
     font-size: 26px;
@@ -65,7 +65,7 @@ Mixins
     margin: 7px 0 0 0; }
 
 .project-box-header {
-  height: 250px;
+  height: 220px;
   overflow: hidden;
   position: relative;
   vertical-align: middle;
@@ -120,5 +120,22 @@ Mixins
   color: #303030; }
 
 .project-box-body-description {
-  padding: 15px 13px;
+  padding: 0px 13px;
   line-height: 170%; }
+
+.project-box-body-avatar {
+  float: left;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  border-color: #FFFFFF;
+  margin: 10px 13px;
+  height: 60px;
+  width: 60px; }
+
+.project-box-body-user-title {
+  margin: 24px 13px 2px 7px;
+  font-weight: 600;
+  color: #3AB151; }
+
+.project-box-body-user-subtitle {
+  color: #929292; }

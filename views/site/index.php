@@ -47,7 +47,11 @@ $this->title = 'Crowdfunding';
     </div>
 
     <div class="project-box-container">
-        <?php foreach ($projects as $project) { ?>
+        <?php foreach ($projects as $project) { 
+            $initiator = $project->getInitiator();
+            $username = $initiator->firstname . ' ' . $initiator->lastname;  
+            $initiatoravatar = $initiator->getImagePath();
+            ?>
             <div class="project-box">
                 <div class="project-box-header">
                     <div class="project-box-header-content">
@@ -60,6 +64,11 @@ $this->title = 'Crowdfunding';
                     <div class="project-box-header-imageholder" style="background-image: url(<?php echo $project->getImagePath() ?>);"></div>
                 </div>
                 <div class="project-box-body">
+                    <div class="project-box-body-users clearfix">
+                        <img class="project-box-body-avatar" src="<?php echo "../" . $initiatoravatar ?>" alt="<?php echo $username; ?>">
+                        <p class="project-box-body-user-title"><?php echo $username; ?> hat das Projekt gestartet.</p>
+                        <p class="project-box-body-user-subtitle"><em>4 weitere Leute machen mit.</em></p>
+                    </div>
                     <div class="project-box-body-description"><?php echo $project->shortDescription; ?></div>
                 </div>
             </div>

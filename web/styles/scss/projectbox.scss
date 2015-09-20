@@ -11,6 +11,7 @@ and open the template in the editor.
 @import "partials/typography";
 @import "partials/mixins";
 @import "partials/variables";
+@import "partials/colors";
 
 .project-box-container {
     margin: 0 auto;
@@ -30,7 +31,7 @@ and open the template in the editor.
     min-width:200px;
     background: #F7F7F7;
     height: $projectbox-height;
-    font-size: 12px;
+    font-size: 13px;
     margin: $resize-padding;
 
     h1, h2 {
@@ -102,6 +103,30 @@ and open the template in the editor.
 }
 
 .project-box-body-description {
-    padding: 15px 13px;
+    padding: 0px 13px;
     line-height: 170%;
+}
+
+.project-box-body-users {
+    
+}
+
+.project-box-body-avatar {
+    float:left;
+    border-radius: 50%;
+    border: 2px solid $white-color;
+    border-color: $white-color;
+    margin: 10px 13px;
+    height: 60px;
+    width: 60px;
+}
+
+.project-box-body-user-title {
+    margin: 24px 13px 2px 7px;
+    font-weight: $bold;
+    color: $accent-color-hover;
+}
+
+.project-box-body-user-subtitle {
+    color: $grey-color;
 }
