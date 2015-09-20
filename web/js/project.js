@@ -2,6 +2,7 @@ var Project = {
 
     init: function () {
         this.initMap();
+        this.checkIfNew();
     },
     
     initMap: function() {
@@ -24,9 +25,19 @@ var Project = {
                 map: map,
                 title: title
             });
+    },
+    
+    checkIfNew: function() {
+        var isNew = $('#project').attr('project-new');
+        console.log(isNew);
+        
+        if (isNew == 0) {
+            $('#project-created-modal').modal('show')
+        }
+        
     }
 }
 
 $(document).ready(function() {
-Project.init();
-        });
+    Project.init();
+});

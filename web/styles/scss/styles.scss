@@ -378,36 +378,23 @@ Detail Hero
     }
 }
 
-
 /* ==========================================================================
-Modals
+Detail Content
 ========================================================================== */
-.modal {
-    p {
-        margin: 0px !important;
+
+.project-detail-description {
+    padding:50px;
+    background: $lightgrey-color;
+}
+
+.project-detail-description-image {
+    img {
+        width: 100%;
     }
-    
-    .center-block {
-        text-align: center;
-    }
 }
-
-.modal-dialog {
-    width: 800px !important;
-}
-
-.modal-content {
-    padding: 10px;
-    box-shadow: none !important;
-    border-radius: 10px;
-}
-
-.modal-header {
-    padding: 0px 15px;
-    border: none;
-}
-.modal-body {
-    padding: 15px 15px 0px 15px;
+.project-detail-description-text {
+    font-size: 18px;
+    line-height: 28px;
 }
 
 .form-title {
@@ -506,3 +493,54 @@ Category Select
         border: solid 1px #49D964 !important;
 }
 
+/* ==========================================================================
+Project Created Modal
+========================================================================== */
+
+
+/* ==========================================================================
+Modals
+========================================================================== */
+.modal {
+    p {
+        margin: 0px !important;
+    }
+    
+    .center-block {
+        text-align: center;
+    }
+}
+
+
+.modal-content {
+    padding: 10px;
+    box-shadow: none !important;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border: none;
+}
+.modal-body {
+    border: none;
+}
+.modal-footer {
+    border: none;
+    text-align: center;
+}
+
+
+#project-created-modal {
+    .modal-title {
+        text-align: center;
+        font-size: 4em;
+        font-weight: $light;
+    }
+    
+    .modal-subtitle {
+        text-align: center;
+        font-size: 14px;
+        color: $grey-color;
+        margin: 0px;
+    }
+}

@@ -62,7 +62,8 @@ class ProjectController extends Controller
                         
         return $this->render('detail', [
             'project' => $project,
-            'initiator' => $initiator
+            'initiator' => $initiator,
+            'projectIsNew' => false                
         ]);
     }
 
@@ -87,7 +88,9 @@ class ProjectController extends Controller
             }
             
             if($model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);                
+                return $this->redirect(['detail', 
+                    'id' => $model->id,
+                    'projectIsNew' => true]);                
             }
         } else {
             return $this->render('create', [
