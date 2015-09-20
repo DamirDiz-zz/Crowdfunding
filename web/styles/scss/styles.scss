@@ -502,6 +502,10 @@ Project Created Modal
 Modals
 ========================================================================== */
 .modal {
+    
+    top: 50%;
+    transform: translateY(-50%);
+    
     p {
         margin: 0px !important;
     }
@@ -509,6 +513,10 @@ Modals
     .center-block {
         text-align: center;
     }
+}
+
+.modal.fade:not(.in) .modal-dialog {
+    transform: translate3d(0, 0, 0);
 }
 
 

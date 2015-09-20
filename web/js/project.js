@@ -31,7 +31,7 @@ var Project = {
         var isNew = $('#project').attr('project-new');
         console.log(isNew);
         
-        if (isNew == 0) {
+        if (isNew == 1) {
             $('#project-created-modal').modal('show')
         }
         

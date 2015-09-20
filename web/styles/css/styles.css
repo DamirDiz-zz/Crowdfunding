@@ -464,10 +464,19 @@ Project Created Modal
 /* ==========================================================================
 Modals
 ========================================================================== */
-.modal p {
-  margin: 0px !important; }
-.modal .center-block {
-  text-align: center; }
+.modal {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  .modal p {
+    margin: 0px !important; }
+  .modal .center-block {
+    text-align: center; }
+
+.modal.fade:not(.in) .modal-dialog {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
 
 .modal-content {
   padding: 10px;
