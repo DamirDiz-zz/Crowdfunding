@@ -78,15 +78,34 @@ Layout
     
 }
 
+/* ==========================================================================
+Maps
+========================================================================== */
+
 
 .full-width-map {
     width:100%;
     height:200px;
+    position: relative;
+    overflow: hidden;
 }
 
+.full-width-map:before, .full-width-map:after, #map:before, #map:after {
+    position: absolute;
+    display: block;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    content: '';
+    z-index: 5;
+}
+
+.full-width-map:before { top: -5px; left: 0; right: 0; height: 5px; }
+.full-width-map:after { right: -5px; top: 0; bottom: 0; width: 5px; }
+#map:before{ bottom: -5px; left: 0; right: 0; height: 5px; }
+#map:after { left: -5px; top: 0; bottom: 0; width: 5px; }
+
 #map {
-    width:100%;
-    height:200px;
+    width: inherit;
+    height: inherit;
     -webkit-transform:none !important;
 }
 
