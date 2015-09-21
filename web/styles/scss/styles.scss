@@ -502,10 +502,6 @@ Project Created Modal
 Modals
 ========================================================================== */
 .modal {
-    
-    top: 50%;
-    transform: translateY(-50%);
-    
     p {
         margin: 0px !important;
     }
@@ -537,8 +533,18 @@ Modals
     text-align: center;
 }
 
+.centered-modal-text {
+    text-align: center;
+    font-size:1.5em;
+}
+
 
 #project-created-modal {
+    
+    .modal-dialog {
+        width: 450px;
+    }
+    
     .modal-title {
         text-align: center;
         font-size: 4em;
@@ -551,4 +557,12 @@ Modals
         color: $grey-color;
         margin: 0px;
     }
+    
+    .social-icon-large {
+        padding: 20px;
+        
+        img {
+            width:100%;
+        }
+    }   
 }

@@ -10,7 +10,7 @@ if ($initiator) {
     $initiatoravatar = $initiator->getImagePath();
 }
 ?>
-<sectiom id="project" project-id="<?php echo $project->id; ?>" project-new="<?php echo (int)$projectIsNew; ?>">
+<section id="project" project-id="<?php echo $project->id; ?>" project-new="<?php echo (int)$projectIsNew; ?>">
 <section class="herodetail">
     <div class="herodetail-content">
         <div class="herodetail-content-holder text-center">
@@ -37,10 +37,7 @@ if ($initiator) {
     <div class="project-detail-description-text col-md-8"><?php echo $project->shortDescription; ?></div>
 </section>
 
-<section class="row">
-    <div class="project-detail-description-text"><?php echo $project->shortDescription; ?></div>
 </section>
-</sectio>
 
 <div id="project-created-modal" class="modal fade">
   <div class="modal-dialog">
@@ -50,6 +47,22 @@ if ($initiator) {
         <h3 class="modal-subtitle">Dein Projekt wurde angelegt. </h3>
       </div>
       <div class="modal-body">
+          <p class="centered-modal-text">Kennst du Leute die mitmachen möchten? <br> Dann teile dein Projekt mit Ihnen.</p>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4 social-icon-large"><img src="../img/icontwitter.png"></div>
+                <div class="col-md-4 social-icon-large"><img src="../img/iconfacebook.png"></div>
+                <div class="col-md-4 social-icon-large"><img src="../img/iconmail.png"></div>
+            </div>
+          </div>
+          <p class="centered-modal-text">Lade hier das Flugblatt zu deinem Projekt runter.<br> Druck es aus und hänge es in deiner Nachbarschaft auf.</p>
+          <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4 social-icon-large"></div>
+                <div class="col-md-4 social-icon-large"><img src="../img/iconmonstr-note-14-icon-256.png"></div>
+                <div class="col-md-4 social-icon-large"></div>
+            </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">weiter zum Projekt</button>

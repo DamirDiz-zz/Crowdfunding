@@ -464,15 +464,10 @@ Project Created Modal
 /* ==========================================================================
 Modals
 ========================================================================== */
-.modal {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
-  .modal p {
-    margin: 0px !important; }
-  .modal .center-block {
-    text-align: center; }
+.modal p {
+  margin: 0px !important; }
+.modal .center-block {
+  text-align: center; }
 
 .modal.fade:not(.in) .modal-dialog {
   -webkit-transform: translate3d(0, 0, 0);
@@ -493,6 +488,12 @@ Modals
   border: none;
   text-align: center; }
 
+.centered-modal-text {
+  text-align: center;
+  font-size: 1.5em; }
+
+#project-created-modal .modal-dialog {
+  width: 450px; }
 #project-created-modal .modal-title {
   text-align: center;
   font-size: 4em;
@@ -502,3 +503,7 @@ Modals
   font-size: 14px;
   color: #929292;
   margin: 0px; }
+#project-created-modal .social-icon-large {
+  padding: 20px; }
+  #project-created-modal .social-icon-large img {
+    width: 100%; }
