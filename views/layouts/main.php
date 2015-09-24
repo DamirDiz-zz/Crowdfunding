@@ -61,15 +61,15 @@ $newproject = new Project();
                                 </ul>
                                 <ul class="member-actions">
                                     <?php if (Yii::$app->user->isGuest) { ?>
-                                    <li><?= Html::a('Login', ['/user/login']) ?></li>
-                                    <li><?= Html::a('Registrieren', ['/user/register']) ?></li>
+                                    <li><?= Html::a('Login', ['/site/login']) ?></li>
+                                    <li><?= Html::a('Registrieren', ['/site/signup']) ?></li>
                                     <?php } else { ?>
                                     <li><?= Html::a('Logout', ['/site/logout'], ['data-method' => 'post'] )?></li>
                                     <?php } ?>
                                     <li><?= Html::a('Starte dein Projekt', ['/project/create'], ['class' => 'btn btn-fill btn-small']) ?></li>
                                 </ul>
                             </nav>
-                            
+                                                        
                         </div>
                     </div>
                 </header>

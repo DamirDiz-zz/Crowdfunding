@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
+use app\models\SignupForm;
 
 use app\dao\ProjectDao;
 
@@ -70,6 +71,29 @@ class SiteController extends Controller
         }
         
         return $this->render('login', [
+            'model' => $model,
+        ]);
+    }
+    
+    /**
+     * Signs user up.
+     *
+     * @return mixed
+     */
+    public function actionSignup()
+    {
+        $model = new SignupForm();
+        
+        if ($model->load(Yii::$app->request->post())) {
+
+            if ($user = $model->signup()) {
+                if (Yii::$app->getUser()->login($user)) {
+                    return $this->goHome();
+                }
+            }
+        }
+
+        return $this->render('signup', [
             'model' => $model,
         ]);
     }
