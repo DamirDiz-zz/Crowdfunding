@@ -48,7 +48,7 @@ use yii\helpers\ArrayHelper
     <?= $form->field($model, 'category_id')->radioList($map, array("class" => "category-select"))->label("In welche Kategorie passt dein Projekt?") ?>
             
     <div class="form-group center-block text-center">
-        <?= Html::submitButton($model->isNewRecord ? 'Leg los' : 'Update', ['class' => 'btn-fill btn-large center-block']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Leg los' : 'Update', ['class' => 'btn btn-fill btn-large']) ?>
 
     </div>
     <?php ActiveForm::end(); ?>
