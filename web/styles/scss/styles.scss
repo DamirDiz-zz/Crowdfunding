@@ -130,67 +130,79 @@ Navigation
 ========================================================================== */
 
 .navigation {
-    transition: all 300ms ease-in-out;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-
+  transition: all 500ms ease-in-out;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
-
 .fixed {
-    position: fixed;
-    background-color: rgba(0,0,0,0.7);
-    z-index: 999;
-    width: 100%;
-    color: #000000;
+  position: fixed;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 999;
+  width: 100%;
+  border: none;
 }
 header {
-    padding: 0px;
-    position: relative;
-    max-width: $globalmaxwidth;
-    margin: 0 auto;
-    transition: padding 300ms ease-in-out;
+  padding: 25px 0;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
 
-    a {
+  a {
+    color: $header-nav-color;
+    font-size: $nav-font-size;
+
+    &.login {
+      margin-right: 20px;
+    }
+  }
+  .logo {
+    display: inline-block;
+  }
+  ul.primary-nav {
+    margin: 0 0 0 75px;
+    padding: 0;
+
+    li {
+      display: inline;
+
+      a {
         color: $header-nav-color;
-        font-size: $nav-font-size;
+        padding-right: 25px;
 
-        &.login {
-            margin-right: 20px;
+        &:hover {
+          color: $header-nav-color-hover;
         }
+      }
+      &:last-child a {
+        padding-right: 0px;
+      }
     }
-    .logo {
-        display: inline-block;
-    }
+  }
+  ul.member-actions {
+    li {
+      display: inline;
 
-    ul.primary-nav {
-        li {
-            display: inline;
-
-            a {
-                color: $header-nav-color;
-                margin-left: 25px;
-
-                &:hover {
-                    color: $header-nav-color-hover;
-                }
-            }
-            .btn {
-                margin-left:10px;
-            }
+      a {
+        color: $header-nav-color;
+        margin-left: 25px;
+        &:hover {
+          color: $header-nav-color-hover;
         }
+      }
     }
-    .header-nav {
-        display: inline-block;
-    }
-    .primary-nav {
-        position: absolute;
-        right: 0;
-        top: 15px;
-        transition: all 300ms ease-in-out;
-    }
+  }
+  .header-nav {
+    display: inline-block;
+  }
+  .member-actions {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    transition: all 300ms ease-in-out;
+  }
 }
-
 /* ==========================================================================
 Hero
 ========================================================================== */
