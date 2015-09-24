@@ -3,7 +3,8 @@
 namespace app\models;
 
 use Yii;
-use yii\behaviors\TimestampBehavior;
+use yii\db\ActiveRecord;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "user".
@@ -23,7 +24,7 @@ use yii\behaviors\TimestampBehavior;
  * 
  * @property User2project[] $user2projects
  */
-class User extends \yii\db\ActiveRecord
+class User extends ActiveRecord implements IdentityInterface
 {
     public $avatarImageFile;
 
@@ -33,16 +34,6 @@ class User extends \yii\db\ActiveRecord
     public static function tableName()
     {
         return 'user';
-    }
-    
-    /**
-     * @inheritdoc
-     */
-    public function behaviors()
-    {
-        return [
-            TimestampBehavior::className(),
-        ];
     }
 
     /**
@@ -64,9 +55,9 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'firstname' => 'Firstname',
-            'lastname' => 'Lastname',
-            'email' => 'Email',
+            'firstname' => 'Vorname',
+            'lastname' => 'Nachname',
+            'email' => 'E-Mail-Adresse',
             'avatarImage' => 'Avatar Image',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
@@ -85,7 +76,6 @@ class User extends \yii\db\ActiveRecord
     {
         return  'uploads/' . $this->avatarImage;
     }
-    
     
     /**
      * @inheritdoc
