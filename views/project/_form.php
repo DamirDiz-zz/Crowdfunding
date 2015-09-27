@@ -38,7 +38,6 @@ use yii\helpers\ArrayHelper
     <?= $form->field($model, 'latitude')->hiddenInput()->label(false) ?>
     <?= $form->field($model, 'placeId')->hiddenInput()->label(false) ?>
 
-    
     <?= $form->field($model, 'mainImage')->fileInput(array("class" => "inputfile"))->hint("Ein Bild sagt mehr als tausend Worte. Zeig uns den Ort den du verändern möchtest.")->label("Lade ein Bild hoch") ?>
 
     <?php

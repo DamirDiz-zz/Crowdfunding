@@ -3,8 +3,11 @@
 namespace app\models;
 
 use Yii;
+use app\models\User;
 use yii\base\Model;
 
+
+use yii\web\UploadedFile;
 
 /**
  * Signup form
@@ -15,6 +18,7 @@ class SignupForm extends Model
     public $lastname;
     public $email;
     public $password;
+    public $avatarImage;
 
     /**
      * @inheritdoc
@@ -25,6 +29,8 @@ class SignupForm extends Model
             
             ['firstname', 'required'],
             ['firstname', 'string'],
+            
+            ['avatarImage', 'string',],
 
             ['lastname', 'required'],
             ['lastname', 'string'],
@@ -46,7 +52,7 @@ class SignupForm extends Model
      * @return User|null the saved model or null if saving fails
      */
     public function signup()
-    {
+    {   
         if ($this->validate()) {
             $user = new User();
             $user->firstname = $this->firstname;
@@ -55,6 +61,14 @@ class SignupForm extends Model
             $user->generateAuthKey();
             $user->setPassword($this->password);
 
+            $user->avatarImageFile = UploadedFile::getInstance($this,'avatarImage');
+         
+            if($user->avatarImageFile) {
+                $name = $user->avatarImageFile->baseName . '.' . $user->avatarImageFile->extension;
+                $user->avatarImageFile->saveAs('uploads/' . $name);  
+                $user->avatarImage = $name;
+            } 
+            
             $user->created_at = time();
             $user->updated_at = time();
             

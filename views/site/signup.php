@@ -20,7 +20,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="site-signup">
                 <?php
                 $form = ActiveForm::begin([
-                            'id' => 'form-signup'
+                    'id' => 'form-signup',
+                    'options' => ['enctype' => 'multipart/form-data'],
                 ]);
                 ?>
 
@@ -31,6 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= $form->field($model, 'email') ?>
 
                 <?= $form->field($model, 'password')->passwordInput() ?>
+
+                <?= $form->field($model, 'avatarImage')->fileInput(array("class" => "inputfile"))->label("Lade ein Bild hoch") ?>
 
                 <div class="form-group center-block text-center">
                     <?= Html::submitButton('Signup', ['class' => 'btn btn-fill btn-large', 'name' => 'signup-button']) ?>
