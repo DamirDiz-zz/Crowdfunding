@@ -3,11 +3,15 @@
 namespace app\controllers;
 
 use Yii;
+use app\models\User;
+use app\models\Role;
 use app\models\Project;
 use app\models\ProjectSearch;
+use app\models\User2project;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+
 
 use yii\web\UploadedFile;
 
@@ -74,27 +78,37 @@ class ProjectController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Project();
+        $project = new Project();
 
-        if ($model->load(Yii::$app->request->post())) {
-            $model->created_at = time();
-            $model->updated_at = time();
+        $user = User::findById(Yii::$app->user->id);
+
+        if ($project->load(Yii::$app->request->post())) {
+            $project->created_at = time();
+            $project->updated_at = time();
             
-            $model->mainImageFile = UploadedFile::getInstance($model,'mainImage');
-            if($model->mainImageFile) {
-                $name = $model->mainImageFile->baseName . '.' . $model->mainImageFile->extension;
-                $model->mainImageFile->saveAs('uploads/' . $name);  
-                $model->mainImage = $name;
+            $project->mainImageFile = UploadedFile::getInstance($project,'mainImage');
+            if($project->mainImageFile) {
+                $name = $project->mainImageFile->baseName . '.' . $project->mainImageFile->extension;
+                $project->mainImageFile->saveAs('uploads/' . $name);  
+                $project->mainImage = $name;
             }
             
-            if($model->save()) {
+            if($project->save()) {
+                
+                $u2p = new User2project();
+                $u2p->project_id = $project->id;
+                $u2p->user_id = $user->id;
+                $u2p->role_id = Role::INITIATOR;
+                
+                $u2p->save();
+                
                 return $this->redirect(['detail', 
-                    'id' => $model->id,
+                    'id' => $project->id,
                     'projectIsNew' => true]);                
             }
         } else {
             return $this->render('create', [
-                'model' => $model,
+                'model' => $project,
             ]);
         }
     }

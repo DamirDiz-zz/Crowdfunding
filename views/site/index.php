@@ -43,11 +43,10 @@ $this->title = 'Crowdfunding';
                     $initiator = $project->getInitiator();
                     
                     if ($initiator != null) {
-                    $username = $initiator->firstname . ' ' . $initiator->lastname;  
                     $initiatoravatar = $initiator->getImagePath();?>
                     <div class="project-box-body-users clearfix">
-                        <img class="project-box-body-avatar" src="<?php echo "../" . $initiatoravatar ?>" alt="<?php echo $username; ?>">
-                        <p class="project-box-body-user-title"><?php echo $username; ?> hat das Projekt gestartet.</p>
+                        <img class="project-box-body-avatar" src="<?php echo "../" . $initiatoravatar ?>" alt="<?php echo $initiator->firstname; ?>">
+                        <p class="project-box-body-user-title"><?php echo $initiator->firstname; ?> hat das Projekt gestartet.</p>
                         <p class="project-box-body-user-subtitle"><em>4 weitere Leute machen mit.</em></p>
                     </div>
                     <?php } ?>

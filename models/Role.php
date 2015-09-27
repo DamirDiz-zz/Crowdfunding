@@ -14,6 +14,8 @@ use Yii;
  */
 class Role extends \yii\db\ActiveRecord
 {
+    const INITIATOR = 1;
+    
     /**
      * @inheritdoc
      */

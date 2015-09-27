@@ -52,7 +52,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $projectDao = new ProjectDao();
-        $projects = $projectDao->getAllProjects();
+        $projects = $projectDao->getTop3();
         
         return $this->render('index', [
             'projects' => $projects

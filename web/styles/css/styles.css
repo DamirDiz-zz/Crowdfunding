@@ -497,7 +497,8 @@ Modals
   border: none; }
 
 .modal-body {
-  border: none; }
+  border: none;
+  padding: 5px 15px; }
 
 .modal-footer {
   border: none;
@@ -505,7 +506,8 @@ Modals
 
 .centered-modal-text {
   text-align: center;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  padding-top: 10px; }
 
 #project-created-modal .modal-dialog {
   width: 450px; }
@@ -518,7 +520,13 @@ Modals
   font-size: 14px;
   color: #929292;
   margin: 0px; }
+#project-created-modal .reference-link {
+  padding: 5px 10px !important;
+  font-size: 1.2em;
+  font-weight: 200;
+  width: 100%;
+  margin-bottom: 10px; }
 #project-created-modal .social-icon-large {
-  padding: 20px; }
+  padding: 15px 30px; }
   #project-created-modal .social-icon-large img {
     width: 100%; }

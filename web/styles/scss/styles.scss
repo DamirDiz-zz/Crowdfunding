@@ -549,6 +549,7 @@ Modals
 }
 .modal-body {
     border: none;
+    padding: 5px 15px;
 }
 .modal-footer {
     border: none;
@@ -558,6 +559,7 @@ Modals
 .centered-modal-text {
     text-align: center;
     font-size:1.5em;
+    padding-top: 10px;
 }
 
 
@@ -579,9 +581,17 @@ Modals
         color: $grey-color;
         margin: 0px;
     }
+    
+    .reference-link {
+        padding: 5px 10px !important;
+        font-size: 1.2em;
+        font-weight: $light;
+        width:100%;
+        margin-bottom: 10px;
+    }
 
     .social-icon-large {
-        padding: 20px;
+        padding: 15px 30px;
 
         img {
             width:100%;

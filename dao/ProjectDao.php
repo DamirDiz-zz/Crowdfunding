@@ -12,6 +12,12 @@ use app\models\Project;
 
 class ProjectDao 
 {
+    
+    public function getTop3()
+    {
+        return Project::find()->limit(3)->all();
+    }
+
     public function getAllProjects()
     {
         return Project::find()->all();
