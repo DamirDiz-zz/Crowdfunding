@@ -58,6 +58,12 @@ class SiteController extends Controller
             'projects' => $projects
         ]);
     }
+    
+    public function actionHowitworks()
+    {        
+        return $this->render('howitworks');
+    }
+
 
     public function actionLogin()
     {

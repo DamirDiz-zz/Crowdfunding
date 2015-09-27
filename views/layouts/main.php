@@ -5,6 +5,7 @@
 use yii\helpers\Html;
 use app\assets\AppAsset;
 use app\models\Project;
+use app\models\User;
 
 AppAsset::register($this);
 
@@ -58,15 +59,23 @@ $newproject = new Project();
                             <nav>
                                 <ul class="primary-nav">
                                     <li><?= Html::a('Home', ['/']) ?></li>
+                                    <li><?= Html::a("So funktioniert's", ['site/howitworks']) ?></li>
+                                    <li><?= Html::a("Starte dein Projekt", ['/project/create']) ?></li>
+
                                 </ul>
                                 <ul class="member-actions">
                                     <?php if (Yii::$app->user->isGuest) { ?>
                                     <li><?= Html::a('Login', ['/site/login']) ?></li>
-                                    <li><?= Html::a('Registrieren', ['/site/signup']) ?></li>
+                                    <li><?= Html::a('Registrieren', ['/site/signup'], ['class' => 'btn btn-small']) ?></li>
+
                                     <?php } else { ?>
                                     <li><?= Html::a('Logout', ['/site/logout'], ['data-method' => 'post'] )?></li>
+                                    <?php 
+                                    $user = User::findById(Yii::$app->user->id);
+                                    $avatar = $user->getImagePath();
+                                    ?>
+                                    <li><img class="header-avatar" src="<?php echo $avatar ?>" alt="<?php echo $user->firstname; ?>"></li>
                                     <?php } ?>
-                                    <li><?= Html::a('Starte dein Projekt', ['/project/create'], ['class' => 'btn btn-fill btn-small']) ?></li>
                                 </ul>
                             </nav>
                                                         
