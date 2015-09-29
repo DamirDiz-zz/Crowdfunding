@@ -73,8 +73,10 @@ $newproject = new Project();
                                     <?php 
                                     $user = User::findById(Yii::$app->user->id);
                                     $avatar = $user->getImagePath();
+                                    
+
                                     ?>
-                                    <li><img class="header-avatar" src="<?php echo $avatar ?>" alt="<?php echo $user->firstname; ?>"></li>
+                                    <li><img class="header-avatar" src="<?php echo $avatar; ?>" alt="<?php echo $user->firstname; ?>"></li>
                                     <?php } ?>
                                 </ul>
                             </nav>
@@ -83,7 +85,6 @@ $newproject = new Project();
                     </div>
                 </header>
             </section>
-
             <?= $content ?>
         </div>
         

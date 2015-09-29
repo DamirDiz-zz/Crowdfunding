@@ -18,7 +18,7 @@ if ($initiator) {
                 <h2><?php echo $project->location; ?></h2>
                 <?php if ($initiator) { ?>
                     <div class="herodetail-people">
-                        <img class="user-avatar" src="<?php echo "../" . $initiatoravatar ?>" alt="<?php echo $username; ?>">
+                        <img class="user-avatar" src="<?php echo $initiatoravatar ?>" alt="<?php echo $username; ?>">
                         <p class="username"><?php echo $username; ?></p>
                         <p class="role">Initiator</p>
                     </div>
@@ -26,7 +26,7 @@ if ($initiator) {
                 <?php } ?>
             </div>
         </div>
-        <div class="herodetail-image" style="background-image: url(<?php echo "../" . $project->getImagePath() ?>);"></div>
+        <div class="herodetail-image" style="background-image: url(<?php echo $project->getImagePath() ?>);"></div>
     </section>
     <section class="full-width-map">
         <div id="map" lat="<?php echo $project->latitude; ?>" lng="<?php echo $project->longitude; ?>" location="<?php echo $project->location; ?>" style="height:200px; width:100%"></div>
@@ -36,7 +36,7 @@ if ($initiator) {
         
         <p class="descriptionElement"><?php echo $project->shortDescription; ?></p>
         <figure class="descriptionElement">
-            <div class="imageHolder"><img src="<?php echo "../" . $project->getImagePath() ?>"></div>
+            <div class="imageHolder"><img src="<?php echo $project->getImagePath() ?>"></div>
             <figcaption class="imageCaption">Awsome Caption is written here you know what im sayn</figcaption>
         </figure>
 
