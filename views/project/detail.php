@@ -31,12 +31,16 @@ if ($initiator) {
     <section class="full-width-map">
         <div id="map" lat="<?php echo $project->latitude; ?>" lng="<?php echo $project->longitude; ?>" location="<?php echo $project->location; ?>" style="height:200px; width:100%"></div>
     </section>
+    
+    <section class="project-detail-description">
+        
+        <p class="descriptionElement"><?php echo $project->shortDescription; ?></p>
+        <figure class="descriptionElement">
+            <div class="imageHolder"><img src="<?php echo "../" . $project->getImagePath() ?>"></div>
+            <figcaption class="imageCaption">Awsome Caption is written here you know what im sayn</figcaption>
+        </figure>
 
-    <section class="project-detail-description row">
-        <div class="project-detail-description-image col-md-4"><img src="<?php echo "../" . $project->getImagePath() ?>"></div>
-        <div class="project-detail-description-text col-md-8"><?php echo $project->shortDescription; ?></div>
     </section>
-
 </section>
 
 <div id="project-created-modal" class="modal fade">
