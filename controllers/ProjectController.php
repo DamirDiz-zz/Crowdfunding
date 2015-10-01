@@ -102,9 +102,14 @@ class ProjectController extends Controller
                 
                 $u2p->save();
                 
-                return $this->redirect(['detail', 
-                    'id' => $project->id,
-                    'projectIsNew' => true]);                
+                return $this->render('addTodos', [
+                    'project' => $project,
+                ]);
+
+                //#todo
+                //return $this->redirect(['detail', 
+                //    'id' => $project->id,
+                //    'projectIsNew' => true]);                
             }
         } else {
             return $this->render('create', [

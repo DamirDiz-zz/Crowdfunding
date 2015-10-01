@@ -1,9 +1,6 @@
 <?php
 
-use yii\helpers\Html;
-
 $this->registerJsFile('@web/js/CreateProject.js', ['position' => \yii\web\View::POS_END, 'depends' => [\yii\web\JqueryAsset::className()]]);
-
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Project */
