@@ -551,3 +551,44 @@ Modals
   padding: 15px 30px; }
   #project-created-modal .social-icon-large img {
     width: 100%; }
+
+/* ==========================================================================
+To Do
+========================================================================== */
+.todo-list {
+  width: 600px;
+  margin: 0 auto; }
+
+.todo-list-entry {
+  height: 50px;
+  line-height: 50px;
+  vertical-align: top;
+  box-sizing: content-box;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.04);
+  margin-bottom: 10px; }
+
+.todo-icon {
+  background-image: url(../img/Unchecked-2.png);
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  width: 50px;
+  height: 50px; }
+
+.todo-text {
+  display: inline-block;
+  font-size: 2em;
+  margin: 0px;
+  vertical-align: top; }
+
+.todo-delete-icon {
+  background-image: url(../img/Trash-100.png);
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  width: 30px;
+  height: 50px; }

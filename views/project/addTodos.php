@@ -1,8 +1,9 @@
 <?php
 
+$this->registerJsFile('@web/js/Todos.js', ['position' => \yii\web\View::POS_END, 'depends' => [\yii\web\JqueryAsset::className()]]);
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Project */
+/* @var $proejct app\models\Project */
 
 $this->title = 'Was ist zu tun?';
 ?>
@@ -13,7 +14,7 @@ $this->title = 'Was ist zu tun?';
     <p class="form-subtitle">Beschreibe kurz ein paar Aufgaben die zu erlidgen sind bei denen du Hilfe benötigen könntest.</p>
 
     <?= $this->render('_todos', [
-        'model' => $model,
+        'project' => $project,
     ]) ?>
 
 </div>

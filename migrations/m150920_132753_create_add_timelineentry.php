@@ -31,15 +31,4 @@ class m150920_132753_create_add_timelineentry extends Migration {
         $this->dropTable('{{%timelineEntry}}');
         
     }
-
-    /*
-      // Use safeUp/safeDown to run migration code within a transaction
-      public function safeUp()
-      {
-      }
-
-      public function safeDown()
-      {
-      }
-     */
 }

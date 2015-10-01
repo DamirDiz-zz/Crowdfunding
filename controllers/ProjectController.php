@@ -117,6 +117,14 @@ class ProjectController extends Controller
             ]);
         }
     }
+    
+    public function actionAddtodos($id) {
+        $project = $this->findModel($id);
+
+        return $this->render('addTodos', [
+            'project' => $project,
+        ]);
+    }
 
     /**
      * Updates an existing Project model.
