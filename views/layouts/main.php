@@ -55,10 +55,10 @@ $newproject = new Project();
             <section class="navigation">
                 <header>
                     <div class="header-content">
+                        <div class="logo"><a href="#"></a></div>
                         <div class="header-nav">
                             <nav>
                                 <ul class="primary-nav">
-                                    <li><?= Html::a('Home', ['/']) ?></li>
                                     <li><?= Html::a("So funktioniert's", ['site/howitworks']) ?></li>
                                     <li><?= Html::a("Starte dein Projekt", ['/project/create']) ?></li>
 

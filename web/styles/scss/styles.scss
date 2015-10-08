@@ -143,7 +143,7 @@ Navigation
     border: none;
 }
 header {
-    padding: 25px 0;
+    padding: 15px 0;
     border-bottom: solid 1px rgba(255, 255, 255, 0.2);
     position: relative;
     width: 1170px;
@@ -164,10 +164,20 @@ header {
         border-radius: 50%;
     }
     .logo {
+        vertical-align: middle;
+        background-image: url(../img/gartlnlogo.svg);
+        background-size: 130px 50px;
+        background-repeat: no-repeat;
+        background-position: center center;
         display: inline-block;
+        width: 130px;
+        height: 50px;
+        cursor: pointer;
+
+        
     }
     ul.primary-nav {
-        margin: 0 0 0 75px;
+        margin: 0 0 0 25px;
         padding: 0;
 
         li {
@@ -205,7 +215,7 @@ header {
     .member-actions {
         position: absolute;
         right: 0;
-        top: 16px;
+        top: 20px;
         transition: all 300ms ease-in-out;
     }
 }
@@ -644,7 +654,7 @@ To Do
     
 }
 
-.todo-list-entry {
+.todo-list-entry, .todo-list-add {
   height: 50px;
   line-height: 50px;
   vertical-align: top;
@@ -655,31 +665,65 @@ To Do
   margin-bottom: 10px;
 }
 
-.todo-icon {
-    background-image: url(../img/Unchecked-2.png);
-    //background-image: url(../img/Checked-100.png);
+.todo-list-add {
+    background-color: transparent;
+}
+.todo-icon, .todo-add-icon, .todo-delete-icon, .todo-edit-icon {
     background-size: 35px 35px;
     background-repeat: no-repeat;
     background-position: center center;
     display: inline-block;
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 
-.todo-text {
+.todo-add-icon {
+    background-image: url(../img/Plus.svg);
+}
+
+.todo-icon {
+    background-image: url(../img/UncheckedCheckbox.svg);
+}
+
+.todo-delete-icon {
+    background-image: url(../img/Delete.svg);
+    background-size: 30px 30px;
+    width: 30px;
+    height: 50px;    
+}
+
+.todo-edit-icon {
+    background-image: url(../img/Edit.svg);
+}
+
+.todo-text, .todo-add-text {
     display: inline-block;
     font-size: 2em;
     margin: 0px;
     vertical-align: top;
+    cursor: text;
+    
+    input {
+        font-size: inherit;
+        font-weight: inherit;
+        background: inherit;
+        outline: 0;
+        appearance: none;
+        margin: 0px;
+        border: 0;
+        
+        &:focus {
+            outline: 0;
+            appearance: none;
+            border: 0;
 
+        }
+        
+    }
 }
 
-.todo-delete-icon {
-    background-image: url(../img/Trash-100.png);
-    background-size: 30px 30px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: inline-block;
-    width: 30px;
-    height: 50px;    
+.todo-add-text {
+    color: #4CAF50;
+    cursor: pointer;
 }
