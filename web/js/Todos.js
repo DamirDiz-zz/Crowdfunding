@@ -1,7 +1,22 @@
 $(document).ready(function () {
     
-    $('.todo-list-entry').each(function() {
-        $(this).find('.todo-text').text($(this).data("todo-content"));
+    $(".todo-list-entry").each(function() {
+        $(this).find(".todo-text").text($(this).data("todo-content"));
+    });
+    
+    $(".todo-list-add").on("click", function() {
+        console.log("genau");
+        
+        var addblock = '<div class="todo-list-entry" data-todo-id="" data-todo-content="" data-todo-edited="0">' +
+                        '<div class="todo-icon"></div>' +
+                        '<div class="todo-text"></div>' +
+                        '<div class="todo-action pull-right">' +
+                            '<div class="todo-icon-edit"></div>' +
+                            '<div class="todo-icon-delete"></div>' +
+                        '</div>' +
+                    '</div>';
+        
+        $('#todo-list-items').append(addblock);
     });
     
     $(document).on("click", ".todo-icon-edit", function() {
@@ -46,4 +61,10 @@ $(document).ready(function () {
         } 
     });
     
+    $(document).on("click", ".todo-icon-delete", function() {
+        var button = $(this);
+        var todoobject = button.parent().parent();
+        
+        todoobject.remove();
+    });   
 });
