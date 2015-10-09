@@ -10,12 +10,13 @@ $this->title = 'Registrieren';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
+<div class="full-page-form-large">
+    <div class="full-page-form-holder">
+        <div class="full-page-form-content">
+            <h1 class="form-title"><?= Html::encode($this->title) ?></h4>
+                <p class="form-subtitle">Erzähl ein bisschen über dich und melde dich an</p>
 
-<div class="create-form">
-    <h1 class="form-title"><?= Html::encode($this->title) ?></h4>
-        <p class="form-subtitle">Erzähl ein bisschen über dich und melde dich an</p>
-
-        <div class="project-form">
+                <div class="project-form">
 
             <div class="site-signup">
                 <?php
@@ -46,4 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
+        </div>
+    </div>
+    <div class="full-page-form-background"></div>
 </div>

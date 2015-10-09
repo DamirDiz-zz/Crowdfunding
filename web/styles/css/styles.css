@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Martel+Sans:400,300,200,600,700);
 @font-face {
   font-family: Serendity;
@@ -58,9 +59,16 @@ Global Styles
 *, *:after, *:before {
   box-sizing: border-box; }
 
+html, body {
+  height: 100%;
+  margin: 0; }
+
 body {
   font-size: 100%;
   font-family: "Martel Sans", sans-serif; }
+
+.row {
+  margin: 0px; }
 
 ul, ol {
   margin: 0;
@@ -87,7 +95,8 @@ Layout
 ========================================================================== */
 .content {
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+  min-height: 100%; }
 
 .container-elements {
   box-sizing: border-box;
@@ -249,7 +258,7 @@ Hero
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     background: url("../img/header.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -436,22 +445,75 @@ Detail Content
       line-height: 1.4;
       color: #929292; }
 
+.full-page-form-large, .full-page-form-medium {
+  height: 100%;
+  margin: 0 auto; }
+
+.full-page-form-holder {
+  position: relative;
+  padding-top: 100px; }
+
+.full-page-form-content {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden; }
+
+.full-page-form-background {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../img/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: blur(10px) brightness(100%);
+          filter: blur(10px) brightness(100%);
+  z-index: -1; }
+
 .form-title {
   text-align: center;
   font-size: 30px;
   font-weight: 200;
-  margin-top: 20px;
   font-family: "Martel Sans", sans-serif;
-  text-shadow: none; }
+  text-shadow: none;
+  margin: 0 auto; }
 
 .form-subtitle {
   text-align: center;
   font-size: 14px;
-  color: #929292; }
+  color: #929292;
+  margin: 0 auto; }
 
 .project-form {
-  width: 700px;
   margin: 0 auto; }
+
+.full-page-form-medium {
+  width: 450px; }
+  .full-page-form-medium .full-page-form-content {
+    padding: 40px 20px; }
+  .full-page-form-medium .form-title  {
+    width: 410px; }
+  .full-page-form-medium .form-subtitle  {
+    width: 410px; }
+  .full-page-form-medium .project-form {
+    width: 410px; }
+
+.full-page-form-large {
+  width: 700px; }
+  .full-page-form-large .full-page-form-content {
+    padding: 40px 20px; }
+  .full-page-form-large .form-title  {
+    width: 660px; }
+  .full-page-form-large .form-subtitle  {
+    width: 660px; }
+  .full-page-form-large .project-form {
+    width: 660px; }
 
 label {
   font-weight: 300;

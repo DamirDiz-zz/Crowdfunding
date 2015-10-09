@@ -8,7 +8,7 @@ $this->registerJsFile('@web/js/CreateProject.js', ['position' => \yii\web\View::
 $this->title = 'Starte dein Projekt';
 ?>
 
-<div class="create-form">
+<div class="form">
 
     <h1 class="form-title">Starte dein Projekt</h4>
     <p class="form-subtitle">Erzähle uns ein bisschen über deine Idee</p>

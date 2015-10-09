@@ -27,11 +27,20 @@ Global Styles
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font: {
         size: 100%;
         family: $sans-serif;
     }
+}
+
+.row {
+    margin: 0px;
 }
 
 ul, ol {
@@ -64,6 +73,7 @@ Layout
 .content {
     padding: 0px;
     margin: 0px;
+    min-height: 100%;
 }
 
 .container-elements {
@@ -249,7 +259,7 @@ Hero
         left: 0px;
         top: 0px;
         width:100%;
-        height:100%;
+        min-height:100%;
         background: url('../img/header.jpg');
         @include blur(10px);
         z-index: 1;
@@ -478,27 +488,74 @@ $descriptionElementTopPadding: 30px;
 
 }
 
+.full-page-form-large, .full-page-form-medium {
+    height:100%;
+    margin: 0 auto;
+
+}
+
+.full-page-form-holder {
+    position:relative;
+    padding-top: 100px;
+}
+
+.full-page-form-content {
+    background-color: rgba(255,255,255,1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.full-page-form-background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width:100%;
+    height:100%;
+    background: url('../img/header.jpg');
+    @include blur(10px,100%);
+    z-index:-1;
+} 
+
 
 .form-title {
     text-align: center;
     font-size: 30px;
     font-weight: $light;
-    margin-top:20px;
     font-family: $sans-serif;
     text-shadow: none;
+    margin: 0 auto;
 }
 
 .form-subtitle {
     text-align: center;
     font-size: 14px;
     color: $grey-color;
-
+    margin: 0 auto;
 }
 
 .project-form {
-    width: 700px;
     margin: 0 auto;
 }
+
+.full-page-form-medium {
+    width: $form-width-medium;
+    
+    .full-page-form-content { padding: $form-padding-vertical-medium $form-padding-horizontal-medium}
+    .form-title { width: $form-width-medium - $form-padding-horizontal-medium*2; }
+    .form-subtitle { width: $form-width-medium - $form-padding-horizontal-medium*2; }
+    .project-form { width: $form-width-medium - $form-padding-horizontal-medium*2; }
+}
+
+.full-page-form-large {
+    width: $form-width-large;
+    
+    .full-page-form-content { padding: $form-padding-vertical-large $form-padding-horizontal-large}
+    .form-title { width: $form-width-large - $form-padding-horizontal-large*2; }
+    .form-subtitle { width: $form-width-large - $form-padding-horizontal-large*2; }
+    .project-form { width: $form-width-large - $form-padding-horizontal-large*2; }
+}
+
 
 label {
     font-weight: $normal;
