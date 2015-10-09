@@ -326,8 +326,8 @@ Detail Hero
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-filter: blur(8px) brightness(60%);
-            filter: blur(8px) brightness(60%);
+    -webkit-filter: blur(8px) brightness(100%);
+            filter: blur(8px) brightness(100%);
     z-index: 1; }
   .herodetail .herodetail-content {
     position: absolute;
@@ -473,6 +473,8 @@ input, textarea, select {
 
 input[type="text"],
 input[type="email"],
+input[type="password"],
+input[type="file"],
 select,
 textarea {
   border: none !important;
@@ -484,6 +486,8 @@ textarea {
   box-shadow: none; }
   input[type="text"]:focus,
   input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="file"]:focus,
   select:focus,
   textarea:focus {
     border: none !important;
@@ -491,11 +495,16 @@ textarea {
 
 input[type="text"],
 input[type="email"],
+input[type="password"],
+input[type="file"],
 select {
   padding: 24px 16px !important; }
 
 textarea {
   padding: 16px !important; }
+
+input[type="file"] {
+  width: 100%; }
 
 /* ==========================================================================
 Category Select

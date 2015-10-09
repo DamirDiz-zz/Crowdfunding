@@ -12,8 +12,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="create-form">
 
     <div class="site-login">
-        <h1 class="form-title"><?= Html::encode($this->title) ?></h4>
-            <p class="form-subtitle">Please fill out the following fields to login</p>
+        <h1 class="form-title">Schön dich wiederzusehen!</h4>
+            <p class="form-subtitle">Gib deine E-Mail-Adresse und dein Passwort ein.</p>
 
             <div class="project-form">
 
@@ -21,35 +21,36 @@ $this->params['breadcrumbs'][] = $this->title;
                 $form = ActiveForm::begin([
                             'id' => 'login-form',
                             'options' => ['class' => 'form-horizontal'],
-                            'fieldConfig' => [
-                                'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
-                                'labelOptions' => ['class' => 'col-lg-1 control-label'],
-                            ],
+//                            'fieldConfig' => [
+//                                'template' => "{label}\n<div class=\"col-lg-3\">{input}</div>\n<div class=\"col-lg-8\">{error}</div>",
+//                                'labelOptions' => ['class' => 'col-lg-1 control-label'],
+//                            ],
                 ]);
                 ?>
 
-                <?= $form->field($model, 'email') ?>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3"><?= $form->field($model, 'email')->label("E-Mail-Adresse") ?></div>
+                </div>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
 
-                <?=
-                $form->field($model, 'rememberMe')->checkbox([
-                    'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
-                ])
-                ?>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3"><?= $form->field($model, 'password')->passwordInput()->label("Passwort") ?></div>
+                </div>
 
-                <div class="form-group">
-                    <div class="col-lg-offset-1 col-lg-11">
-                <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <?=
+                            $form->field($model, 'rememberMe')->checkbox();                        
+                        ?>
                     </div>
+                </div>
+
+                <div class="form-group center-block text-center">
+                        <?= Html::submitButton('Anmelden', ['class' => 'btn btn-fill btn-large', 'name' => 'login-button']) ?>
                 </div>
 
                 <?php ActiveForm::end(); ?>
 
-                <div class="col-lg-offset-1" style="color:#999;">
-                    You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-                    To modify the email/password, please check out the code <code>app\models\User::$users</code>.
-                </div>
             </div>
     </div>
 </div>

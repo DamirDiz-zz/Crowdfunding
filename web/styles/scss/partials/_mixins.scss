@@ -3,7 +3,7 @@
 Mixins
 ========================================================================== */
 
-@mixin blur($blur: 5px,$brightness: 60%) {
+@mixin blur($blur: 5px,$brightness: 100%) {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
