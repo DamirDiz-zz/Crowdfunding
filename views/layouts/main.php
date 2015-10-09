@@ -55,7 +55,7 @@ $newproject = new Project();
             <section class="navigation">
                 <header>
                     <div class="header-content">
-                        <div class="logo"><a href="#"></a></div>
+                        <a href="<?php echo Yii::$app->getUrlManager()->createUrl(['']); ?>"><div class="logo"></div></a>
                         <div class="header-nav">
                             <nav>
                                 <ul class="primary-nav">
