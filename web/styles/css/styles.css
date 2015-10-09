@@ -568,8 +568,7 @@ To Do
   margin: 0 auto; }
 
 .todo-list-entry, .todo-list-add {
-  height: 50px;
-  line-height: 50px;
+  min-height: 50px;
   vertical-align: top;
   box-sizing: content-box;
   padding: 8px;
@@ -580,7 +579,7 @@ To Do
 .todo-list-add {
   background-color: transparent; }
 
-.todo-icon, .todo-add-icon, .todo-delete-icon, .todo-edit-icon {
+.todo-icon, .todo-icon-add, .todo-icon-delete, .todo-icon-edit, .todo-icon-confirm {
   background-size: 35px 35px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -589,28 +588,32 @@ To Do
   height: 50px;
   cursor: pointer; }
 
-.todo-add-icon {
-  background-image: url(../img/Plus.svg); }
-
 .todo-icon {
   background-image: url(../img/UncheckedCheckbox.svg); }
 
-.todo-delete-icon {
+.todo-icon-add {
+  background-image: url(../img/Plus.svg); }
+
+.todo-icon-edit {
+  background-image: url(../img/Edit.svg); }
+
+.todo-icon-confirm {
+  background-image: url(../img/Checkmark.svg); }
+
+.todo-icon-delete {
   background-image: url(../img/Delete.svg);
   background-size: 30px 30px;
   width: 30px;
   height: 50px; }
 
-.todo-edit-icon {
-  background-image: url(../img/Edit.svg); }
-
-.todo-text, .todo-add-text {
+.todo-text, .todo-text-add {
   display: inline-block;
   font-size: 2em;
   margin: 0px;
   vertical-align: top;
-  cursor: text; }
-  .todo-text input, .todo-add-text input {
+  line-height: 50px;
+  width: 448px; }
+  .todo-text textarea, .todo-text-add textarea {
     font-size: inherit;
     font-weight: inherit;
     background: inherit;
@@ -619,14 +622,17 @@ To Do
        -moz-appearance: none;
             appearance: none;
     margin: 0px;
-    border: 0; }
-    .todo-text input:focus, .todo-add-text input:focus {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; }
+    .todo-text textarea:focus, .todo-text-add textarea:focus {
       outline: 0;
       -webkit-appearance: none;
          -moz-appearance: none;
               appearance: none;
       border: 0; }
 
-.todo-add-text {
+.todo-text-add {
   color: #4CAF50;
   cursor: pointer; }
