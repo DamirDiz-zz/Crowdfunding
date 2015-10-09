@@ -10,7 +10,8 @@ if ($initiator) {
     $initiatoravatar = $initiator->getImagePath();
 }
 ?>
-<section id="project" project-id="<?php echo $project->id; ?>" project-new="<?php echo (int) $projectIsNew; ?>">
+
+<section id="project" data-project-id="<?php echo $project->id; ?>" data-project-new="<?php echo (int) $projectIsNew; ?>">
     <section class="herodetail">
         <div class="herodetail-content">
             <div class="herodetail-content-holder text-center">

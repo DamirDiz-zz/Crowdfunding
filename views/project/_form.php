@@ -18,13 +18,6 @@ use yii\helpers\ArrayHelper
                 'options' => ['enctype' => 'multipart/form-data'],
                 'fieldConfig' => [
                     'template' => "{label}\n{input}\n{hint}\n{error}",
-                //'horizontalCssClasses' => [
-                //    'label' => 'col-sm-4',
-                //    'offset' => 'col-sm-offset-4',
-                //    'wrapper' => 'col-sm-8',
-                //    'error' => '',
-                //    'hint' => '',
-                //],
                 ],
     ]);
     ?>
@@ -45,10 +38,9 @@ use yii\helpers\ArrayHelper
     $map = ArrayHelper::map($categories, 'id', 'title'); // (where 'id' becomes the value and 'name' the name of the value which will be displayed)
     ?>
     <?= $form->field($model, 'category_id')->radioList($map, array("class" => "category-select"))->label("In welche Kategorie passt dein Projekt?") ?>
-            
+    
     <div class="form-group center-block text-center">
         <?= Html::submitButton($model->isNewRecord ? 'Leg los' : 'Update', ['class' => 'btn btn-fill btn-large']) ?>
-
     </div>
     <?php ActiveForm::end(); ?>
 

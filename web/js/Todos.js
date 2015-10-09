@@ -5,9 +5,8 @@ $(document).ready(function () {
     });
     
     $(".todo-list-add").on("click", function() {
-        console.log("genau");
         
-        var addblock = '<div class="todo-list-entry" data-todo-id="" data-todo-content="" data-todo-edited="0">' +
+        var addblock = '<div class="todo-list-entry" data-todo-content="" data-todo-edited="0">' +
                         '<div class="todo-icon"></div>' +
                         '<div class="todo-text"></div>' +
                         '<div class="todo-action pull-right">' +

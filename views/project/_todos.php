@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Html;
+
 ?>
 
 <div class="todo-list editable">
@@ -18,4 +20,8 @@
         <div class="todo-icon-add"></div>
         <div class="todo-text-add">Add Todo</div>
     </div>
+</div>
+
+<div class="center-block text-center">
+    <?= Html::a('Fertig', ['/project/create', 'id' => (int) $project->id, 'isNew'=> true], ['class' => 'btn btn-fill btn-large']) ?>
 </div>

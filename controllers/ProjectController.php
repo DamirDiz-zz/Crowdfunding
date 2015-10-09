@@ -59,7 +59,7 @@ class ProjectController extends Controller
         ]);
     }
     
-    public function actionDetail($id)
+    public function actionDetail($id, $projectIsNew = false)
     {
         $project = $this->findModel($id);
         $initiator = $project->getInitiator();
@@ -67,7 +67,7 @@ class ProjectController extends Controller
         return $this->render('detail', [
             'project' => $project,
             'initiator' => $initiator,
-            'projectIsNew' => false                
+            'projectIsNew' => $projectIsNew                
         ]);
     }
 
@@ -76,7 +76,7 @@ class ProjectController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($id = null, $isNew = false)
     {
         $project = new Project();
 
@@ -105,16 +105,17 @@ class ProjectController extends Controller
                 return $this->render('addTodos', [
                     'project' => $project,
                 ]);
-
-                //#todo
-                //return $this->redirect(['detail', 
-                //    'id' => $project->id,
-                //    'projectIsNew' => true]);                
             }
         } else {
-            return $this->render('create', [
-                'model' => $project,
-            ]);
+            if(isset($id) && $isNew == true) {
+                return $this->redirect(['detail', 
+                    'id' => $id,
+                    'projectIsNew' => true]);                
+            } else {
+                return $this->render('create', [
+                    'model' => $project,
+                ]); 
+            }
         }
     }
     

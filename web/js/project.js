@@ -28,10 +28,9 @@ var Project = {
     },
     
     checkIfNew: function() {
-        var isNew = $('#project').attr('project-new');
-        console.log(isNew);
+        var isNew = $('#project').data('project-new');
         
-        if (isNew == 1) {
+        if (isNew === 1) {
             $('#project-created-modal').modal('show')
         }
         
