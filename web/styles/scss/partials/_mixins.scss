@@ -3,12 +3,12 @@
 Mixins
 ========================================================================== */
 
-@mixin blur($blur: 5px) {
+@mixin blur($blur: 5px,$brightness: 60%) {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     transform: scale(1.1);
-    filter: blur($blur) brightness(60%);
+    filter: blur($blur) brightness($brightness);
 }
 
 // center vertically and/or horizontally an absolute positioned element

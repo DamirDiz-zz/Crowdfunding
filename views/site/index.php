@@ -21,7 +21,7 @@ $this->title = 'Crowdfunding';
 <section class="main-section">
     <div class="container-elements clearfix">
         <div class="pull-left"><h3>Beliebte Projekte</h3></div>
-        <div class="pull-right"><a href="#" class="btn btn-medium">Alle Projekte</a></div>
+        <div class="pull-right"><?= Html::a('Alle Projekte', ['/project/all'], ['class' => 'btn btn-medium']) ?></div>
     </div>
 
     <div class="project-box-container">

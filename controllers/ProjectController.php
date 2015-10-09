@@ -11,7 +11,7 @@ use app\models\User2project;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use app\dao\ProjectDao;
 
 use yii\web\UploadedFile;
 
@@ -69,6 +69,16 @@ class ProjectController extends Controller
             'initiator' => $initiator,
             'projectIsNew' => $projectIsNew                
         ]);
+    }
+    
+    public function actionAll() {
+        $projectDao = new ProjectDao();
+        $projects = $projectDao->getAllProjects();
+        
+        return $this->render('all', [
+            'projects' => $projects
+        ]);
+
     }
 
     /**

@@ -229,22 +229,22 @@ header {
 /* ==========================================================================
 Hero
 ========================================================================== */
-.hero {
+.hero, .hero-special {
   min-height: 500px;
   position: relative;
   overflow: hidden;
   height: 500px; }
-  .hero.how-it-works {
+  .hero.how-it-works, .hero-special.how-it-works {
     height: 650px !important; }
-  .hero h1 {
+  .hero h1, .hero-special h1 {
     color: #FFFFFF;
     margin-bottom: 40px; }
-  .hero p.intro {
+  .hero p.intro, .hero-special p.intro {
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 50px; }
-  .hero .hero-image {
+  .hero .hero-image, .hero-special .hero-image {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -257,22 +257,39 @@ Hero
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-filter: blur(10px) brightness(60%);
-            filter: blur(10px) brightness(60%);
+    -webkit-filter: blur(10px) brightness(100%);
+            filter: blur(10px) brightness(100%);
     z-index: 1; }
-  .hero .hero-content {
+  .hero .hero-content, .hero-special .hero-content {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
     z-index: 3; }
-  .hero .hero-content-holder {
+  .hero .hero-content-holder, .hero-special .hero-content-holder {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
+
+.hero-special {
+  min-height: 400px;
+  height: 400px; }
+  .hero-special h1 {
+    font-family: Serendity;
+    font-size: 120px; }
+  .hero-special .hero-image {
+    background: url("../img/headerspecial.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-filter: blur(10px) brightness(100%);
+            filter: blur(10px) brightness(100%); }
 
 /* ==========================================================================
 Detail Hero

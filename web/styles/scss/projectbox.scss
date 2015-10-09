@@ -18,7 +18,7 @@ and open the template in the editor.
     max-width: $globalmaxwidth + $resize-padding * 2;
     display:flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-content: flex-start;
     align-items: flex-start;
@@ -27,7 +27,7 @@ and open the template in the editor.
 
 .project-box {
     box-sizing: border-box;
-    max-width:($globalmaxwidth/3);
+    max-width:($globalmaxwidth/3) - $resize-padding*2;
     min-width:200px;
     background: #F7F7F7;
     height: $projectbox-height;
@@ -65,7 +65,7 @@ and open the template in the editor.
     top: 0px;
     width:100%;
     height:100%;
-    @include blur();
+    @include blur($brightness: 90%);
     z-index: 1;    
 }
 .project-box-header-content {
