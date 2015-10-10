@@ -230,7 +230,11 @@ header {
         padding-right: 0px; }
   header ul.member-actions li {
     display: inline;
-    margin-left: 25px; }
+    margin-left: 25px;
+    color: #FFFFFF;
+    font-size: 13px; }
+    header ul.member-actions li .header-user {
+      padding-right: 10px; }
     header ul.member-actions li a {
       color: #FFFFFF; }
       header ul.member-actions li a:hover {
@@ -243,6 +247,37 @@ header {
     top: 20px;
     -webkit-transition: all 300ms ease-in-out;
             transition: all 300ms ease-in-out; }
+  header .member-actions:hover .member-navigation {
+    display: block; }
+  header .member-navigation {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    left: absolut;
+    min-width: 282px;
+    max-width: 460px;
+    width: 200px;
+    height: auto; }
+    header .member-navigation .member-navigation-spacer {
+      height: 20px; }
+    header .member-navigation .member-navigation-list {
+      background: #fff;
+      border: 1px solid #dce0e0;
+      border-radius: 2px; }
+      header .member-navigation .member-navigation-list ul {
+        box-sizing: border-box; }
+        header .member-navigation .member-navigation-list ul li {
+          color: #000;
+          margin: 0px 20px;
+          display: block;
+          font-size: 13px;
+          border-top: 1px solid #dce0e0;
+          padding: 20px 0px; }
+          header .member-navigation .member-navigation-list ul li a {
+            color: #000; }
+            header .member-navigation .member-navigation-list ul li a:hover {
+              font-weight: 600; }
 
 /* ==========================================================================
 Hero

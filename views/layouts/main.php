@@ -69,18 +69,28 @@ $newproject = new Project();
                                     <li><?= Html::a('Registrieren', ['/site/signup'], ['class' => 'btn btn-small']) ?></li>
 
                                     <?php } else { ?>
-                                    <li><?= Html::a('Logout', ['/site/logout'], ['data-method' => 'post'] )?></li>
                                     <?php 
                                     $user = User::findById(Yii::$app->user->id);
                                     $avatar = $user->getImagePath();
                                     
 
                                     ?>
-                                    <li><img class="header-avatar" src="<?php echo $avatar; ?>" alt="<?php echo $user->firstname; ?>"></li>
+                                    <li>
+                                        <span class="header-user"><?php echo $user->firstname?></span><img class="header-avatar" src="<?php echo $avatar; ?>" alt="<?php echo $user->firstname; ?>">
+                                        <div class="member-navigation"> 
+                                            <div class="member-navigation-spacer"></div>
+                                            <div class="member-navigation-list">
+                                                <ul>
+                                                    <li>Einstellungen</li>
+                                                    <li><?= Html::a('Abmelden', ['/site/logout'], ['data-method' => 'post'] )?></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <?php } ?>
                                 </ul>
                             </nav>
-                                                        
+                            
                         </div>
                     </div>
                 </header>
