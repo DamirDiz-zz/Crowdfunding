@@ -12,6 +12,7 @@ use yii\web\IdentityInterface;
  * @property integer $id
  * @property string $firstname
  * @property string $lastname
+ * @property string $organisationName
  * @property string $email
  * @property string $avatarImage
  * @property integer $created_at
@@ -44,7 +45,7 @@ class User extends ActiveRecord implements IdentityInterface
         return [
             [['firstname', 'lastname', 'email', 'created_at', 'updated_at'], 'required'],
             [['created_at', 'updated_at'], 'integer'],
-            [['firstname', 'lastname', 'email', 'avatarImage'], 'string', 'max' => 255]
+            [['firstname', 'lastname', 'organisationName', 'email', 'avatarImage'], 'string', 'max' => 255]
         ];
     }
 
@@ -57,6 +58,7 @@ class User extends ActiveRecord implements IdentityInterface
             'id' => 'ID',
             'firstname' => 'Vorname',
             'lastname' => 'Nachname',
+            'organisationName' => 'Organisations Name',
             'email' => 'E-Mail-Adresse',
             'avatarImage' => 'Avatar Image',
             'created_at' => 'Created At',

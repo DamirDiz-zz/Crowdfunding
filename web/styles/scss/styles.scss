@@ -179,10 +179,13 @@ header {
     }
 
     .header-avatar {
+        background-color: #fff;
         height:36px;
         width:36px;
         border-radius: 50%;
+        border: 2px solid #FFF;
     }
+    
     .logo {
         vertical-align: middle;
         background-image: url(../img/gartlnlogo.svg);

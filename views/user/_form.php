@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'avatarImage')->fileInput(array("class" => "inputfile"))->label("Lade ein Bild hoch") ?>
+    <?= $form->field($model, 'avatarImage')->fileInput(array("class" => "inputfile"))->label("Lade ein Profilbild hoch") ?>
  
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

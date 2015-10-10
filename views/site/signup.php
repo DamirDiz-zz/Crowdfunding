@@ -32,11 +32,14 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="col-md-6"><?= $form->field($model, 'lastname')->label("Nachname") ?></div>
                     </div>
                     <div class="row">
+                        <div class="col-md-12"><?= $form->field($model, 'organisationName')->label("Falls Sie einer Organisation angehören können Sie diese hier angeben.") ?></div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-6"><?= $form->field($model, 'email')->label("E-Mail-Adresse") ?></div>
                         <div class="col-md-6"><?= $form->field($model, 'password')->passwordInput()->label("Passwort") ?></div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12"><?= $form->field($model, 'avatarImage')->fileInput(array("class" => "inputfile"))->label("Lade ein Bild hoch") ?></div>
+                        <div class="col-md-12"><?= $form->field($model, 'avatarImage')->fileInput(array("class" => "inputfile"))->label("Lade ein Profilbild hoch") ?></div>
                     </div>
 
                     <div class="row text-center">

@@ -16,6 +16,7 @@ class SignupForm extends Model
 {
     public $firstname;
     public $lastname;
+    public $organisationName;
     public $email;
     public $password;
     public $avatarImage;
@@ -34,6 +35,8 @@ class SignupForm extends Model
 
             ['lastname', 'required'],
             ['lastname', 'string'],
+
+            ['organisationName', 'string'],
 
             ['email', 'filter', 'filter' => 'trim'],
             ['email', 'required'],
@@ -57,6 +60,7 @@ class SignupForm extends Model
             $user = new User();
             $user->firstname = $this->firstname;
             $user->lastname = $this->lastname;
+            $user->organisationName = $this->organisationName;
             $user->email = $this->email;
             $user->generateAuthKey();
             $user->setPassword($this->password);

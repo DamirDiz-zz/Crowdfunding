@@ -201,9 +201,11 @@ header {
     header a.login {
       margin-right: 20px; }
   header .header-avatar {
+    background-color: #fff;
     height: 36px;
     width: 36px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    border: 2px solid #FFF; }
   header .logo {
     vertical-align: middle;
     background-image: url(../img/gartlnlogo.svg);
