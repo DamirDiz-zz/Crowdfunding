@@ -8,7 +8,7 @@ $this->title = "So funktioniert's";
     <div class="hero-content">
         <div class="hero-content-holder text-center">
             <h1>So funktioniert's</h1>
-            <p class="intro">Wir helfen dir ökologische, nachhaltige und grüne Projekte in deiner Nachbarschaft umzusetzen</p>
+            <p class="intro">Gartln.at hilft dir ökologische, nachhaltige und grüne Projekte in deiner Nachbarschaft umzusetzen</p>
             <div class="hero-content-how-it-works">
                 <div class="row">
                     <div class="col-md-4 intro-feature">

@@ -10,7 +10,7 @@ $this->title = 'Crowdfunding';
     <div class="hero-content">
         <div class="hero-content-holder text-center">
             <h1>Fang an zu gartl'n!</h1>
-            <p class="intro">Wir helfen dir ökologische, nachhaltige und grüne Projekte in deiner Nachbarschaft umzusetzen</p>
+            <p class="intro">Gartln.at hilft dir ökologische, nachhaltige und grüne Projekte in deiner Nachbarschaft umzusetzen</p>
             <?= Html::a('Starte dein Projekt', ['/project/create'], ['class' => 'btn btn-fill btn-large']) ?>
         </div>
 
