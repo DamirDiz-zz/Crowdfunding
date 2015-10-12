@@ -81,7 +81,8 @@ $newproject = new Project();
                                             <div class="member-navigation-spacer"></div>
                                             <div class="member-navigation-list">
                                                 <ul>
-                                                    <li>Einstellungen</li>
+                                                    <li>Deine Projekte</li>
+                                                    <li>Profil bearbeiten</li>
                                                     <li><?= Html::a('Abmelden', ['/site/logout'], ['data-method' => 'post'] )?></li>
                                                 </ul>
                                             </div>

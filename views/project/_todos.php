@@ -18,7 +18,7 @@ use yii\helpers\Html;
 
     <div class="todo-list-add">
         <div class="todo-icon-add"></div>
-        <div class="todo-text-add">Add Todo</div>
+        <div class="todo-text-add">Aufgabe hinzufügen</div>
     </div>
 </div>
 
