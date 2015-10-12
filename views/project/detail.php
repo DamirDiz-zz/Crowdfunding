@@ -1,6 +1,8 @@
 <?php
 /* @var $this yii\web\View */
 
+use app\models\ProjectDescription;
+
 $this->registerJsFile('@web/js/project.js', ['position' => \yii\web\View::POS_END, 'depends' => [\yii\web\JqueryAsset::className()]]);
 
 $this->title = $project->title;
@@ -32,14 +34,29 @@ if ($initiator) {
     <section class="full-width-map">
         <div id="map" lat="<?php echo $project->latitude; ?>" lng="<?php echo $project->longitude; ?>" location="<?php echo $project->location; ?>" style="height:200px; width:100%"></div>
     </section>
-    
+
     <section class="project-detail-description">
-        
+
         <p class="descriptionElement"><?php echo $project->shortDescription; ?></p>
         <figure class="descriptionElement">
             <div class="imageHolder"><img src="<?php echo $project->getImagePath() ?>"></div>
-            <figcaption class="imageCaption">Awsome Caption is written here you know what im sayn</figcaption>
+            <figcaption class="imageCaption"><?php echo $project->title; ?></figcaption>
         </figure>
+
+        <?php if (count($projectDescriptions) > 0) { ?>
+        <?php foreach ($projectDescriptions as $pd) {
+            if ($pd->type == ProjectDescription::TEXT) { ?>
+                <p class="descriptionElement"><?php echo $pd->value; ?></p>
+
+            <?php } else if ($pd->type == ProjectDescription::IMAGE) { ?>
+                <figure class="descriptionElement">
+                    <div class="imageHolder"><img src="<?php echo Yii::getAlias('@web') . '/uploads/' . $pd->value ?>"></div>
+                    <figcaption class="imageCaption"><?php echo $pd->description ?></figcaption>
+                </figure>
+            <?php } else if ($pd->type == ProjectDescription::URL) { ?>
+
+
+        <?php }}} ?>
 
     </section>
 </section>

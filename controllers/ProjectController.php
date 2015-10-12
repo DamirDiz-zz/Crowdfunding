@@ -61,13 +61,17 @@ class ProjectController extends Controller
     
     public function actionDetail($id, $projectIsNew = false)
     {
-        $project = $this->findModel($id);
-        $initiator = $project->getInitiator();
-                        
+        $projectDao = new ProjectDao();
+
+        $project = $projectDao->getById($id);
+        $initiator = $projectDao->getInitiatorForProject($project);
+        $pds = $projectDao->getProjectDescriptionsForProject($project);
+        
         return $this->render('detail', [
             'project' => $project,
             'initiator' => $initiator,
-            'projectIsNew' => $projectIsNew                
+            'projectIsNew' => $projectIsNew,
+            'projectDescriptions' => $pds
         ]);
     }
     
@@ -135,6 +139,10 @@ class ProjectController extends Controller
         return $this->render('addTodos', [
             'project' => $project,
         ]);
+    }
+    
+    public function actionAddProjectDescription() {
+        
     }
 
     /**

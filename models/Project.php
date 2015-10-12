@@ -85,7 +85,7 @@ class Project extends \yii\db\ActiveRecord
     {
         return $this->hasMany(User2project::className(), ['project_id' => 'id']);
     }
-
+    
     public function getInitiator() {
         $user2project = User2project::findOne(['project_id' => $this->id, 'role_id' => 1]);
         if($user2project) {
@@ -99,5 +99,4 @@ class Project extends \yii\db\ActiveRecord
     {
         return  Yii::getAlias('@web') . '/uploads/' . $this->mainImage;
     }
-
 }
