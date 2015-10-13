@@ -10,3 +10,21 @@ and open the template in the editor.
 /* ==========================================================================
 Mixins
 ========================================================================== */
+.project-nav {
+  border-top: 1px solid #d9d9de;
+  border-bottom: 1px solid #d9d9de; }
+  .project-nav .project-nav-holder {
+    display: table;
+    margin: 0 auto; }
+  .project-nav ul {
+    list-style: none;
+    display: inline-block; }
+    .project-nav ul li.project-nav-item {
+      box-sizing: border-box;
+      padding: 25px 15px 15px 15px;
+      display: inline-block;
+      list-style: none;
+      font-size: 20px;
+      font-weight: 400; }
+      .project-nav ul li.project-nav-item.active {
+        border-bottom: 5px solid #49D964; }

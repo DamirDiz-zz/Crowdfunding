@@ -36,11 +36,13 @@ if ($initiator) {
     </section>
 
     <section class="project-nav">
-        <ul>
-            <div class="project-nav-item">Über dieses Projekt</div>
-            <div class="project-nav-item">Updates</div>
-            <div class="project-nav-item">Aufgaben</div>
-        </ul>
+        <div class="project-nav-holder">
+            <ul>
+                <li class="project-nav-item active">Über dieses Projekt</li>
+                <li class="project-nav-item">Updates</li>
+                <li class="project-nav-item">Aufgaben</li>
+            </ul>
+        </div>
     </section>
     
     <section class="project-detail-description">

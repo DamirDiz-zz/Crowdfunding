@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": ";;;;;;;;;;;;AAKA,YAAa;EAET,UAAU,EAAE,iBAAiB;EAC7B,aAAa,EAAE,iBAAiB;EAEhC,gCAAoB;IAChB,OAAO,EAAE,KAAK;IAAE,MAAM,EAAE,MAAM;EAGlC,eAAG;IACC,UAAU,EAAE,IAAI;IAChB,OAAO,EAAE,YAAY;IAErB,mCAAoB;MAChB,UAAU,EAAE,UAAU;MACtB,OAAO,EAAE,mBAAmB;MAC5B,OAAO,EAAE,YAAY;MACrB,UAAU,EAAE,IAAI;MAEhB,SAAS,EAAE,IAAI;MACf,WAAW,ECHZ,GAAG;MDKF,0CAAS;QACL,aAAa,EAAE,iBAAuB",
+"sources": ["../scss/project-nav.scss","../scss/partials/_typography.scss"],
 "names": [],
 "file": "project-nav.css"
 }

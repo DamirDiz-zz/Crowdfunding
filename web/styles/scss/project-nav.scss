@@ -3,3 +3,31 @@
 @import "partials/variables";
 @import "partials/colors";
 
+.project-nav {
+    
+    border-top: 1px solid #d9d9de;
+    border-bottom: 1px solid #d9d9de;
+    
+    .project-nav-holder {
+        display: table; margin: 0 auto;
+    }
+    
+    ul {
+        list-style: none;
+        display: inline-block;
+        
+        li.project-nav-item {
+            box-sizing: border-box;
+            padding: 25px 15px 15px 15px;
+            display: inline-block;
+            list-style: none;
+            
+            font-size: 20px;
+            font-weight: $semibold;
+            
+            &.active {
+                border-bottom: 5px solid $accent-color;
+            }
+        }
+    }
+}
