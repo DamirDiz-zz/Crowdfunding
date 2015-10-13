@@ -35,6 +35,14 @@ if ($initiator) {
         <div id="map" lat="<?php echo $project->latitude; ?>" lng="<?php echo $project->longitude; ?>" location="<?php echo $project->location; ?>" style="height:200px; width:100%"></div>
     </section>
 
+    <section class="project-nav">
+        <ul>
+            <div class="project-nav-item">Über dieses Projekt</div>
+            <div class="project-nav-item">Updates</div>
+            <div class="project-nav-item">Aufgaben</div>
+        </ul>
+    </section>
+    
     <section class="project-detail-description">
 
         <p class="descriptionElement"><?php echo $project->shortDescription; ?></p>

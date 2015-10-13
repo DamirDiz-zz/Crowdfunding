@@ -76,11 +76,8 @@ ul li {
 
 a {
   color: #FFFFFF;
-  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
-  -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
-  -webkit-transition-property: color, border-color, background-color;
   transition-property: color, border-color, background-color; }
 
 a:hover, a:focus {
@@ -176,8 +173,7 @@ h2 {
 Navigation
 ========================================================================== */
 .navigation {
-  -webkit-transition: all 500ms ease-in-out;
-          transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
   position: fixed;
   width: 100%;
   z-index: 999; }
@@ -245,8 +241,7 @@ header {
     position: absolute;
     right: 0;
     top: 20px;
-    -webkit-transition: all 300ms ease-in-out;
-            transition: all 300ms ease-in-out; }
+    transition: all 300ms ease-in-out; }
   header .member-actions:hover .member-navigation {
     display: block; }
   header .member-navigation {
@@ -308,7 +303,6 @@ Hero
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
             transform: scale(1.1);
     -webkit-filter: blur(10px) brightness(100%);
             filter: blur(10px) brightness(100%);
@@ -324,7 +318,6 @@ Hero
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
 
 .hero-special {
@@ -339,7 +332,6 @@ Hero
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
             transform: scale(1.1);
     -webkit-filter: blur(10px) brightness(100%);
             filter: blur(10px) brightness(100%); }
@@ -377,7 +369,6 @@ Detail Hero
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
             transform: scale(1.1);
     -webkit-filter: blur(8px) brightness(100%);
             filter: blur(8px) brightness(100%);
@@ -393,7 +384,6 @@ Detail Hero
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
 
 .user-avatar {
@@ -515,7 +505,6 @@ Detail Content
   background-repeat: no-repeat;
   background-position: 50% 50%;
   -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-filter: blur(10px) brightness(100%);
           filter: blur(10px) brightness(100%);

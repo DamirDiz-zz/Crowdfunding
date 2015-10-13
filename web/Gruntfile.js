@@ -3,18 +3,24 @@ module.exports = function (grunt) {
     grunt.initConfig({
         sass: {
             dist: {
-                files: {
-                    'styles/css/projectbox.css': 'styles/scss/projectbox.scss',
-                    'styles/css/styles.css': 'styles/scss/styles.scss'
-                }
+                files: [{
+                        expand: true,
+                        cwd: 'styles/scss',
+                        src: ['*.scss'],
+                        dest: 'styles/css',
+                        ext: '.css'
+                    }]
             }
         },
         autoprefixer: {
-            compile: {
-                files: {
-                    'styles/css/projectbox.css': 'styles/css/projectbox.css',
-                    'styles/css/styles.css': 'styles/css/styles.css'
-                }
+            options: {
+                browsers:  ['last 1 version']
+            },
+            build: {
+                expand: true,
+                cwd: "styles/css",
+                src: ['*.css'],
+                dest: "styles/css"
             }
         },
         cssmin: {
