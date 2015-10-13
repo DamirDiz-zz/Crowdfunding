@@ -2,6 +2,7 @@
 /* @var $this yii\web\View */
 
 use app\models\ProjectDescription;
+use app\models\Todo;
 
 $this->registerJsFile('@web/js/project.js', ['position' => \yii\web\View::POS_END, 'depends' => [\yii\web\JqueryAsset::className()]]);
 
@@ -40,7 +41,7 @@ if ($initiator) {
             <ul>
                 <li class="project-nav-item active">Über dieses Projekt</li>
                 <li class="project-nav-item">Updates</li>
-                <li class="project-nav-item">Aufgaben</li>
+                <li class="project-nav-item">Was ist zu tun <?php $count = count($todos); if($count > 0 ) { echo "<span class=\"todo-count\">$count</div>"; } ?></li>
             </ul>
         </div>
     </section>
@@ -69,6 +70,14 @@ if ($initiator) {
         <?php }}} ?>
 
     </section>
+    
+    <section class="project-detail-todos">
+        <?php if (count($todos) > 0 ) { ?>
+        <?php foreach ($todos as $todo) { ?> 
+            <?php echo $todo->content; ?>
+        <?php }} ?>
+    </section>
+
 </section>
 
 <div id="project-created-modal" class="modal fade">

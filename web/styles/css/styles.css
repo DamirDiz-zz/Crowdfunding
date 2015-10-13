@@ -26,6 +26,8 @@ and open the template in the editor.
     color: #3AB151 !important;
     border-color: #3AB151;
     background: transparent; }
+  .btn:focus {
+    outline: 0 !important; }
 
 .btn-fill {
   border: none;
@@ -34,7 +36,8 @@ and open the template in the editor.
   background: #49D964; }
   .btn-fill:hover, .btn-fill:focus {
     color: #FFFFFF !important;
-    background-color: #3AB151; }
+    background-color: #3AB151;
+    outline: 0 !important; }
 
 .btn-small {
   padding: 8px 25px; }

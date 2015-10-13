@@ -28,3 +28,13 @@ Mixins
       font-weight: 400; }
       .project-nav ul li.project-nav-item.active {
         border-bottom: 5px solid #49D964; }
+
+.todo-count {
+  background-color: #D0021B;
+  font-weight: 400;
+  color: #FFFFFF;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  width: 25px;
+  height: 25px; }

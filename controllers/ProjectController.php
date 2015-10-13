@@ -66,12 +66,15 @@ class ProjectController extends Controller
         $project = $projectDao->getById($id);
         $initiator = $projectDao->getInitiatorForProject($project);
         $pds = $projectDao->getProjectDescriptionsForProject($project);
+        $todos = $projectDao->getTodosForProject($project->id);
         
         return $this->render('detail', [
             'project' => $project,
             'initiator' => $initiator,
             'projectIsNew' => $projectIsNew,
-            'projectDescriptions' => $pds
+            'projectDescriptions' => $pds,
+            'todos' => $todos
+
         ]);
     }
     
