@@ -67,13 +67,12 @@ $newproject = new Project();
                                     <?php if (Yii::$app->user->isGuest) { ?>
                                     <li><?= Html::a('Login', ['/site/login']) ?></li>
                                     <li><?= Html::a('Registrieren', ['/site/signup'], ['class' => 'btn btn-small']) ?></li>
-
+                                    
                                     <?php } else { ?>
                                     <?php 
                                     $user = User::findById(Yii::$app->user->id);
                                     $avatar = $user->getImagePath();
                                     
-
                                     ?>
                                     <li>
                                         <span class="header-user"><?php echo $user->firstname?></span><img class="header-avatar" src="<?php echo $avatar; ?>" alt="<?php echo $user->firstname; ?>">

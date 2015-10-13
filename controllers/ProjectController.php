@@ -144,7 +144,11 @@ class ProjectController extends Controller
     public function actionAddProjectDescription() {
         
     }
-
+    
+    public function actionSavetodo() {
+        return json_encode(array('success' => true));
+    }
+    
     /**
      * Updates an existing Project model.
      * If update is successful, the browser will be redirected to the 'view' page.
