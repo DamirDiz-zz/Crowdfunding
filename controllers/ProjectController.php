@@ -145,8 +145,20 @@ class ProjectController extends Controller
         
     }
     
-    public function actionSavetodo() {
-        return json_encode(array('success' => true));
+    public function actionSavetodo($projectId) {
+        $projectDao = new ProjectDao();
+        $user = User::findById(Yii::$app->user->id);
+
+        $action = $_POST['action'];
+        
+        if ($action == "create") {
+            $todo = $projectDao->createTodo($projectId, $user->id);
+            return json_encode(array('id' => $todo->id, 'content' => $todo->content));   
+        } else if ($action == "delete") {
+            $todoid = (int) $_POST['todoid'];
+            $projectDao = $projectDao->deleteTodo($todoid);
+            return json_encode(array('todoId' => $todoid));   
+        }
     }
     
     /**

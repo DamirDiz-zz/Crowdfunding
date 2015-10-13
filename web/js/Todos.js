@@ -5,19 +5,7 @@ var Todos = {
         });
 
         $(".todo-list-add").on("click", function () {
-            
             Todos.createTodo();
-            
-            var addblock = '<div class="todo-list-entry" data-todo-content="" data-todo-edited="0">' +
-                    '<div class="todo-icon"></div>' +
-                    '<div class="todo-text"></div>' +
-                    '<div class="todo-action pull-right">' +
-                    '<div class="todo-icon-edit"></div>' +
-                    '<div class="todo-icon-delete"></div>' +
-                    '</div>' +
-                    '</div>';
-
-            $('#todo-list-items').append(addblock);
         });
 
         $(document).on("click", ".todo-icon-edit", function () {
@@ -63,29 +51,67 @@ var Todos = {
         });
 
         $(document).on("click", ".todo-icon-delete", function () {
-            var button = $(this);
-            var todoobject = button.parent().parent();
-
-            todoobject.remove();
+            Todos.deleteTodo($(this).parent().parent());
         });
     },
-
+    
     createTodo: function () {
-        
         var url = $('#todo-list').attr('data-todo-action-url');
 
         $.ajax({
             type: 'POST',
             url: url,
             data: {
+                "action" : "create"
             },
             dataType: "json",
             success: function (data) {
                 console.log(data);
+                Todos.addTodo(data.id, data.content);
             }
         });
+    },
+    
+    addTodo: function (id, content) {
+        var addblock = '<div class="todo-list-entry" data-todo-id="' + id + '" data-todo-content="' + content + '" data-todo-edited="0">' +
+                '<div class="todo-icon"></div>' +
+                '<div class="todo-text">' + content + '</div>' +
+                '<div class="todo-action pull-right">' +
+                '<div class="todo-icon-edit"></div>' +
+                '<div class="todo-icon-delete"></div>' +
+                '</div>' +
+                '</div>';
 
+        $('#todo-list-items').append(addblock);
+    },
+    
+    deleteTodo: function (todoobject) {
+        var url = $('#todo-list').attr('data-todo-action-url');
+
+        var todoid = todoobject.attr("data-todo-id");
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: {
+                "action" : "delete",
+                "todoid" : todoid
+            },
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                todoobject.remove();
+            }
+        });
+    },
+    removeTodo: function () {
+        
+        //var button = $(this);
+        //    var todoobject = button.parent().parent();
+
+        //    todoobject.remove();
     }
+    
+    
 }
 $(document).ready(function () {
     Todos.init();

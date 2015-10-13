@@ -9,6 +9,7 @@
 namespace app\dao;
 
 use app\models\User;
+use app\models\Todo;
 use app\models\Project;
 use app\models\User2project;
 use app\models\ProjectDescription;
@@ -45,5 +46,25 @@ class ProjectDao
 
         return null;
     }
-
+    
+    public function createTodo($projectId, $userId) {
+        $todo = new Todo();
+        
+        $todo->project_id = $projectId;
+        $todo->content = "New Todo";
+        $todo->status = 0;
+        $todo->creator = $userId;
+        $todo->assignedTo = null;
+        $todo->created_at = time();
+        $todo->updated_at = time();
+        
+        $todo->save();
+        
+        return $todo;
+        //#todo exception werfen falls es nicht geklappt hat
+    }
+    
+    public function deleteTodo($todoId) {
+        Todo::deleteAll(["id" => $todoId]);
+    }
 }

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 
 ?>
 
-<div id="todo-list" class="todo-list editable" data-todo-action-url="<?php echo Yii::$app->urlManager->createUrl('project/savetodo'); ?>">
+<div id="todo-list" class="todo-list editable" data-todo-action-url="<?php echo Yii::$app->urlManager->createUrl(['project/savetodo', 'projectId' => (int) $project->id]); ?>">
     <div id="todo-list-items">
     </div>
 
