@@ -20,6 +20,7 @@ Mixins
     list-style: none;
     display: inline-block; }
     .project-nav ul li.project-nav-item {
+      cursor: pointer;
       box-sizing: border-box;
       padding: 25px 15px 15px 15px;
       display: inline-block;
@@ -29,7 +30,7 @@ Mixins
       .project-nav ul li.project-nav-item.active {
         border-bottom: 5px solid #49D964; }
 
-.todo-count {
+.project-nav-item-count {
   background-color: #D0021B;
   font-weight: 400;
   color: #FFFFFF;
@@ -38,3 +39,40 @@ Mixins
   text-align: center;
   width: 25px;
   height: 25px; }
+
+.project-detail-description {
+  width: 700px;
+  margin: 0 auto; }
+  .project-detail-description .descriptionElement {
+    padding: 30px 10px 0px 10px; }
+  .project-detail-description p {
+    font-size: 20px;
+    letter-spacing: 0.16px;
+    line-height: 30px;
+    font-weight: 200; }
+  .project-detail-description figure {
+    position: relative; }
+    .project-detail-description figure .imageHolder {
+      max-width: 630px;
+      max-height: 354px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+      .project-detail-description figure .imageHolder img {
+        margin: 0 auto;
+        max-height: inherit;
+        max-width: inherit; }
+    .project-detail-description figure .imageCaption {
+      position: absolute;
+      left: -172px;
+      width: 150px;
+      top: 30px;
+      text-align: right;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #929292; }
+
+.project-detail {
+  display: none; }
+  .project-detail.active {
+    display: block; }

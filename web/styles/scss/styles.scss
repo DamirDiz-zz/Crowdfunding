@@ -511,59 +511,6 @@ Detail Hero
     }
 }
 
-/* ==========================================================================
-Detail Content
-========================================================================== */
-
-$descriptionElementTopPadding: 30px;
-
-.project-detail-description {
-    
-    width:700px;
-    margin: 0 auto;
-    
-    .descriptionElement {
-        padding: $descriptionElementTopPadding 10px 0px 10px;
-    }
-    
-    p {
-        font-size: 20px;
-        letter-spacing: 0.16px;
-        line-height: 30px;
-        font-weight: $light;
-    }
-    
-    figure {
-        position: relative;
-
-        .imageHolder {
-            max-width: 630px;
-            max-height: 354px;
-            width:100%;
-            margin: 0 auto;
-            text-align:center;
-            
-            img {
-                margin: 0 auto;
-                max-height: inherit;
-                max-width: inherit;
-            }
-        }
-
-        .imageCaption {
-            position: absolute;
-            left: -172px;
-            width: 150px;
-            top: $descriptionElementTopPadding;
-            text-align: right;
-            font-size: 13px;
-            line-height: 1.4;
-            color: $grey-color;
-        }
-    }
-
-}
-
 .full-page-form-large, .full-page-form-medium {
     height:100%;
     margin: 0 auto;

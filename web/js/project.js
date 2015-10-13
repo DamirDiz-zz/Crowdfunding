@@ -39,4 +39,18 @@ var Project = {
 
 $(document).ready(function() {
     Project.init();
+    
+    $("#project-nav li").click(function(e){
+        if (!$(this).hasClass("active")) {
+            
+            var tabNum = $(this).index();
+            
+            console.log(tabNum);
+            $("#project-nav li.active").removeClass("active");    
+            $(this).addClass("active");
+
+            $(".project-detail.active").removeClass("active");
+            $($(".project-detail")[tabNum]).addClass("active");
+        }
+    });
 });

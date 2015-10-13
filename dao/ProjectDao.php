@@ -11,6 +11,7 @@ namespace app\dao;
 use app\models\User;
 use app\models\Todo;
 use app\models\Project;
+use app\models\TimelineEntry;
 use app\models\User2project;
 use app\models\ProjectDescription;
 
@@ -78,6 +79,12 @@ class ProjectDao
     public function deleteTodo($todoId) {
         Todo::deleteAll(["id" => $todoId]);
     }
+    
+        
+    public function getUpdatesForProject($id) {
+        return TimelineEntry::findAll(["project_id" => $id]);
+    }
+
     
     public function getTodosForProject($id) {
         return Todo::findAll(["project_id" => $id]);
