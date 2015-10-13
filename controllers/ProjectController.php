@@ -134,10 +134,14 @@ class ProjectController extends Controller
     }
     
     public function actionAddtodos($id) {
-        $project = $this->findModel($id);
+        $projectDao = new ProjectDao();
 
+        $project = $this->findModel($id);
+        $todos = $projectDao->getTodosForProject($id);
+        
         return $this->render('addTodos', [
             'project' => $project,
+            'todos' => $todos
         ]);
     }
     
@@ -153,6 +157,11 @@ class ProjectController extends Controller
         
         if ($action == "create") {
             $todo = $projectDao->createTodo($projectId, $user->id);
+            return json_encode(array('id' => $todo->id, 'content' => $todo->content));   
+        } else if ($action == "edit") {
+            $todoid = (int) $_POST['todoid'];
+            $content = $_POST['content'];
+            $todo = $projectDao->editTodo($todoid, $content);
             return json_encode(array('id' => $todo->id, 'content' => $todo->content));   
         } else if ($action == "delete") {
             $todoid = (int) $_POST['todoid'];

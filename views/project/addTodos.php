@@ -16,6 +16,7 @@ $this->title = 'Was ist zu tun?';
 
             <?= $this->render('_todos', [
                 'project' => $project,
+                'todos' => $todos,
             ]) ?>
 
         </div>

@@ -36,17 +36,7 @@ var Todos = {
             var editmode = todoobject.data("todo-edited");
 
             if (editmode === 1) {
-                todoobject.data("todo-edited", 0);
-
-                var textdiv = todoobject.find(".todo-text");
-                var inputtext = textdiv.find('textarea').val();
-                todoobject.data("todo-content", inputtext);
-
-                textdiv.empty();
-                textdiv.text(inputtext);
-
-                button.removeClass("todo-icon-confirm");
-                button.addClass("todo-icon-edit");
+                Todos.editTodo(todoobject);
             }
         });
 
@@ -85,6 +75,42 @@ var Todos = {
         $('#todo-list-items').append(addblock);
     },
     
+    editTodo: function(todoobject) {
+        var url = $('#todo-list').attr('data-todo-action-url');
+
+        var todoid = todoobject.attr("data-todo-id");
+        var contenttext = todoobject.find("textarea");
+        
+        console.log(contenttext.val());
+        
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: {
+                "action" : "edit",
+                "todoid" : todoid,
+                "content" : contenttext.val()
+            },
+            dataType: "json",
+            success: function (data) {
+                
+                todoobject.data("todo-edited", 0);
+
+                var textdiv = todoobject.find(".todo-text");
+                todoobject.data("todo-content", data.content);
+                todoobject.attr("data-todo-content", data.content);
+
+                textdiv.empty();
+                textdiv.text(data.content);
+                
+                var button = todoobject.find(".todo-icon-confirm");
+                button.removeClass("todo-icon-confirm");
+                button.addClass("todo-icon-edit");
+            }
+        });
+
+    },
+    
     deleteTodo: function (todoobject) {
         var url = $('#todo-list').attr('data-todo-action-url');
 
@@ -98,7 +124,6 @@ var Todos = {
             },
             dataType: "json",
             success: function (data) {
-                console.log(data);
                 todoobject.remove();
             }
         });

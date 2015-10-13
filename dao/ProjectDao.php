@@ -64,7 +64,22 @@ class ProjectDao
         //#todo exception werfen falls es nicht geklappt hat
     }
     
+    public function editTodo($todoId, $content) {
+        $todo = Todo::findOne(["id" => $todoId]);
+        
+        if ($todo) {
+            $todo->content = $content;
+            $todo->updated_at = time();
+            $todo->save();
+            return $todo;
+        }
+    }
+    
     public function deleteTodo($todoId) {
         Todo::deleteAll(["id" => $todoId]);
+    }
+    
+    public function getTodosForProject($id) {
+        return Todo::findAll(["project_id" => $id]);
     }
 }
