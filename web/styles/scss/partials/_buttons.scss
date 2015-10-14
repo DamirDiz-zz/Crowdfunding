@@ -25,11 +25,11 @@
 .btn-fill {
     border: none;
     display: inline-block;
-    color: $white-color !important; 
+    color: $white !important; 
     background: $accent-color;
     
     &:hover, &:focus {
-        color: $white-color !important;
+        color: $white !important;
         background-color: $accent-color-hover;
         outline:0 !important;
     }

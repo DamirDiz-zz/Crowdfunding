@@ -39,9 +39,9 @@ if ($initiator) {
     <section class="project-nav">
         <div class="project-nav-holder">
             <ul id="project-nav">
-                <li class="project-nav-item active">Über dieses Projekt</li>
-                <li class="project-nav-item">Neuigkeiten <?php $ucount = count($updates); if($ucount > 0 ) { echo "<span class=\"project-nav-item-count\">$ucount</div>"; } ?></li>
-                <li class="project-nav-item">Was ist zu tun <?php $tcount = count($todos); if($tcount > 0 ) { echo "<span class=\"project-nav-item-count\">$tcount</div>"; } ?></li>
+                <li class="active"><span class="project-nav-item">Über dieses Projekt</span></li>
+                <li><span class="project-nav-item">Neuigkeiten <?php $ucount = count($updates); if($ucount > 0 ) { echo "<span class=\"project-nav-item-count\">$ucount</div>"; } ?></span></li>
+                <li><span class="project-nav-item">Was ist zu tun <?php $tcount = count($todos); if($tcount > 0 ) { echo "<span class=\"project-nav-item-count\">$tcount</div>"; } ?></span></li>
             </ul>
         </div>
     </section>

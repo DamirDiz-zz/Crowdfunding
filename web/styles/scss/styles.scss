@@ -320,11 +320,11 @@ Hero
         height:650px !important;
     }
     h1 {
-        color: $white-color;
+        color: $white;
         margin-bottom: 40px;
     }
     p.intro {
-        color: $white-color;
+        color: $white;
         font-size: 20px;
         font-weight: 300;
         margin-bottom: 50px;
@@ -382,18 +382,18 @@ Detail Hero
     overflow: hidden;
 
     h1 {
-        color: $white-color;
+        color: $white;
         margin-bottom: 30px;
         font-size: 50px;
     }
     h2 {
-        color: $white-color;
+        color: $white;
         font-size: 40px;
     }
 
     .herodetail-people {
         margin: 10px 0px 20px 0px;
-        color: $white-color;
+        color: $white;
         font-weight: $semibold;
         font-size: 120%;
 
@@ -433,8 +433,8 @@ Detail Hero
 
 .user-avatar {
     border-radius: 50%;
-    border: 2px solid $white-color;
-    border-color: $white-color;
+    border: 2px solid $white;
+    border-color: $white;
     margin: 10px;
     height: 60px;
     width: 60px;
@@ -456,14 +456,14 @@ Detail Hero
             text-align: center;
             font-weight: $light;
             font-size: 20px;    
-            color: $white-color;
+            color: $white;
         }
 
         p { 
             font-size: 14px;
             line-height: 26px;
             text-align: center;
-            color: $white-color;
+            color: $white;
         }
 
         .intro_step {
@@ -560,7 +560,7 @@ Detail Hero
 .form-subtitle {
     text-align: center;
     font-size: 14px;
-    color: $grey-color;
+    color: $grey;
     margin: 0 auto;
 }
 
@@ -598,7 +598,7 @@ label {
 .hint-block {
     margin-top: 8px !important;
     font-size: 12px;
-    color: $grey-color;
+    color: $grey;
 
 }
 
@@ -617,7 +617,7 @@ select,
 textarea {
     border:none !important;
     border-radius: 0px  !important;
-    background-color: $lightgrey-color  !important;
+    background-color: $lightgrey  !important;
     appearance: none;
     box-shadow: none;
 
@@ -657,12 +657,12 @@ Category Select
     text-align: center;
     width:32%;
     display:inline-block;
-    background: $lightgrey-color;
+    background: $lightgrey;
     padding:20px;
     margin:3px;
     font-size:16px;
     cursor: pointer;
-    border: solid 1px $white-color;
+    border: solid 1px $white;
 }
 
 .category-is-selected {
@@ -733,7 +733,7 @@ Modals
     .modal-subtitle {
         text-align: center;
         font-size: 14px;
-        color: $grey-color;
+        color: $grey;
         margin: 0px;
     }
     

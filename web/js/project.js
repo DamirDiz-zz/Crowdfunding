@@ -45,12 +45,11 @@ $(document).ready(function() {
             
             var tabNum = $(this).index();
             
-            console.log(tabNum);
             $("#project-nav li.active").removeClass("active");    
             $(this).addClass("active");
 
             $(".project-detail.active").removeClass("active");
-            $($(".project-detail")[tabNum]).addClass("active");
+            $($(".project-detail")[tabNum]).addClass("active")
         }
     });
 });

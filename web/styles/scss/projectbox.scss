@@ -114,8 +114,8 @@ and open the template in the editor.
 .project-box-body-avatar {
     float:left;
     border-radius: 50%;
-    border: 2px solid $white-color;
-    border-color: $white-color;
+    border: 2px solid $white;
+    border-color: $white;
     margin: 10px 13px;
     height: 60px;
     width: 60px;
@@ -128,5 +128,5 @@ and open the template in the editor.
 }
 
 .project-box-body-user-subtitle {
-    color: $grey-color;
+    color: $grey;
 }
