@@ -62,6 +62,76 @@ $project-detail-width: 700px;
 
 .project-detail-updates {
     height: 500px;
+    
+    width:$project-detail-width;
+    margin: 0 auto;
+    
+    padding: $descriptionElementTopPadding 0px 0px 0px;
+
+    .updates-timeline-block {
+        display: block;
+        margin-bottom: 20px;
+        
+        &::before {
+
+        }
+
+        
+        .updates-timeline-img {
+            display: inline-block;
+            width:15%;
+            
+            .timline-image {
+                background-size: 50px 50px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                
+                border: 5px solid;
+                border-radius: 50%;
+
+                &.achievement { background-image: url(../img/update.svg); }
+                &.info { 
+                    background-size: 40px 40px;
+                    background-image: url(../img/update.svg); 
+                    background-color: #DFF4F3;
+                    border-color: #91E4E0;
+                }
+                &.user { 
+                    background-image: url(../img/update.svg);  
+                    border-color: #E49191;
+                }
+                &.start { 
+                    background-image: url(../img/rocket.svg); 
+                    background-color: #F9E7FC;
+                    border-color: #D991E4;
+                }
+            }
+        }
+        .updates-timeline-content {
+            display: inline-block;
+            font-family: $sans-serif;
+            width:84%;
+                            
+            date {
+                font-size: 16px;
+                font-weight: $semibold;
+            }
+            
+            h2 {
+                font-size: 22px;
+                font-weight: $light;
+            }
+            
+            p {
+                font-size: 14px;
+                font-weight: $normal;
+            }
+        }
+    }
+   
 }
 
 .project-detail-todos {

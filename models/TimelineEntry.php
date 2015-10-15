@@ -22,6 +22,11 @@ use Yii;
  */
 class TimelineEntry extends \yii\db\ActiveRecord
 {
+    const ACHIEVMENT = 1;
+    const INFO = 2;
+    const USER = 3;
+    const START = 4;
+
     /**
      * @inheritdoc
      */
