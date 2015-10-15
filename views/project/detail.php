@@ -40,8 +40,8 @@ if ($initiator) {
         <div class="project-nav-holder">
             <ul id="project-nav">
                 <li class="active"><span class="project-nav-item">Über dieses Projekt</span></li>
-                <li><span class="project-nav-item">Neuigkeiten <?php $ucount = count($updates); if($ucount > 0 ) { echo "<span class=\"project-nav-item-count\">$ucount</div>"; } ?></span></li>
-                <li><span class="project-nav-item">Was ist zu tun <?php $tcount = count($todos); if($tcount > 0 ) { echo "<span class=\"project-nav-item-count\">$tcount</div>"; } ?></span></li>
+                <li><span class="project-nav-item">Neuigkeiten <?php $ucount = count($updates); if($ucount > 0 ) { echo "<span class=\"project-nav-item-count\">$ucount</span>"; } ?></span></li>
+                <li><span class="project-nav-item">Was ist zu tun <?php $tcount = count($todos); if($tcount > 0 ) { echo "<span class=\"project-nav-item-count\">$tcount</span>"; } ?></span></li>
             </ul>
         </div>
     </section>
@@ -79,11 +79,18 @@ if ($initiator) {
     </section>
 
     <section class="project-detail project-detail-todos">
-        <?php if (count($todos) > 0 ) { ?>
-        <?php foreach ($todos as $todo) { ?> 
-            <?php echo $todo->content; ?>
-        <?php }} ?>
+        <?php if (count($todos) > 0) { ?>
+            <div class="project-detail-todos-list">
+                <?php foreach ($todos as $todo) { ?> 
+                    <div class="project-detail-todos-list-entry" data-todo-id="<?php echo $todo->id; ?>">
+                        <?php echo $todo->content; ?>
+                    </div>
+                <?php } ?>
+            </div>
+        <?php } ?>
     </section>
+  
+    
     
 
 </section>

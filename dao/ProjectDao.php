@@ -76,6 +76,17 @@ class ProjectDao
         }
     }
     
+    public function addTimeLineEntryToProject($project, $title, $text = null) {
+        $timelineEntry = new TimelineEntry();
+        
+        $timelineEntry->project_id = $project->id;
+        $timelineEntry->title = $title; 
+        $timelineEntry->text = $text; 
+        $timelineEntry->created_at = time();
+        $timelineEntry->updated_at = time();        
+        
+    }
+    
     public function deleteTodo($todoId) {
         Todo::deleteAll(["id" => $todoId]);
     }

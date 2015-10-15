@@ -4,7 +4,7 @@
 @import "partials/colors";
 
 $descriptionElementTopPadding: 30px;
-
+$project-detail-width: 700px;
 
 .project-detail {
     display:none;
@@ -13,9 +13,10 @@ $descriptionElementTopPadding: 30px;
        display: block;
     }
 }
+
 .project-detail-description {
     
-    width:700px;
+    width:$project-detail-width;
     margin: 0 auto;
     
     .descriptionElement {
@@ -65,4 +66,27 @@ $descriptionElementTopPadding: 30px;
 
 .project-detail-todos {
     height: 500px;
+
+    width:$project-detail-width;
+    margin: 0 auto;
+    
+    font-size: 20px;
+    letter-spacing: 0.16px;
+    line-height: 30px;
+    font-weight: $light;
+    
+    .project-detail-todos-list {
+        
+        padding: $descriptionElementTopPadding 0px 0px 0px;
+
+        .project-detail-todos-list-entry {
+            min-height: 50px;
+            vertical-align: top;
+            box-sizing: content-box;
+            padding: 15px 20px;
+            border-radius: 10px;
+            background-color: rgba(0,0,0,0.04);
+            margin-bottom: 10px;
+        }
+    }
 }

@@ -11,11 +11,13 @@ use Yii;
  * @property integer $project_id
  * @property string $title
  * @property string $text
+ * @property integer $userReference
  * @property integer $created_at
  * @property integer $updated_at
  * @property integer $type_id
  *
  * @property Project $project
+ * @property User $userReference0
  * @property TimelineEntryType $type
  */
 class TimelineEntry extends \yii\db\ActiveRecord
@@ -35,7 +37,7 @@ class TimelineEntry extends \yii\db\ActiveRecord
     {
         return [
             [['project_id', 'title', 'created_at', 'updated_at'], 'required'],
-            [['project_id', 'created_at', 'updated_at', 'type_id'], 'integer'],
+            [['project_id', 'userReference', 'created_at', 'updated_at', 'type_id'], 'integer'],
             [['text'], 'string'],
             [['title'], 'string', 'max' => 255]
         ];
@@ -51,6 +53,7 @@ class TimelineEntry extends \yii\db\ActiveRecord
             'project_id' => 'Project ID',
             'title' => 'Title',
             'text' => 'Text',
+            'userReference' => 'User Reference',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'type_id' => 'Type ID',
@@ -63,6 +66,14 @@ class TimelineEntry extends \yii\db\ActiveRecord
     public function getProject()
     {
         return $this->hasOne(Project::className(), ['id' => 'project_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUserReference0()
+    {
+        return $this->hasOne(User::className(), ['id' => 'userReference']);
     }
 
     /**
