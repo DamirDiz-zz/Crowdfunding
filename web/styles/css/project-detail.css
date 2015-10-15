@@ -49,10 +49,18 @@ Mixins
       color: #929292; }
 
 .project-detail-updates {
-  height: 500px;
   width: 700px;
-  margin: 0 auto;
-  padding: 30px 0px 0px 0px; }
+  margin: 30px auto;
+  position: relative; }
+  .project-detail-updates::before {
+    position: absolute;
+    top: 10px;
+    left: 32px;
+    width: 6px;
+    height: 100%;
+    background: #C3C3C3;
+    content: '';
+    z-index: -1; }
   .project-detail-updates .updates-timeline-block {
     display: block;
     margin-bottom: 20px; }
@@ -77,6 +85,7 @@ Mixins
           border-color: #91E4E0; }
         .project-detail-updates .updates-timeline-block .updates-timeline-img .timline-image.user  {
           background-image: url(../img/update.svg);
+          background-color: #F6DBDB;
           border-color: #E49191; }
         .project-detail-updates .updates-timeline-block .updates-timeline-img .timline-image.start {
           background-image: url(../img/rocket.svg);
