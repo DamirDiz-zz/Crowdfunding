@@ -17,7 +17,6 @@ use app\models\ProjectDescription;
 
 class ProjectDao 
 {
-    
     public function getTop3()
     {
         return Project::find()->limit(3)->all();
@@ -76,26 +75,29 @@ class ProjectDao
         }
     }
     
-    public function addTimeLineEntryToProject($project, $title, $text = null) {
+    public function addTimeLineEntryToProject($projectId, $title, $text = null, $userId = null, $typeId) {
         $timelineEntry = new TimelineEntry();
         
-        $timelineEntry->project_id = $project->id;
+        $timelineEntry->project_id = $projectId;
         $timelineEntry->title = $title; 
         $timelineEntry->text = $text; 
+        $timelineEntry->userReference = $userId; 
         $timelineEntry->created_at = time();
-        $timelineEntry->updated_at = time();        
+        $timelineEntry->updated_at = time();   
+        $timelineEntry->type_id = $typeId;
         
+        $timelineEntry->save();
+        
+        return $timelineEntry;
     }
     
     public function deleteTodo($todoId) {
         Todo::deleteAll(["id" => $todoId]);
     }
     
-        
     public function getUpdatesForProject($id) {
-        return TimelineEntry::findAll(["project_id" => $id]);
-    }
-
+        return TimelineEntry::find()->where(["project_id" => $id])->orderBy(['id' => SORT_DESC])->all();
+            }
     
     public function getTodosForProject($id) {
         return Todo::findAll(["project_id" => $id]);

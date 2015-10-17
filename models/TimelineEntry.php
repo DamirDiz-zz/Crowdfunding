@@ -70,15 +70,17 @@ class TimelineEntry extends \yii\db\ActiveRecord
      */
     public function getProject()
     {
-        return $this->hasOne(Project::className(), ['id' => 'project_id']);
+        return Project::findOne($this->project_id);
+        //return $this->hasOne(Project::className(), ['id' => 'project_id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUserReference0()
+    public function getUserReference()
     {
-        return $this->hasOne(User::className(), ['id' => 'userReference']);
+        return User::findOne($this->userReference);
+        //return $this->hasOne(User::className(), ['id' => 'userReference']);
     }
 
     /**

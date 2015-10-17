@@ -1,6 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 
+use app\models\User;
 use app\models\ProjectDescription;
 use app\models\Todo;
 use app\models\TimelineEntry;
@@ -76,13 +77,10 @@ if ($initiator) {
         <?php if (count($updates) > 0 ) { ?>
         <?php foreach ($updates as $update) { ?> 
         
-        <div class="updates-timeline-block">
-            <div class="updates-timeline-img">
-                
-                <?php
-                    $class = "";
-                    switch ($update->type_id) {
-                    case TimelineEntry::ACHIEVMENT: 
+        <?php
+            $class = "";
+                switch ($update->type_id) {
+                    case TimelineEntry::ACHIEVMENT:
                         $class = "achievment";
                         break;
                     case TimelineEntry::INFO:
@@ -94,15 +92,25 @@ if ($initiator) {
                     case TimelineEntry::START:
                         $class = "start";
                         break;
-                    }                    
+                }
                 ?>
-                <div class="timline-image <?php echo $class; ?>"></div>
+        <div class="updates-timeline-block <?php echo $class; ?>">
+            <div class="updates-timeline-img">
+                <?php if ($class == "user") { 
+                    $user = $update->getUserReference(); ?>
+                    <div class="timeline-avatar"><img src="<?php echo $user->getImagePath(); ?>"></div>
+                <?php } else { ?>
+                    <div class="timeline-icon"></div>
+                <?php } ?>
+
+                
+                
             </div> <!-- cd-timeline-img -->
             
             <div class="updates-timeline-content">
-                <date><?php echo $update->created_at; ?></date>
+                <date><?php echo date("m.d.y",$update->created_at); ?></date>
                 <h4><?php echo $update->title; ?></h2>
-                <p><?php echo $update->text; ?>.</p>
+                <p><?php echo $update->text; ?></p>
             </div> <!-- cd-timeline-content -->
         </div> <!-- cd-timeline-block -->
         <?php }} ?>

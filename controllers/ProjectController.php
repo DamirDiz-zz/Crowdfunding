@@ -8,6 +8,7 @@ use app\models\Role;
 use app\models\Project;
 use app\models\ProjectSearch;
 use app\models\User2project;
+use app\models\TimelineEntry;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -98,7 +99,8 @@ class ProjectController extends Controller
     public function actionCreate($id = null, $isNew = false)
     {
         $project = new Project();
-
+        $projectDao = new ProjectDao();
+        
         $user = User::findById(Yii::$app->user->id);
 
         if ($project->load(Yii::$app->request->post())) {
@@ -120,7 +122,9 @@ class ProjectController extends Controller
                 $u2p->role_id = Role::INITIATOR;
                 
                 $u2p->save();
-                
+                $projectDao->addTimeLineEntryToProject($project->id, "Es geht los! Unterstütz unser Projekt!", null, null, TimelineEntry::START);
+                $projectDao->addTimeLineEntryToProject($project->id, "$user->firstname hat das Projekt gestartet!", null, $user->id, TimelineEntry::USER);
+                                
                 return $this->render('addTodos', [
                     'project' => $project,
                 ]);
@@ -162,6 +166,8 @@ class ProjectController extends Controller
         
         if ($action == "create") {
             $todo = $projectDao->createTodo($projectId, $user->id);
+            $projectDao->addTimeLineEntryToProject($projectId, "Eine neue Aufgabe wurde hinzugefügt!", null, null, TimelineEntry::INFO);
+           
             return json_encode(array('id' => $todo->id, 'content' => $todo->content));   
         } else if ($action == "edit") {
             $todoid = (int) $_POST['todoid'];

@@ -82,11 +82,57 @@ $project-detail-width: 700px;
         display: block;
         margin-bottom: 20px;
 
+        &.achievement { 
+            .timeline-icon {
+                background-image: url(../img/update.svg); 
+            }
+            
+            h4 { color: #D991E4; }
+            date { color: #A96CB2; }
+        }
+        &.info { 
+            .timeline-icon {
+                background-size: 40px 40px;
+                background-image: url(../img/update.svg); 
+                background-color: #DFF4F3;
+                border-color: #91E4E0 !important;
+            }
+            
+            h4 { color: #408F8B; }
+            date { color: #5FB9B5; }
+        }
+        &.start { 
+            .timeline-icon {
+                background-image: url(../img/rocket.svg); 
+                background-color: #F9E7FC;
+                border-color: #D991E4 !important;
+            }
+            
+            h4 { color: #D991E4; }
+            date { color: #A96CB2; }
+        }
+        &.user { 
+            h4 { color: #E49191; }
+            date { color: #955656; }
+        }
+
         .updates-timeline-img {
             display: inline-block;
             width:15%;
 
-            .timline-image {
+            .timeline-avatar {
+
+                img {
+                    display: inline-block;
+                    width: 70px;
+                    height: 70px;
+                    border: 5px solid #E49191;
+                    border-radius: 50%;
+                    background-color: #F6DBDB;
+                }
+            }
+
+            .timeline-icon {
                 background-size: 50px 50px;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -96,24 +142,6 @@ $project-detail-width: 700px;
 
                 border: 5px solid;
                 border-radius: 50%;
-
-                &.achievement { background-image: url(../img/update.svg); }
-                &.info { 
-                    background-size: 40px 40px;
-                    background-image: url(../img/update.svg); 
-                    background-color: #DFF4F3;
-                    border-color: #91E4E0;
-                }
-                &.user { 
-                    background-image: url(../img/update.svg); 
-                    background-color: #F6DBDB;
-                    border-color: #E49191;
-                }
-                &.start { 
-                    background-image: url(../img/rocket.svg); 
-                    background-color: #F9E7FC;
-                    border-color: #D991E4;
-                }
             }
         }
         .updates-timeline-content {
@@ -126,9 +154,10 @@ $project-detail-width: 700px;
                 font-weight: $semibold;
             }
 
-            h2 {
+            h4 {
                 font-size: 22px;
                 font-weight: $light;
+                margin: 5px 0px;
             }
 
             p {
