@@ -74,7 +74,7 @@ if ($initiator) {
     </section>
     
     <section class="project-detail project-detail-updates">
-        <div class="updates-timeline"> 
+        <div id="updates-timeline" class="updates-timeline"> 
             <?php if (count($updates) > 0 ) { ?>
             <?php foreach ($updates as $update) { ?> 
 
@@ -110,7 +110,7 @@ if ($initiator) {
 
                 <div class="updates-timeline-content">
                     <date><?php echo date("m.d.y",$update->created_at); ?></date>
-                    <h4><?php echo $update->title; ?></h2>
+                    <h4><?php echo $update->title; ?></h4>
                     <p><?php echo $update->text; ?></p>
                 </div> <!-- cd-timeline-content -->
             </div> <!-- cd-timeline-block -->
@@ -118,11 +118,11 @@ if ($initiator) {
         </div>
         
         
-        <div id="add-update" class="project-detail-add-update" data-add-update-url="<?php echo Yii::$app->urlManager->createUrl(['project/addUpdate', 'projectId' => (int) $project->id]); ?>">
+        <div id="add-update" class="project-detail-add-update" data-add-update-url="<?php echo Yii::$app->urlManager->createUrl(['project/addupdate', 'id' => (int) $project->id]); ?>">
             <label>Gibt es neuigkeiten?</label>
-            <input placeholder="Titel" type="text">
-            <textarea placeholder="Was hat sich getan?" rows="4"></textarea>
-            <button class="btn btn-fill">Hinzufügen</button>
+            <input id="add-update-title" placeholder="Titel" type="text">
+            <textarea id="add-update-content" placeholder="Was hat sich getan?" rows="4"></textarea>
+            <button id="add-update-button" class="btn btn-fill">Hinzufügen</button>
         </div>
     </section>
 

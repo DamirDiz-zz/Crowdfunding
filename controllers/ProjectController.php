@@ -153,11 +153,12 @@ class ProjectController extends Controller
             'todos' => $todos
         ]);
     }
+     
     
     public function actionAddProjectDescription() {
         
     }
-    
+   
     public function actionSavetodo($projectId) {
         $projectDao = new ProjectDao();
         $user = User::findById(Yii::$app->user->id);
@@ -178,6 +179,20 @@ class ProjectController extends Controller
             $todoid = (int) $_POST['todoid'];
             $projectDao = $projectDao->deleteTodo($todoid);
             return json_encode(array('todoId' => $todoid));   
+        }
+    }
+    
+     public function actionAddupdate($id) {
+        $projectDao = new ProjectDao();
+                
+        $action = $_POST['action'];
+        $tile = $_POST['title'];
+        $content = $_POST['content'];
+
+        if ($action == "create") {
+            $update = $projectDao->addTimeLineEntryToProject($id, $tile, $content, null, TimelineEntry::INFO);
+
+            return json_encode(array('id' => $update->id, 'title' => $update->title, 'content' => $update->text, 'createdat' => date("m.d.y",$update->created_at)));   
         }
     }
     

@@ -27,8 +27,20 @@ class ProjectDao
         return Project::find()->all();
     }
     
-    public function getById($id) {
-        return Project::findOne($id);
+    /**
+     * Finds the Project model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     * @param integer $id
+     * @return Project the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function getById($id)
+    {
+        if (($model = Project::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
     }
     
     public function getProjectDescriptionsForProject($project) {

@@ -57,12 +57,12 @@ var Todos = {
             dataType: "json",
             success: function (data) {
                 console.log(data);
-                Todos.addTodo(data.id, data.content);
+                Todos.addTodoToDom(data.id, data.content);
             }
         });
     },
     
-    addTodo: function (id, content) {
+    addTodoToDom: function (id, content) {
         var addblock = '<div class="todo-list-entry" data-todo-id="' + id + '" data-todo-content="' + content + '" data-todo-edited="0">' +
                 '<div class="todo-icon"></div>' +
                 '<div class="todo-text">' + content + '</div>' +

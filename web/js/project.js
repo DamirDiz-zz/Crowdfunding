@@ -1,8 +1,52 @@
+var Update = {
+    
+    createUpdate: function (title, content) {
+        var persistLink = $('#add-update').attr('data-add-update-url');
+
+        $.ajax({
+            type: 'POST',
+            url: persistLink,
+            data: {
+                "action" : "create",
+                "title" : title,
+                "content" : content
+            },
+            dataType: "json",
+            success: function (data) {
+
+                Update.addUpdateToDom(data.id, data.title, data.content, data.createdat);
+                Update.reset();
+            }
+        });
+    },
+        
+    addUpdateToDom: function(id, title, content, createdat) {
+        var updateBlock = '<div class="updates-timeline-block info">' + 
+            '<div class="updates-timeline-img">' + 
+                '<div class="timeline-icon"></div>' + 
+            '</div>' + 
+            '<div class="updates-timeline-content">' + 
+                    '<date>' + createdat + '</date>' +
+                    '<h4>' + title + '</h4>' +
+                    '<p>' + content + '</p>' +
+                '</div>' +
+            '</div>';
+        
+        $('#updates-timeline').prepend(updateBlock);
+    },
+    
+    reset: function() {
+        $('#add-update-title').val("");
+        $('#add-update-content').val("");
+    }
+}
+
 var Project = {
 
     init: function () {
         this.initMap();
         this.checkIfNew();
+        this.initUpdates();
     },
     
     initMap: function() {
@@ -10,7 +54,6 @@ var Project = {
         var latitude = $('#map').attr('lat');
         var longitude = $('#map').attr('lng');
         var location = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
-        
         
         var map = new google.maps.Map(document.getElementById('map'), {
                 center: location,
@@ -34,6 +77,17 @@ var Project = {
             $('#project-created-modal').modal('show')
         }
         
+    },
+    
+    initUpdates: function() {
+        
+        $('#add-update-button').on('click', function() {
+            var title = $('#add-update-title').val();
+            var content = $('#add-update-content').val();
+            
+            Update.createUpdate(title, content);
+            
+        });
     }
 }
 
