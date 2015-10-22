@@ -609,6 +609,7 @@ input, textarea, select {
     color: #2b3e51;
 }
 
+
 input[type="text"], 
 input[type="email"], 
 input[type="password"], 
@@ -627,18 +628,25 @@ textarea {
     }
 }
 
+
+.form-control {
+    padding: 16px;
+    height: inherit;
+}
+
+
 input[type="text"], 
 input[type="email"], 
 input[type="password"], 
 input[type="file"], 
 select {
-    padding: 24px 16px !important;
+    padding: 16px;
     //appearance: none;
     &:focus {
     }
 }
 textarea {
-    padding: 16px !important;
+    padding: 16px;
 } 
 
 input[type="file"] {

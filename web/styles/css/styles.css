@@ -562,12 +562,16 @@ textarea {
     border: none !important;
     box-shadow: none !important; }
 
+.form-control {
+  padding: 16px;
+  height: inherit; }
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="file"],
 select {
-  padding: 24px 16px !important; }
+  padding: 16px; }
 
 textarea {
   padding: 16px !important; }

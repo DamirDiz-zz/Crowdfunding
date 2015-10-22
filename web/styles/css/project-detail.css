@@ -49,80 +49,91 @@ Mixins
 
 .project-detail-updates {
   width: 700px;
-  margin: 30px auto;
-  position: relative; }
-  .project-detail-updates::before {
-    position: absolute;
-    top: 10px;
-    left: 32px;
-    width: 6px;
-    height: 100%;
-    background: #C3C3C3;
-    content: '';
-    z-index: -1; }
-  .project-detail-updates .updates-timeline-block {
+  margin: 30px auto; }
+  .project-detail-updates .updates-timeline {
+    position: relative; }
+    .project-detail-updates .updates-timeline::before {
+      position: absolute;
+      top: 0px;
+      bottom: 10px;
+      left: 33px;
+      width: 4px;
+      background: #C3C3C3;
+      content: '';
+      z-index: -1; }
+    .project-detail-updates .updates-timeline .updates-timeline-block {
+      display: block;
+      margin-bottom: 20px; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.achievement .timeline-icon {
+        background-image: url(../img/update.svg); }
+      .project-detail-updates .updates-timeline .updates-timeline-block.achievement h4 {
+        color: #D991E4; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.achievement date {
+        color: #A96CB2; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.info .timeline-icon {
+        background-size: 40px 40px;
+        background-image: url(../img/update.svg);
+        background-color: #DFF4F3;
+        border-color: #91E4E0 !important; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.info h4 {
+        color: #408F8B; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.info date {
+        color: #5FB9B5; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.start .timeline-icon {
+        background-image: url(../img/rocket.svg);
+        background-color: #F9E7FC;
+        border-color: #D991E4 !important; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.start h4 {
+        color: #D991E4; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.start date {
+        color: #A96CB2; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.user h4 {
+        color: #E49191; }
+      .project-detail-updates .updates-timeline .updates-timeline-block.user date {
+        color: #955656; }
+      .project-detail-updates .updates-timeline .updates-timeline-block .updates-timeline-img {
+        display: inline-block;
+        width: 15%; }
+        .project-detail-updates .updates-timeline .updates-timeline-block .updates-timeline-img .timeline-avatar img {
+          display: inline-block;
+          width: 70px;
+          height: 70px;
+          border: 5px solid #E49191;
+          border-radius: 50%;
+          background-color: #F6DBDB; }
+        .project-detail-updates .updates-timeline .updates-timeline-block .updates-timeline-img .timeline-icon {
+          background-size: 50px 50px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          display: inline-block;
+          width: 70px;
+          height: 70px;
+          border: 5px solid;
+          border-radius: 50%; }
+      .project-detail-updates .updates-timeline .updates-timeline-block .updates-timeline-content {
+        display: inline-block;
+        font-family: "Martel Sans", sans-serif;
+        width: 84%;
+        vertical-align: top; }
+        .project-detail-updates .updates-timeline .updates-timeline-block .updates-timeline-content date {
+          font-size: 16px;
+          font-weight: 400; }
+        .project-detail-updates .updates-timeline .updates-timeline-block .updates-timeline-content h4 {
+          font-size: 22px;
+          font-weight: 200;
+          margin: 5px 0px; }
+        .project-detail-updates .updates-timeline .updates-timeline-block .updates-timeline-content p {
+          font-size: 14px;
+          font-weight: 300; }
+  .project-detail-updates .project-detail-add-update label {
+    display: block; }
+  .project-detail-updates .project-detail-add-update input {
+    padding: 16px;
+    width: 100%; }
+  .project-detail-updates .project-detail-add-update textarea {
     display: block;
-    margin-bottom: 20px; }
-    .project-detail-updates .updates-timeline-block.achievement .timeline-icon {
-      background-image: url(../img/update.svg); }
-    .project-detail-updates .updates-timeline-block.achievement h4 {
-      color: #D991E4; }
-    .project-detail-updates .updates-timeline-block.achievement date {
-      color: #A96CB2; }
-    .project-detail-updates .updates-timeline-block.info .timeline-icon {
-      background-size: 40px 40px;
-      background-image: url(../img/update.svg);
-      background-color: #DFF4F3;
-      border-color: #91E4E0 !important; }
-    .project-detail-updates .updates-timeline-block.info h4 {
-      color: #408F8B; }
-    .project-detail-updates .updates-timeline-block.info date {
-      color: #5FB9B5; }
-    .project-detail-updates .updates-timeline-block.start .timeline-icon {
-      background-image: url(../img/rocket.svg);
-      background-color: #F9E7FC;
-      border-color: #D991E4 !important; }
-    .project-detail-updates .updates-timeline-block.start h4 {
-      color: #D991E4; }
-    .project-detail-updates .updates-timeline-block.start date {
-      color: #A96CB2; }
-    .project-detail-updates .updates-timeline-block.user h4 {
-      color: #E49191; }
-    .project-detail-updates .updates-timeline-block.user date {
-      color: #955656; }
-    .project-detail-updates .updates-timeline-block .updates-timeline-img {
-      display: inline-block;
-      width: 15%; }
-      .project-detail-updates .updates-timeline-block .updates-timeline-img .timeline-avatar img {
-        display: inline-block;
-        width: 70px;
-        height: 70px;
-        border: 5px solid #E49191;
-        border-radius: 50%;
-        background-color: #F6DBDB; }
-      .project-detail-updates .updates-timeline-block .updates-timeline-img .timeline-icon {
-        background-size: 50px 50px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        display: inline-block;
-        width: 70px;
-        height: 70px;
-        border: 5px solid;
-        border-radius: 50%; }
-    .project-detail-updates .updates-timeline-block .updates-timeline-content {
-      display: inline-block;
-      font-family: "Martel Sans", sans-serif;
-      width: 84%; }
-      .project-detail-updates .updates-timeline-block .updates-timeline-content date {
-        font-size: 16px;
-        font-weight: 400; }
-      .project-detail-updates .updates-timeline-block .updates-timeline-content h4 {
-        font-size: 22px;
-        font-weight: 200;
-        margin: 5px 0px; }
-      .project-detail-updates .updates-timeline-block .updates-timeline-content p {
-        font-size: 14px;
-        font-weight: 300; }
+    width: 100%;
+    margin: 10px 0px; }
 
 .project-detail-todos {
   height: 500px;

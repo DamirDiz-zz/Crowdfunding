@@ -74,46 +74,56 @@ if ($initiator) {
     </section>
     
     <section class="project-detail project-detail-updates">
-        <?php if (count($updates) > 0 ) { ?>
-        <?php foreach ($updates as $update) { ?> 
-        
-        <?php
-            $class = "";
-                switch ($update->type_id) {
-                    case TimelineEntry::ACHIEVMENT:
-                        $class = "achievment";
-                        break;
-                    case TimelineEntry::INFO:
-                        $class = "info";
-                        break;
-                    case TimelineEntry::USER:
-                        $class = "user";
-                        break;
-                    case TimelineEntry::START:
-                        $class = "start";
-                        break;
-                }
-                ?>
-        <div class="updates-timeline-block <?php echo $class; ?>">
-            <div class="updates-timeline-img">
-                <?php if ($class == "user") { 
-                    $user = $update->getUserReference(); ?>
-                    <div class="timeline-avatar"><img src="<?php echo $user->getImagePath(); ?>"></div>
-                <?php } else { ?>
-                    <div class="timeline-icon"></div>
-                <?php } ?>
+        <div class="updates-timeline"> 
+            <?php if (count($updates) > 0 ) { ?>
+            <?php foreach ($updates as $update) { ?> 
 
-                
-                
-            </div> <!-- cd-timeline-img -->
-            
-            <div class="updates-timeline-content">
-                <date><?php echo date("m.d.y",$update->created_at); ?></date>
-                <h4><?php echo $update->title; ?></h2>
-                <p><?php echo $update->text; ?></p>
-            </div> <!-- cd-timeline-content -->
-        </div> <!-- cd-timeline-block -->
+            <?php
+                $class = "";
+                    switch ($update->type_id) {
+                        case TimelineEntry::ACHIEVMENT:
+                            $class = "achievment";
+                            break;
+                        case TimelineEntry::INFO:
+                            $class = "info";
+                            break;
+                        case TimelineEntry::USER:
+                            $class = "user";
+                            break;
+                        case TimelineEntry::START:
+                            $class = "start";
+                            break;
+                    }
+                    ?>
+            <div class="updates-timeline-block <?php echo $class; ?>">
+                <div class="updates-timeline-img">
+                    <?php if ($class == "user") { 
+                        $user = $update->getUserReference(); ?>
+                        <div class="timeline-avatar"><img src="<?php echo $user->getImagePath(); ?>"></div>
+                    <?php } else { ?>
+                        <div class="timeline-icon"></div>
+                    <?php } ?>
+
+
+
+                </div> <!-- cd-timeline-img -->
+
+                <div class="updates-timeline-content">
+                    <date><?php echo date("m.d.y",$update->created_at); ?></date>
+                    <h4><?php echo $update->title; ?></h2>
+                    <p><?php echo $update->text; ?></p>
+                </div> <!-- cd-timeline-content -->
+            </div> <!-- cd-timeline-block -->
         <?php }} ?>
+        </div>
+        
+        
+        <div id="add-update" class="project-detail-add-update" data-add-update-url="<?php echo Yii::$app->urlManager->createUrl(['project/addUpdate', 'projectId' => (int) $project->id]); ?>">
+            <label>Gibt es neuigkeiten?</label>
+            <input placeholder="Titel" type="text">
+            <textarea placeholder="Was hat sich getan?" rows="4"></textarea>
+            <button class="btn btn-fill">Hinzufügen</button>
+        </div>
     </section>
 
     <section class="project-detail project-detail-todos">
