@@ -2,6 +2,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use app\models\Category;
 
 $this->title = 'Crowdfunding';
 ?>
@@ -71,7 +72,7 @@ $this->title = 'Crowdfunding';
             <div class="category-box-content">
                 <div class="category-box-content-holder">
                     <a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/discover', 'categoryId' => (int) $category->id]); ?>"><h1 class="text-center text-uppercase"><?php echo $category->title; ?></h1></a>
-                    <div class="project-count">10 Projekte</div>
+                    <div class="project-count"><?php echo count($category->getProjects()) ?> Projekte</div>
                 </div>
             </div>
             <div class="category-box-imageholder" style="background-image: url(<?php echo $category->getTitleImage(); ?>);"></div>

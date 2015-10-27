@@ -104,15 +104,15 @@ header {
     .header-nav {
         display: inline-block;
     }
+    
     .member-actions {
         position: absolute;
         right: 0;
         top: 20px;
         transition: all 300ms ease-in-out;
-
     }
 
-    .member-actions:hover .member-navigation {
+    .member-actions-navigation:hover .member-navigation {
         display: block;
     }
 

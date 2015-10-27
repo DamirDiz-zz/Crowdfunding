@@ -169,7 +169,15 @@ Hero
         font-weight: 300;
         margin-bottom: 50px;
         line-height: 2em; 
-       
+    }
+    
+    p.description {
+        color: $white;
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 50px;
+        line-height: 1.8em; 
+        padding: 0px 60px;
     }
 
     .hero-image {

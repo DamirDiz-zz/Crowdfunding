@@ -84,7 +84,7 @@ header {
     right: 0;
     top: 20px;
     transition: all 300ms ease-in-out; }
-  header .member-actions:hover .member-navigation {
+  header .member-actions-navigation:hover .member-navigation {
     display: block; }
   header .member-navigation {
     display: none;

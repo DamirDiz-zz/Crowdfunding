@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $title
+ * @property string $description
  *
  * @property Project[] $projects
  */
@@ -29,7 +30,8 @@ class Category extends \yii\db\ActiveRecord
     {
         return [
             [['title'], 'required'],
-            [['title'], 'string', 'max' => 255]
+            [['title'], 'string', 'max' => 255],
+            [['description'], 'string']
         ];
     }
 
@@ -41,6 +43,7 @@ class Category extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Title',
+            'description' => 'Description',
         ];
     }
 
@@ -49,10 +52,11 @@ class Category extends \yii\db\ActiveRecord
      */
     public function getProjects()
     {
-        return $this->hasMany(Project::className(), ['category_id' => 'id']);
+        return $this->hasMany(Project::className(), ['category_id' => 'id'])->all();
     }
     
     public function getTitleImage() {
         return Yii::getAlias('@web') . '/img/categories/' . str_replace(" ","",$this->title) . '.jpg';
     }
+    
 }

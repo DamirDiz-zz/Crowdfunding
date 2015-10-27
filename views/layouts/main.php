@@ -77,7 +77,7 @@ $newproject = new Project();
                                     <li>
                                         <img class="header-notification" width="30" height="30" src="<?php echo Yii::getAlias('@web') . '/img/Notification.svg'?>" alt="Notification">
                                     </li>
-                                    <li>
+                                    <li class="member-actions-navigation">
                                         <span class="header-user"><?php echo $user->firstname?></span><img class="header-avatar" src="<?php echo $avatar; ?>" alt="<?php echo $user->firstname; ?>">
                                         <div class="member-navigation"> 
                                             <div class="member-navigation-spacer"></div>

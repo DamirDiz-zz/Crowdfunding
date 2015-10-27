@@ -191,6 +191,13 @@ Hero
     font-weight: 300;
     margin-bottom: 50px;
     line-height: 2em; }
+  .hero p.description, .hero-special p.description {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    line-height: 1.8em;
+    padding: 0px 60px; }
   .hero .hero-image, .hero-special .hero-image {
     position: absolute;
     left: 0px;
@@ -220,8 +227,8 @@ Hero
             transform: translateY(-50%); }
 
 .hero-special {
-  min-height: 400px;
-  height: 400px; }
+  min-height: 450px;
+  height: 450px; }
   .hero-special h1 {
     font-size: 80px; }
   .hero-special .hero-image {

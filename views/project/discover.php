@@ -10,6 +10,7 @@ $this->title = 'Crowdfunding';
     <div class="hero-content">
         <div class="hero-content-holder text-center">
             <h1><?php echo $category->title;?></h1>
+            <p class="description"><?php echo $category->description;?></p>
         </div>
 
     </div>
