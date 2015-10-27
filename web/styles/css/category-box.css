@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11.09.2015, 13:22:01
+    Author     : DamirDiz
+*/
+/* ==========================================================================
+Mixins
+========================================================================== */
+.category-box-container {
+  margin: 0 auto;
+  max-width: 1180px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  -webkit-align-content: flex-start;
+          align-content: flex-start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+  padding: 10px; }
+  .category-box-container .category-box {
+    box-sizing: border-box;
+    width: 366.66667px;
+    background: #F7F7F7;
+    height: 150px;
+    font-size: 12px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden; }
+    .category-box-container .category-box h1 {
+      font-size: 26px;
+      line-height: 140%;
+      font-family: Sunday;
+      margin: 0; }
+    .category-box-container .category-box .category-box-content {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 3; }
+      .category-box-container .category-box .category-box-content .category-box-content-holder {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        padding: 0px 20px; }
+        .category-box-container .category-box .category-box-content .category-box-content-holder .project-count {
+          border-top: 1px solid rgba(255, 255, 255, 0.4);
+          text-align: center;
+          margin: 10px 70px;
+          padding-top: 10px;
+          display: block;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.8); }
+    .category-box-container .category-box .category-box-imageholder {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1);
+      -webkit-filter: blur(5px) brightness(100%);
+              filter: blur(5px) brightness(100%);
+      z-index: 1; }

@@ -57,3 +57,28 @@ $this->title = 'Crowdfunding';
         <?php } ?>
     </div>
 </section>
+
+<section class="main-section">
+    <div class="container-elements clearfix">
+        <div class="pull-left"><h3>Suche nach Kategorien</h3></div>
+    </div>
+    
+    <div class="category-box-container">
+        
+        <?php foreach ($categories as $category) { ?>
+
+        <div class="category-box">
+            <div class="category-box-content">
+                <div class="category-box-content-holder">
+                    <a href="<?php //echo Yii::$app->getUrlManager()->createUrl(['project/detail', 'id' => (int) $project->id]); ?>"><h1 class="text-center text-uppercase"><?php echo $category->title; ?></h1></a>
+                    <div class="project-count">10 Projekte</div>
+                </div>
+            </div>
+            <div class="category-box-imageholder" style="background-image: url(<?php echo Yii::getAlias('@web') . '/img/categories/' . str_replace(" ","",$category->title) . '.jpg'?>);"></div>
+
+        </div>
+        
+        <?php } ?>
+        
+    </div>
+</section>

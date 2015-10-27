@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\SignupForm;
+use app\models\Category;
 
 use app\dao\ProjectDao;
 
@@ -54,8 +55,11 @@ class SiteController extends Controller
         $projectDao = new ProjectDao();
         $projects = $projectDao->getTop3();
         
+        $categories = Category::find()->all();
+        
         return $this->render('index', [
-            'projects' => $projects
+            'projects' => $projects,
+            'categories' => $categories
         ]);
     }
     
