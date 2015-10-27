@@ -6,6 +6,9 @@ use app\models\ProjectDescription;
 use app\models\Todo;
 use app\models\TimelineEntry;
 
+use yii\helpers\Html;
+
+
 $this->registerJsFile('@web/js/project.js', ['position' => \yii\web\View::POS_END, 'depends' => [\yii\web\JqueryAsset::className()]]);
 
 $this->title = $project->title;
@@ -142,6 +145,8 @@ if ($initiator) {
                 <?php } ?>
             </div>
         <?php } ?>
+        <?= Html::a('Aufgaben bearbeiten', ['/project/addtodos', 'id' => (int) $project->id], ['class' => 'btn btn-fill']) ?>
+
     </section>
   
     
