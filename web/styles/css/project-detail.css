@@ -53,15 +53,25 @@ Mixins
       display: inline-block;
       width: 100%; }
       .project-detail-description .project-detail-edit ul li {
+        border: 3px dashed #CCC;
+        border-radius: 20px;
+        padding: 20px;
         cursor: pointer;
         box-sizing: border-box;
         display: inline-block;
         list-style: none;
         text-align: center;
-        width: 49%;
-        min-width: 100px;
+        width: 300px;
+        margin: 20px;
         font-size: 20px;
         font-weight: 400; }
+        .project-detail-description .project-detail-edit ul li:hover {
+          background-color: #EEE; }
+    .project-detail-description .project-detail-edit .project-detail-edit-image {
+      margin: 0 auto;
+      display: block;
+      width: 80px;
+      height: 80px; }
 
 .project-detail-updates {
   width: 700px;

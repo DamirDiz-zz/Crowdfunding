@@ -34,7 +34,11 @@ module.exports = function (grunt) {
             stylus: {
                 files: ['styles/scss/*.scss', 'styles/scss/partials/*.scss'],
                 tasks: ['sass', 'autoprefixer', 'cssmin']
+            },
+            options: {
+                livereload: true
             }
+
         }
     });
 

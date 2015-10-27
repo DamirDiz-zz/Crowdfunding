@@ -73,8 +73,8 @@ if ($initiator) {
                 
         <div class="project-detail-edit">
             <ul>
-                <li class="project-detail-edit-addText">Text hinzufügen</li>
-                <li class="project-detail-edit-addImage">Bild hinzufügen</li>
+                <li class="project-detail-edit-addText"><img class="project-detail-edit-image" src="<?php echo Yii::getAlias('@web') . '/img/AddList.svg' ?>">Text hinzufügen</li>
+                <li class="project-detail-edit-addImage"><img class="project-detail-edit-image" src="<?php echo Yii::getAlias('@web') . '/img/AddImage.svg' ?>">Bild hinzufügen</li>
             </ul>
         </div>
     </section>
