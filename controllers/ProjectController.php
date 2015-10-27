@@ -9,6 +9,7 @@ use app\models\Project;
 use app\models\ProjectSearch;
 use app\models\User2project;
 use app\models\TimelineEntry;
+use app\models\Category;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -87,6 +88,18 @@ class ProjectController extends Controller
         
         return $this->render('all', [
             'projects' => $projects
+        ]);
+    }
+    
+    public function actionDiscover($categoryId) {
+        $projectDao = new ProjectDao();
+        $category = Category::findOne(['id' => $categoryId]);
+       
+        $projects = $projectDao->getProjectsForCategory($categoryId);
+        
+        return $this->render('discover', [
+            'projects' => $projects,
+            'category' => $category
         ]);
 
     }

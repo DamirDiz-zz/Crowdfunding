@@ -27,6 +27,11 @@ class ProjectDao
         return Project::find()->all();
     }
     
+    public function getProjectsForCategory($id) 
+    {
+        return Project::findAll(["category_id" => $id]);
+    }
+    
     /**
      * Finds the Project model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

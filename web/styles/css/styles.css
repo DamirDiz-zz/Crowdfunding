@@ -223,8 +223,7 @@ Hero
   min-height: 400px;
   height: 400px; }
   .hero-special h1 {
-    font-family: Serendity;
-    font-size: 120px; }
+    font-size: 80px; }
   .hero-special .hero-image {
     background: url("../img/headerspecial.jpg");
     background-size: cover;

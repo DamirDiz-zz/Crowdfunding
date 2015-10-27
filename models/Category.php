@@ -51,4 +51,8 @@ class Category extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Project::className(), ['category_id' => 'id']);
     }
+    
+    public function getTitleImage() {
+        return Yii::getAlias('@web') . '/img/categories/' . str_replace(" ","",$this->title) . '.jpg';
+    }
 }

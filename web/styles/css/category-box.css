@@ -30,7 +30,7 @@ Mixins
     box-sizing: border-box;
     width: 366.66667px;
     background: #F7F7F7;
-    height: 150px;
+    height: 200px;
     font-size: 12px;
     margin: 10px;
     position: relative;
@@ -54,7 +54,7 @@ Mixins
                 transform: translateY(-50%);
         padding: 0px 20px; }
         .category-box-container .category-box .category-box-content .category-box-content-holder .project-count {
-          border-top: 1px solid rgba(255, 255, 255, 0.4);
+          border-top: 1px solid rgba(255, 255, 255, 0.5);
           text-align: center;
           margin: 10px 70px;
           padding-top: 10px;
