@@ -58,6 +58,31 @@ $project-detail-width: 700px;
             color: $grey;
         }
     }
+    
+    .project-detail-edit {
+        
+        margin: 20px 0px;
+        
+        ul {
+            list-style: none;
+            display: inline-block;
+            width: 100%;
+
+            li {
+                cursor: pointer;
+                box-sizing: border-box;
+                display: inline-block;
+                list-style: none;
+
+                text-align: center;
+                width: 49%;
+                min-width: 100px;
+
+                font-size: 20px;
+                font-weight: $semibold;
+            }
+        }
+    }
 }
 
 .project-detail-updates {

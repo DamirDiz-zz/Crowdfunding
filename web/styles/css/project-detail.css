@@ -46,6 +46,22 @@ Mixins
       font-size: 13px;
       line-height: 1.4;
       color: #929292; }
+  .project-detail-description .project-detail-edit {
+    margin: 20px 0px; }
+    .project-detail-description .project-detail-edit ul {
+      list-style: none;
+      display: inline-block;
+      width: 100%; }
+      .project-detail-description .project-detail-edit ul li {
+        cursor: pointer;
+        box-sizing: border-box;
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+        width: 49%;
+        min-width: 100px;
+        font-size: 20px;
+        font-weight: 400; }
 
 .project-detail-updates {
   width: 700px;

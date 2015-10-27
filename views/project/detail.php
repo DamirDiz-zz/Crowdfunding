@@ -70,7 +70,13 @@ if ($initiator) {
 
 
         <?php }}} ?>
-
+                
+        <div class="project-detail-edit">
+            <ul>
+                <li class="project-detail-edit-addText">Text hinzufügen</li>
+                <li class="project-detail-edit-addImage">Bild hinzufügen</li>
+            </ul>
+        </div>
     </section>
     
     <section class="project-detail project-detail-updates">
