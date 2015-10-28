@@ -48,6 +48,8 @@ Mixins
       color: #929292; }
   .project-detail-description .project-detail-edit {
     margin: 20px 0px; }
+    .project-detail-description .project-detail-edit a, .project-detail-description .project-detail-edit a:hover {
+      color: #000; }
     .project-detail-description .project-detail-edit ul {
       list-style: none;
       display: inline-block;

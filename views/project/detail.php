@@ -76,8 +76,8 @@ if ($initiator) {
                 
         <div class="project-detail-edit">
             <ul>
-                <li class="project-detail-edit-addText"><img class="project-detail-edit-image" src="<?php echo Yii::getAlias('@web') . '/img/AddList.svg' ?>">Text hinzufügen</li>
-                <li class="project-detail-edit-addImage"><img class="project-detail-edit-image" src="<?php echo Yii::getAlias('@web') . '/img/AddImage.svg' ?>">Bild hinzufügen</li>
+                <li class="project-detail-edit-addText"><a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/addprojectdescription', 'projectId' => (int) $project->id, 'type' => 'text']); ?>"><img class="project-detail-edit-image" src="<?php echo Yii::getAlias('@web') . '/img/AddList.svg' ?>">Text hinzufügen</a></li>
+                <li class="project-detail-edit-addImage"><a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/addprojectdescription', 'projectId' => (int) $project->id, 'type' => 'image']); ?>"><img class="project-detail-edit-image" src="<?php echo Yii::getAlias('@web') . '/img/AddImage.svg' ?>">Bild hinzufügen</a></li>
             </ul>
         </div>
     </section>

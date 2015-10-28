@@ -10,6 +10,7 @@ use app\models\ProjectSearch;
 use app\models\User2project;
 use app\models\TimelineEntry;
 use app\models\Category;
+use app\models\ProjectDescription;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -103,6 +104,28 @@ class ProjectController extends Controller
         ]);
 
     }
+    
+    public function actionAddprojectdescription($projectId = null, $type = null) {
+        $projectDescription = new ProjectDescription();
+
+        if ($projectDescription->load(Yii::$app->request->post())) {
+            
+            if ($projectDescription->save(false)) {
+                return $this->redirect(['detail',
+                    'id' => $projectDescription->project_id]);
+            }
+        } else {
+            if ($type == "text") {
+                return $this->render('addprojectdescriptiontext', [
+                            'projectDescription' => $projectDescription
+                ]);
+            } else if ($type == "image") {
+                return $this->render('addprojectdescriptionimage', [
+                            'projectDescription' => $projectDescription
+                ]);
+            }
+        }
+    }
 
     /**
      * Creates a new Project model.
@@ -167,11 +190,7 @@ class ProjectController extends Controller
         ]);
     }
      
-    
-    public function actionAddProjectDescription() {
-        
-    }
-   
+       
     public function actionSavetodo($projectId) {
         $projectDao = new ProjectDao();
         $user = User::findById(Yii::$app->user->id);
