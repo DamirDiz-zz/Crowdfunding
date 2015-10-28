@@ -110,18 +110,27 @@ class ProjectController extends Controller
 
         if ($projectDescription->load(Yii::$app->request->post())) {
             
-            if ($projectDescription->save(false)) {
+            $projectDescription->created_at = time();
+            $projectDescription->updated_at = time();
+            $projectDescription->position = 0;
+            
+            if ($projectDescription->save()) {
                 return $this->redirect(['detail',
                     'id' => $projectDescription->project_id]);
             }
         } else {
+            $projectDao = new ProjectDao();
+            $project = $projectDao->getById($projectId);
+            
             if ($type == "text") {
                 return $this->render('addprojectdescriptiontext', [
-                            'projectDescription' => $projectDescription
+                        'projectDescription' => $projectDescription,
+                        'project' => $project
                 ]);
             } else if ($type == "image") {
                 return $this->render('addprojectdescriptionimage', [
-                            'projectDescription' => $projectDescription
+                    'projectDescription' => $projectDescription,
+                    'project' => $project
                 ]);
             }
         }

@@ -22,7 +22,9 @@ $this->title = 'Füge einen Text zu deinem Projekt';
                             ],
                 ]);
                 ?>
-
+                <?= $form->field($projectDescription, 'project_id')->hiddenInput(['value'=> $project->id])->label(false); ?>
+                <?= $form->field($projectDescription, 'type')->hiddenInput(['value'=> '0'])->label(false); ?>
+                <?= $form->field($projectDescription, 'description')->hiddenInput(['value'=> ''])->label(false); ?>
                 <?= $form->field($projectDescription, 'value')->textarea(['rows' => 6])->label("Fügen Sie hier einen Beschreibungstext ein") ?>
 
                 <div class="form-group center-block text-center">

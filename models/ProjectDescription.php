@@ -38,7 +38,7 @@ class ProjectDescription extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['project_id', 'value', 'description', 'type', 'position', 'created_at', 'updated_at'], 'required'],
+            [['project_id', 'value', 'type', 'position', 'created_at', 'updated_at'], 'required'],
             [['project_id', 'type', 'position', 'created_at', 'updated_at'], 'integer'],
             [['value', 'description'], 'string']
         ];
