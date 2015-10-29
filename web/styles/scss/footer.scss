@@ -3,11 +3,16 @@
 @import "partials/variables";
 @import "partials/colors";
 
-$footer-background-color: #333333;
-$footer-title-color: #FBFBFB;
-$footer-link-color: #EBECDB;
+//$footer-background-color: #333333;
+//$footer-title-color: #FBFBFB;
+//$footer-link-color: #EBECDB;
+
+$footer-background-color: #FBFAF7;
+$footer-title-color: #AB9F8D;
+$footer-link-color: #B9CB85;
 
 footer {
+    border-top: 1px solid #E8E7E5;
     padding: 30px 0px 30px 0px;
     background-color: $footer-background-color;
     font-size: 13px;
@@ -18,8 +23,9 @@ footer {
         color: $footer-title-color;
         text-align: center;
         text-transform: uppercase;
-        font-weight: $bold;
+        font-weight: $semibold;
         margin-top: 20px;
+        letter-spacing: 1px;
 
         span {
             color: #B9CB85;
@@ -49,13 +55,16 @@ footer {
     
     .footer-title {
         color: $footer-title-color;
-        font-weight: $bold;
+        text-transform: uppercase;
+        font-weight: $semibold;
+        letter-spacing: 1px;
         margin-bottom: 10px;
         font-size: inherit;
     }
     
     .footer-link {
         color: $footer-link-color;
+        text-transform: none;
         font-weight: $normal;
     }
 }

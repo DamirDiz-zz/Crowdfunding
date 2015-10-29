@@ -108,7 +108,6 @@ $newproject = new Project();
             <div class="col-md-3">
                 <ul class="footer-reference">
                     <li class="footer-logo"</li>
-                    <li class="footer-copyright">© 2015</li>
                 </ul>
             </div><div class="col-md-3">
                 <h5 class="footer-title">Erfahre mehr</h5>
@@ -118,7 +117,7 @@ $newproject = new Project();
                 </ul>
             </div>
             <div class="col-md-3">
-                <h5 class="footer-title">Entedecken</h5>
+                <h5 class="footer-title">Entdecken</h5>
                 <ul class="footer-link">
                     <li>Urban Farming</li>
                     <li>Community</li>
@@ -139,7 +138,7 @@ $newproject = new Project();
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 footer-madein">Made with <span>❤</span> in Wien</div>
+            <div class="col-md-12 footer-madein">Made with <span>❤</span> in Wien<br>© 2015</div>
         </div>
 
             

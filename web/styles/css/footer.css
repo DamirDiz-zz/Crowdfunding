@@ -11,16 +11,18 @@ and open the template in the editor.
 Mixins
 ========================================================================== */
 footer {
+  border-top: 1px solid #E8E7E5;
   padding: 30px 0px 30px 0px;
-  background-color: #333333;
+  background-color: #FBFAF7;
   font-size: 13px;
   line-height: 23px; }
   footer .footer-madein {
-    color: #FBFBFB;
+    color: #AB9F8D;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 20px; }
+    font-weight: 400;
+    margin-top: 20px;
+    letter-spacing: 1px; }
     footer .footer-madein span {
       color: #B9CB85; }
   footer .footer-reference {
@@ -38,10 +40,13 @@ footer {
     footer .footer-reference .footer-copyright {
       margin-bottom: 40px; }
   footer .footer-title {
-    color: #FBFBFB;
-    font-weight: 600;
+    color: #AB9F8D;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
     margin-bottom: 10px;
     font-size: inherit; }
   footer .footer-link {
-    color: #EBECDB;
+    color: #B9CB85;
+    text-transform: none;
     font-weight: 300; }
