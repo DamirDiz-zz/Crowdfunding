@@ -60,6 +60,9 @@ Mixins
   position: relative;
   vertical-align: middle;
   color: white; }
+  .project-box-header:hover .project-box-header-imageholder {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
 
 .project-box-header-imageholder {
   position: absolute;
@@ -74,7 +77,8 @@ Mixins
           transform: scale(1.1);
   -webkit-filter: blur(5px) brightness(90%);
           filter: blur(5px) brightness(90%);
-  z-index: 1; }
+  z-index: 1;
+  transition: all 0.2s ease-in-out; }
 
 .project-box-header-content {
   position: absolute;

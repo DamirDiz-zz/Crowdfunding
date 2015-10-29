@@ -25,6 +25,7 @@
         position: relative;
         overflow: hidden;
 
+        
         h1 {
             font-size: 26px;
             line-height: 140%;
@@ -66,7 +67,15 @@
             width:100%;
             height:100%;
             @include blur($brightness: 100%);
-            z-index: 1;    
+            z-index: 1;  
+            transition:all 0.2s ease-in-out;
+                        
+        }
+        
+         &:hover {
+            .category-box-imageholder {
+                transform: scale(1.2);
+            }
         }
     }  
 } 

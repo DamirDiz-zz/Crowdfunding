@@ -56,6 +56,12 @@ and open the template in the editor.
     position: relative;
     vertical-align: middle;
     color: white;
+    
+    &:hover {
+        .project-box-header-imageholder {
+            transform: scale(1.2);            
+        }
+    }
 }
 
 .project-box-header-imageholder 
@@ -67,6 +73,9 @@ and open the template in the editor.
     height:100%;
     @include blur($brightness: 90%);
     z-index: 1;    
+    
+    transition:all 0.2s ease-in-out;
+    
 }
 .project-box-header-content {
     position: absolute;

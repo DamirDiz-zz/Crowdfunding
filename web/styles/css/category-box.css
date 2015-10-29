@@ -74,4 +74,8 @@ Mixins
               transform: scale(1.1);
       -webkit-filter: blur(5px) brightness(100%);
               filter: blur(5px) brightness(100%);
-      z-index: 1; }
+      z-index: 1;
+      transition: all 0.2s ease-in-out; }
+    .category-box-container .category-box:hover .category-box-imageholder {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2); }

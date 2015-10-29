@@ -8,7 +8,7 @@ $footer-title-color: #FBFBFB;
 $footer-link-color: #EBECDB;
 
 footer {
-    padding: 40px 0px 40px 0px;
+    padding: 30px 0px 30px 0px;
     background-color: $footer-background-color;
     font-size: 13px;
     
@@ -19,7 +19,7 @@ footer {
         text-align: center;
         text-transform: uppercase;
         font-weight: $bold;
-        margin-top: 10px;
+        margin-top: 20px;
 
         span {
             color: #B9CB85;
@@ -50,7 +50,7 @@ footer {
     .footer-title {
         color: $footer-title-color;
         font-weight: $bold;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         font-size: inherit;
     }
     

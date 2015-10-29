@@ -29,16 +29,18 @@ $this->title = 'Crowdfunding';
     <div class="project-box-container">
         <?php foreach ($projects as $project) { ?>
             <div class="project-box">
+                <a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/detail', 'id' => (int) $project->id]); ?>">
                 <div class="project-box-header">
                     <div class="project-box-header-content">
                         <div class="project-box-header-content-holder">
-                            <a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/detail', 'id' => (int) $project->id]); ?>"><h1 class="text-center text-uppercase"><?php echo $project->title; ?></h1></a>
+                            <h1 class="text-center text-uppercase"><?php echo $project->title; ?></h1>
                             <h2 class="text-center text-capitalize"><?php echo $project->location; ?></h2>
                         </div>
                     </div>
                     <div class="project-box-header-category"><p><?php echo $project->category->title; ?></p></div>
                     <div class="project-box-header-imageholder" style="background-image: url(<?php echo $project->getImagePath() ?>);"></div>
                 </div>
+                </a>
                 <div class="project-box-body">
                     
                     <?php 
@@ -69,12 +71,14 @@ $this->title = 'Crowdfunding';
         <?php foreach ($categories as $category) { ?>
 
         <div class="category-box">
-            <div class="category-box-content">
-                <div class="category-box-content-holder">
-                    <a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/discover', 'categoryId' => (int) $category->id]); ?>"><h1 class="text-center text-uppercase"><?php echo $category->title; ?></h1></a>
-                    <div class="project-count"><?php echo count($category->getProjects()) ?> Projekte</div>
+            <a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/discover', 'categoryId' => (int) $category->id]); ?>">
+                <div class="category-box-content">
+                    <div class="category-box-content-holder">
+                        <h1 class="text-center text-uppercase"><?php echo $category->title; ?></h1>
+                        <div class="project-count"><?php echo count($category->getProjects()) ?> Projekte</div>
+                    </div>
                 </div>
-            </div>
+            </a>
             <div class="category-box-imageholder" style="background-image: url(<?php echo $category->getTitleImage(); ?>);"></div>
 
         </div>
