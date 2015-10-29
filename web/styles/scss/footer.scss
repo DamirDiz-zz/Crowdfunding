@@ -1,0 +1,61 @@
+@import "partials/typography";
+@import "partials/mixins";
+@import "partials/variables";
+@import "partials/colors";
+
+$footer-background-color: #333333;
+$footer-title-color: #FBFBFB;
+$footer-link-color: #EBECDB;
+
+footer {
+    padding: 40px 0px 40px 0px;
+    background-color: $footer-background-color;
+    font-size: 13px;
+    
+    line-height: 23px;
+
+    .footer-madein {
+        color: $footer-title-color;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: $bold;
+        margin-top: 10px;
+
+        span {
+            color: #B9CB85;
+        }
+    }
+    
+    .footer-reference {
+        color: #FBFBFB;
+        
+        font-weight: $normal;
+        
+        .footer-logo {
+            vertical-align: middle;
+            background-image: url(../img/gartlnlogo_monochrome.svg);
+            background-size: 80px 130px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: inline-block;
+            width: 70px;
+            height: 30px;
+        }
+        
+        .footer-copyright {
+            margin-bottom: 40px;
+        }
+    }
+    
+    .footer-title {
+        color: $footer-title-color;
+        font-weight: $bold;
+        margin-bottom: 10px;
+        font-size: inherit;
+    }
+    
+    .footer-link {
+        color: $footer-link-color;
+        font-weight: $normal;
+    }
+}

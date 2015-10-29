@@ -103,5 +103,47 @@ $newproject = new Project();
         
 <?php $this->endBody() ?>
     </body>
+    <footer class="container-fluid">
+        <div class="row footer-title">
+            <div class="col-md-3">
+                <ul class="footer-reference">
+                    <li class="footer-logo"</li>
+                    <li class="footer-copyright">© 2015</li>
+                </ul>
+            </div><div class="col-md-3">
+                <h5 class="footer-title">Erfahre mehr</h5>
+                <ul class="footer-link">
+                    <li>Über uns</li>
+                    <li>So funktioniert's</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5 class="footer-title">Entedecken</h5>
+                <ul class="footer-link">
+                    <li>Urban Farming</li>
+                    <li>Community</li>
+                    <li>Nahrung</li>
+                    <li>Fassadenbegrünung</li>
+                    <li>Dachbegrünung</li>
+                    <li>Energy & Recycling</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5 class="footer-title">Folge uns</h5>
+                <ul class="footer-link">
+                    <li>Twitter</li>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 footer-madein">Made with <span>❤</span> in Wien</div>
+        </div>
+
+            
+    </footer>
+    
 </html>
 <?php $this->endPage() ?>

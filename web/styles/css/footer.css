@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11.09.2015, 13:22:01
+    Author     : DamirDiz
+*/
+/* ==========================================================================
+Mixins
+========================================================================== */
+footer {
+  padding: 40px 0px 40px 0px;
+  background-color: #333333;
+  font-size: 13px;
+  line-height: 23px; }
+  footer .footer-madein {
+    color: #FBFBFB;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px; }
+    footer .footer-madein span {
+      color: #B9CB85; }
+  footer .footer-reference {
+    color: #FBFBFB;
+    font-weight: 300; }
+    footer .footer-reference .footer-logo {
+      vertical-align: middle;
+      background-image: url(../img/gartlnlogo_monochrome.svg);
+      background-size: 80px 130px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: inline-block;
+      width: 70px;
+      height: 30px; }
+    footer .footer-reference .footer-copyright {
+      margin-bottom: 40px; }
+  footer .footer-title {
+    color: #FBFBFB;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: inherit; }
+  footer .footer-link {
+    color: #EBECDB;
+    font-weight: 300; }
