@@ -24,6 +24,8 @@ class ProjectDescription extends \yii\db\ActiveRecord
     const IMAGE = 1;
     const URL = 2;
 
+    public $imageFile;
+
     /**
      * @inheritdoc
      */
@@ -68,4 +70,10 @@ class ProjectDescription extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Project::className(), ['id' => 'project_id']);
     }
+    
+    public function getImagePath() 
+    {
+        return  Yii::getAlias('@web') . '/uploads/' . $this->value;
+    }
+
 }

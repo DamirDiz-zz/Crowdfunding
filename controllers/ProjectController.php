@@ -114,6 +114,17 @@ class ProjectController extends Controller
             $projectDescription->updated_at = time();
             $projectDescription->position = 0;
             
+            if ($projectDescription->type == 1) {
+                
+                $projectDescription->imageFile = UploadedFile::getInstance($projectDescription,'value');
+                
+                if($projectDescription->imageFile) {
+                    $name = 'img_'.date('Y-m-d-H-s').'.' . $projectDescription->imageFile->extension;
+                    $projectDescription->imageFile->saveAs('uploads/' . $name);  
+                    $projectDescription->value = $name;
+                }
+            }
+            
             if ($projectDescription->save()) {
                 return $this->redirect(['detail',
                     'id' => $projectDescription->project_id]);
@@ -122,17 +133,17 @@ class ProjectController extends Controller
             $projectDao = new ProjectDao();
             $project = $projectDao->getById($projectId);
             
+            $view = "";
             if ($type == "text") {
-                return $this->render('addprojectdescriptiontext', [
-                        'projectDescription' => $projectDescription,
-                        'project' => $project
-                ]);
+                $view = "addprojectdescriptiontext";
             } else if ($type == "image") {
-                return $this->render('addprojectdescriptionimage', [
+                $view = "addprojectdescriptionimage";
+            }
+            
+            return $this->render($view, [
                     'projectDescription' => $projectDescription,
                     'project' => $project
-                ]);
-            }
+            ]);
         }
     }
 
@@ -154,7 +165,7 @@ class ProjectController extends Controller
             
             $project->mainImageFile = UploadedFile::getInstance($project,'mainImage');
             if($project->mainImageFile) {
-                $name = $project->mainImageFile->baseName . '.' . $project->mainImageFile->extension;
+                $name = 'img_'.date('Y-m-d-H-s').'.' . $project->mainImageFile->extension;
                 $project->mainImageFile->saveAs('uploads/' . $name);  
                 $project->mainImage = $name;
             }

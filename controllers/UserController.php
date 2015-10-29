@@ -66,7 +66,7 @@ class UserController extends Controller {
 
             $model->avatarImageFile = UploadedFile::getInstance($model,'avatarImage');
             if($model->avatarImageFile) {
-                $name = $model->avatarImageFile->baseName . '.' . $model->avatarImageFile->extension;
+                $name = 'img_'.date('Y-m-d-H-s').'.' . $model->avatarImageFile->extension;
                 $model->avatarImageFile->saveAs('uploads/' . $name);  
                 $model->avatarImage = $name;
             }
@@ -96,7 +96,7 @@ class UserController extends Controller {
 
             $model->avatarImageFile = UploadedFile::getInstance($model,'avatarImage');
             if($model->avatarImageFile) {
-                $name = $model->avatarImageFile->baseName . '.' . $model->avatarImageFile->extension;
+                $name = 'img_'.date('Y-m-d-H-s').'.' . $model->avatarImageFile->extension;
                 $model->avatarImageFile->saveAs('uploads/' . $name);  
                 $model->avatarImage = $name;
             }
