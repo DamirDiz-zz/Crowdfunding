@@ -26,9 +26,9 @@ $this->title = 'Füge einen Bild zu deinem Projekt hinzu';
                 ?>
                 <?= $form->field($projectDescription, 'project_id')->hiddenInput(['value'=> $project->id])->label(false); ?>
                 <?= $form->field($projectDescription, 'type')->hiddenInput(['value'=> '1'])->label(false); ?>
-                <?= $form->field($projectDescription, 'description')->textInput(['maxlength' => true])->label("Bildbeschreibung")->hint("Dieser Text erscheint neben Ihrem Bild.") ?>
+                <?= $form->field($projectDescription, 'description')->textInput(['maxlength' => true])->label("Bild-Text")->hint("Dieser Text erscheint neben Ihrem Bild.") ?>
 
-                <?= $form->field($projectDescription, 'value')->fileInput(array("class" => "inputfile"))->hint("Ein Bild sagt mehr als tausend Worte. Zeig uns den Ort den du verändern möchtest.")->label("Lade ein Bild hoch") ?>
+                <?= $form->field($projectDescription, 'value')->fileInput(array("class" => "inputfile"))->label("Lade ein Bild hoch") ?>
 
                 <div class="form-group center-block text-center">
                     <?= Html::submitButton('Speichern', ['class' => 'btn btn-fill btn-large']) ?>
