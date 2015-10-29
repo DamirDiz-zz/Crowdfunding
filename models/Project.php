@@ -97,6 +97,10 @@ class Project extends \yii\db\ActiveRecord
     
     public function getImagePath() 
     {
-        return  Yii::getAlias('@web') . '/uploads/' . $this->mainImage;
+        if ($this->mainImage != "") {
+            return  Yii::getAlias('@web') . '/uploads/' . $this->mainImage;            
+        } else {
+            return  Yii::getAlias('@web') . '/img/header.jpg';            
+        }
     }
 }

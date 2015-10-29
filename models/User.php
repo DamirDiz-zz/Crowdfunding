@@ -76,7 +76,11 @@ class User extends ActiveRecord implements IdentityInterface
     
     public function getImagePath() 
     {
-        return  Yii::getAlias('@web') . '/uploads/' . $this->avatarImage;
+        if ($this->avatarImage != null) {
+            return  Yii::getAlias('@web') . '/uploads/' . $this->avatarImage;            
+        } else {
+            return  Yii::getAlias('@web') . '/img/avatar_placeholder.png';
+        }
     }
     
     /**
