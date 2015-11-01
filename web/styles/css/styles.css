@@ -208,8 +208,8 @@ Hero
     background-position: 50% 50%;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-filter: blur(10px) brightness(100%);
-            filter: blur(10px) brightness(100%);
+    -webkit-filter: blur(6px) brightness(100%);
+            filter: blur(6px) brightness(100%);
     z-index: 1; }
   .hero .hero-content, .hero-special .hero-content {
     position: absolute;
@@ -236,8 +236,8 @@ Hero
     background-position: 50% 50%;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-filter: blur(10px) brightness(100%);
-            filter: blur(10px) brightness(100%); }
+    -webkit-filter: blur(6px) brightness(100%);
+            filter: blur(6px) brightness(100%); }
 
 /* ==========================================================================
 Detail Hero

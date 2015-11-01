@@ -50,3 +50,7 @@ footer {
     color: #B9CB85;
     text-transform: none;
     font-weight: 300; }
+    footer .footer-link a {
+      color: #B9CB85; }
+      footer .footer-link a:hover {
+        color: #9BAB71; }

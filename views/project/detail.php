@@ -74,12 +74,14 @@ if ($initiator) {
 
         <?php }}} ?>
                 
+        <?php if($loggedInUserIsInitator) { ?>
         <div class="project-detail-edit">
             <ul>
                 <li class="project-detail-edit-addText"><a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/addprojectdescription', 'projectId' => (int) $project->id, 'type' => 'text']); ?>"><img class="project-detail-edit-image" src="<?php echo Yii::getAlias('@web') . '/img/AddList.svg' ?>">Text hinzufügen</a></li>
                 <li class="project-detail-edit-addImage"><a href="<?php echo Yii::$app->getUrlManager()->createUrl(['project/addprojectdescription', 'projectId' => (int) $project->id, 'type' => 'image']); ?>"><img class="project-detail-edit-image" src="<?php echo Yii::getAlias('@web') . '/img/AddImage.svg' ?>">Bild hinzufügen</a></li>
             </ul>
         </div>
+        <?php } ?>
     </section>
     
     <section class="project-detail project-detail-updates">
@@ -126,13 +128,14 @@ if ($initiator) {
         <?php }} ?>
         </div>
         
-        
+        <?php if($loggedInUserIsInitator) { ?>
         <div id="add-update" class="project-detail-add-update" data-add-update-url="<?php echo Yii::$app->urlManager->createUrl(['project/addupdate', 'id' => (int) $project->id]); ?>">
             <label>Gibt es neuigkeiten?</label>
             <input id="add-update-title" placeholder="Titel" type="text">
             <textarea id="add-update-content" placeholder="Was hat sich getan?" rows="4"></textarea>
             <button id="add-update-button" class="btn btn-fill">Hinzufügen</button>
         </div>
+        <?php } ?>
     </section>
 
     <section class="project-detail project-detail-todos">
@@ -145,7 +148,10 @@ if ($initiator) {
                 <?php } ?>
             </div>
         <?php } ?>
+        
+        <?php if($loggedInUserIsInitator) { ?>
         <?= Html::a('Aufgaben bearbeiten', ['/project/addtodos', 'id' => (int) $project->id], ['class' => 'btn btn-fill']) ?>
+        <?php } ?>
 
     </section>
   

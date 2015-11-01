@@ -72,6 +72,12 @@ class ProjectController extends Controller
         $todos = $projectDao->getTodosForProject($project->id);
         $updates = $projectDao->getUpdatesForProject($project->id);
         
+        if($initiator->id == Yii::$app->user->id) {
+            $loggedInUserIsInitator = true;
+        } else {
+            $loggedInUserIsInitator = false;
+        }
+
         return $this->render('detail', [
             'project' => $project,
             'initiator' => $initiator,
@@ -79,7 +85,7 @@ class ProjectController extends Controller
             'projectDescriptions' => $pds,
             'todos' => $todos,
             'updates' => $updates,
-
+            'loggedInUserIsInitator' => $loggedInUserIsInitator
         ]);
     }
     

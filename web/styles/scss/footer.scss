@@ -10,6 +10,7 @@
 $footer-background-color: #FBFAF7;
 $footer-title-color: #AB9F8D;
 $footer-link-color: #B9CB85;
+$footer-link-color-hover: #9BAB71;
 
 footer {
     border-top: 1px solid #E8E7E5;
@@ -66,5 +67,13 @@ footer {
         color: $footer-link-color;
         text-transform: none;
         font-weight: $normal;
+        
+        a {
+            color: $footer-link-color;
+            
+            &:hover {
+                color: $footer-link-color-hover;
+            }
+        }
     }
 }

@@ -119,12 +119,13 @@ $newproject = new Project();
             <div class="col-md-3">
                 <h5 class="footer-title">Entdecken</h5>
                 <ul class="footer-link">
-                    <li>Urban Farming</li>
-                    <li>Community</li>
-                    <li>Nahrung</li>
-                    <li>Fassadenbegrünung</li>
-                    <li>Dachbegrünung</li>
-                    <li>Energy & Recycling</li>
+                    <li><?= Html::a('Urban Farming', ['/project/discover', 'categoryId' => 1])?></li>
+                    <li><?= Html::a('Community', ['/project/discover', 'categoryId' => 2])?></li>
+                    <li><?= Html::a('Nahrung', ['/project/discover', 'categoryId' => 4])?></li>
+                    <li><?= Html::a('Fassadenbegrünung', ['/project/discover', 'categoryId' => 6])?></li>
+                    <li><?= Html::a('Dachbegrünung', ['/project/discover', 'categoryId' => 7])?></li>
+                    <li><?= Html::a('Energy & Recycling', ['/project/discover', 'categoryId' => 8])?></li>
+
                 </ul>
             </div>
             <div class="col-md-3">
