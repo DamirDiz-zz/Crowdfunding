@@ -18,7 +18,16 @@ $this->title = 'Crowdfunding';
 </section>
 
 <section class="main-section">
-
+    
+    <div class="project-box-filter"><span>Sortieren nach</span>
+        <ul>
+            <li class="active">Neu</li>
+            <li>Beliebt</li>
+            <li>Empfohlen</li>
+            <li>Benötigt Helfer</li>
+            <li>Alle</li>
+        </ul>
+    </div>
     <div class="project-box-container">
         <?php foreach ($projects as $project) { ?>
             <div class="project-box">

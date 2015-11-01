@@ -131,9 +131,9 @@ $newproject = new Project();
             <div class="col-md-3">
                 <h5 class="footer-title">Folge uns</h5>
                 <ul class="footer-link">
-                    <li>Twitter</li>
-                    <li>Facebook</li>
-                    <li>Instagram</li>
+                    <li><span class="socicon socicon-twitter"></span> Twitter</li>
+                    <li><span class="socicon socicon-facebook"></span> Facebook</li>
+                    <li><span class="socicon socicon-instagram"></span> Instagram</li>
                 </ul>
 
             </div>
