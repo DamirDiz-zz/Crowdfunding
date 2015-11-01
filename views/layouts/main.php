@@ -61,6 +61,7 @@ $newproject = new Project();
                                 <ul class="primary-nav">
                                     <li><?= Html::a("So funktioniert's", ['site/howitworks']) ?></li>
                                     <li><?= Html::a("Starte dein Projekt", ['/project/create']) ?></li>
+                                    <li><?= Html::a("Entdecken", ['/project/all']) ?></li>
 
                                 </ul>
                                 <ul class="member-actions">
