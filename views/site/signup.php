@@ -11,11 +11,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="full-page-form-holder">
     <div class="full-page-form-large">
+        <div class="form-header">
+            <h4 class="form-title"><?= Html::encode($this->title) ?></h4>
+            <p class="form-subtitle">Erzähl ein bisschen über dich und melde dich an</p>
+        </div>
         <div class="full-page-form-content">
-            <div class="form-header">
-                <h4 class="form-title"><?= Html::encode($this->title) ?></h4>
-                <p class="form-subtitle">Erzähl ein bisschen über dich und melde dich an</p>
-            </div>
             <div class="project-form">
 
                 <div class="site-signup">

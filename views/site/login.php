@@ -11,11 +11,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="full-page-form-holder">
     <div class="full-page-form-medium">
+        <div class="form-header">
+            <h4 class="form-title">Schön dich wiederzusehen!</h4>
+            <p class="form-subtitle">Gib deine E-Mail-Adresse und dein Passwort ein.</p>
+        </div>
         <div class="full-page-form-content">
-            <div class="form-header">
-                <h4 class="form-title">Schön dich wiederzusehen!</h4>
-                <p class="form-subtitle">Gib deine E-Mail-Adresse und dein Passwort ein.</p>
-            </div>
             <div class="project-form">
 
                 <?php

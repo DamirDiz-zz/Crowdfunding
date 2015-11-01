@@ -4,11 +4,15 @@
 @import "partials/colors";
 
 .navigation {
-    transition: all 500ms ease-in-out;
     position: fixed;
     width: 100%;
     z-index: 999;
 }
+
+.transition {
+    transition: all 500ms ease-in-out;
+}
+
 .fixed {
     position: fixed;
     background-color: rgba(0,0,0,0.8);

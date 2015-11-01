@@ -9,9 +9,11 @@ $this->title = 'Starte dein Projekt';
 ?>
 <div class="full-page-form-holder">
     <div class="full-page-form-large">
+        <div class="form-header">
+            <h4 class="form-title">Starte dein Projekt!</h4>
+            <p class="form-subtitle">Erzähle uns ein bisschen über deine Idee.</p>
+        </div>
         <div class="full-page-form-content">
-            <h1 class="form-title">Starte dein Projekt</h4>
-                <p class="form-subtitle">Erzähle uns ein bisschen über deine Idee</p>
 
                 <?=
                 $this->render('_form', [
