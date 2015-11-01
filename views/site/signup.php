@@ -9,9 +9,8 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Registrieren';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
-<div class="full-page-form-large">
-    <div class="full-page-form-holder">
+<div class="full-page-form-holder">
+    <div class="full-page-form-large">
         <div class="full-page-form-content">
             <div class="form-header">
                 <h4 class="form-title"><?= Html::encode($this->title) ?></h4>
@@ -51,5 +50,4 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
         </div>
     </div>
-    <div class="full-page-form-background"></div>
 </div>

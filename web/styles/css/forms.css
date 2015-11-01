@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11.09.2015, 13:22:01
+    Author     : DamirDiz
+*/
+/* ==========================================================================
+Mixins
+========================================================================== */
+.full-page-form-holder {
+  background: #F7FAFA; }
+
+.full-page-form-large, .full-page-form-medium {
+  margin: 0 auto;
+  position: relative;
+  padding: 50px 0px; }
+
+.full-page-form-content {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #DDDDDD;
+  box-shadow: none !important; }
+
+.form-header {
+  padding-top: 10px;
+  padding-bottom: 20px; }
+
+.form-title {
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 200;
+  font-family: "Martel Sans", sans-serif;
+  text-shadow: none;
+  margin: 0 auto; }
+
+.form-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #929292;
+  margin: 0 auto; }
+
+.project-form {
+  margin: 0 auto; }
+
+.full-page-form-medium {
+  width: 450px; }
+  .full-page-form-medium .full-page-form-content {
+    padding: 20px 30px; }
+  .full-page-form-medium .form-title  {
+    width: 390px; }
+  .full-page-form-medium .form-subtitle  {
+    width: 390px; }
+  .full-page-form-medium .project-form {
+    width: 390px; }
+
+.full-page-form-large {
+  width: 700px; }
+  .full-page-form-large .full-page-form-content {
+    padding: 20px 30px; }
+  .full-page-form-large .form-title  {
+    width: 640px; }
+  .full-page-form-large .form-subtitle  {
+    width: 640px; }
+  .full-page-form-large .project-form {
+    width: 640px; }
+
+label {
+  font-weight: 300;
+  font-family: "Martel Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #2b3e51;
+  margin: 0px; }
+
+.hint-block {
+  margin-top: 8px !important;
+  font-size: 12px;
+  color: #929292; }
+
+input, textarea, select {
+  font-weight: 600;
+  font-family: "Martel Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #2b3e51; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+  border: none !important;
+  border-radius: 0px  !important;
+  background-color: #F7F7F7 !important;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-shadow: none; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="file"]:focus,
+  select:focus,
+  textarea:focus {
+    border: none !important;
+    box-shadow: none !important; }
+
+.form-control {
+  padding: 16px;
+  height: inherit; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+select {
+  padding: 16px; }
+
+textarea {
+  padding: 16px; }
+
+input[type="file"] {
+  width: 100%; }
