@@ -208,8 +208,8 @@ Hero
     background-position: 50% 50%;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-filter: blur(6px) brightness(100%);
-            filter: blur(6px) brightness(100%);
+    -webkit-filter: blur(6px) brightness(80%);
+            filter: blur(6px) brightness(80%);
     z-index: 1; }
   .hero .hero-content, .hero-special .hero-content {
     position: absolute;
@@ -236,8 +236,8 @@ Hero
     background-position: 50% 50%;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-filter: blur(6px) brightness(100%);
-            filter: blur(6px) brightness(100%); }
+    -webkit-filter: blur(6px) brightness(80%);
+            filter: blur(6px) brightness(80%); }
 
 /* ==========================================================================
 Detail Hero
@@ -273,8 +273,8 @@ Detail Hero
     background-position: 50% 50%;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-filter: blur(8px) brightness(100%);
-            filter: blur(8px) brightness(100%);
+    -webkit-filter: blur(8px) brightness(80%);
+            filter: blur(8px) brightness(80%);
     z-index: 1; }
   .herodetail .herodetail-content {
     position: absolute;
