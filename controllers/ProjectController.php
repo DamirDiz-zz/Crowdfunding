@@ -34,6 +34,11 @@ class ProjectController extends Controller
             ],
         ];
     }
+    
+    public function beforeAction($action) {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
 
     /**
      * Lists all Project models.

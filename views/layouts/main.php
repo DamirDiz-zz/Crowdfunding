@@ -86,7 +86,7 @@ $newproject = new Project();
                                                 <ul>
                                                     <li>Deine Projekte</li>
                                                     <li>Profil bearbeiten</li>
-                                                    <li><?= Html::a('Abmelden', ['/site/logout'], ['data-method' => 'post'] )?></li>
+                                                    <li><?= Html::a('Abmelden', ['/site/logout'] )?></li>
                                                 </ul>
                                             </div>
                                         </div>

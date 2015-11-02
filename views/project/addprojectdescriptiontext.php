@@ -7,11 +7,12 @@ use yii\widgets\ActiveForm;
 $this->title = 'Füge einen Text zu deinem Projekt';
 ?>
 
-<div class="full-page-form-large">
-    <div class="full-page-form-holder">
+<div class="full-page-form-holder">
+    <div class="full-page-form-large">
+        <div class="form-header">
+            <h4 class="form-title">Text hinzufügen</h4>
+        </div>
         <div class="full-page-form-content">
-            <h1 class="form-title">Text hinzufügen</h4>
-
             <div class="project-form">
                 <?php
                 
@@ -35,5 +36,4 @@ $this->title = 'Füge einen Text zu deinem Projekt';
             </div>
         </div>
     </div>
-    <div class="full-page-form-background"></div>
 </div>

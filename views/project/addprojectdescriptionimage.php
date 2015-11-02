@@ -7,11 +7,12 @@ use yii\widgets\ActiveForm;
 $this->title = 'Füge einen Bild zu deinem Projekt hinzu';
 ?>
 
-<div class="full-page-form-large">
-    <div class="full-page-form-holder">
+<div class="full-page-form-holder">
+    <div class="full-page-form-large">
         <div class="full-page-form-content">
-            <h1 class="form-title">Bild hinzufügen</h4>
-
+            <div class="form-header">
+                <h4 class="form-title">Bild hinzufügen</h4>
+            </div>
             <div class="project-form">
                 <?php
                 
