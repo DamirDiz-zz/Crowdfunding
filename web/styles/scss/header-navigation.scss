@@ -32,6 +32,10 @@ header {
         color: $header-nav-color;
         font-size: $nav-font-size;
 
+        a:hover, a:focus {
+            color: $header-nav-color-hover;
+        }
+
         &.login {
             margin-right: 20px;
         }

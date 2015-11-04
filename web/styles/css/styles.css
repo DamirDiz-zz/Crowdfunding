@@ -77,13 +77,11 @@ ul li {
   list-style: none; }
 
 a {
-  color: #FFFFFF;
   transition-timing-function: ease;
   transition-duration: 200ms;
   transition-property: color, border-color, background-color; }
 
 a:hover, a:focus {
-  color: #DDDDDD;
   text-decoration: none; }
 
 /* ==========================================================================
@@ -177,7 +175,8 @@ Hero
   min-height: 500px;
   position: relative;
   overflow: hidden;
-  height: 500px; }
+  height: 500px;
+  box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 0.46); }
   .hero.how-it-works, .hero-special.how-it-works {
     height: 650px !important; }
   .hero h1, .hero-special h1 {
@@ -208,8 +207,8 @@ Hero
     background-position: 50% 50%;
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
-    -webkit-filter: blur(6px) brightness(80%);
-            filter: blur(6px) brightness(80%);
+    -webkit-filter: blur(6px) brightness(100%);
+            filter: blur(6px) brightness(100%);
     z-index: 1; }
   .hero .hero-content, .hero-special .hero-content {
     position: absolute;

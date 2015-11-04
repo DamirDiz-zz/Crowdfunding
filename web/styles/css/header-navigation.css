@@ -34,6 +34,8 @@ header {
   header a {
     color: #FFFFFF;
     font-size: 13px; }
+    header a a:hover, header a a:focus {
+      color: #DDDDDD; }
     header a.login {
       margin-right: 20px; }
   header .header-avatar {

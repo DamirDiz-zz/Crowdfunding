@@ -38,6 +38,7 @@ Mixins
     .category-box-container .category-box h1 {
       font-size: 30px;
       line-height: 140%;
+      color: white;
       font-family: Sunday;
       margin: 0; }
     .category-box-container .category-box .category-box-content {
